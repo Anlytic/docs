@@ -11,7 +11,7 @@
   "appearance": {
     "default": "system"
   },
-  "favicon": "/anlytic-fav-icon.svg",
+  "favicon": "/favicon.png",
   "fonts": {
     "heading": {
       "family": "Inter",
