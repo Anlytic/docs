@@ -1,0 +1,39 @@
+---
+title: "SumProduct"
+---
+
+
+Vermenigvuldigt overeenkomstige waarden uit meerdere kolommen en retourneert de som ervan
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+SumProduct([kolom1], [kolom2])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom1` | `kolom` | ✓ Ja | De eerste numerieke kolom om te vermenigvuldigen |
+| `kolom2` | `kolom` | ✓ Ja | De tweede numerieke kolom om te vermenigvuldigen |
+
+**Toegestane kolomtypen voor `kolom1`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `kolom2`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+SumProduct([Aantal], [Prijs])
+```
+Som van (Aantal * Prijs) voor alle rijen

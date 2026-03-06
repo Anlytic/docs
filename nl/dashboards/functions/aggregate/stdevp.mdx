@@ -1,0 +1,36 @@
+---
+title: "StDevP"
+---
+
+
+Retourneert de populatiestandaarddeviatie van waarden in de opgegeven kolom
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+StDevP([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de populatiestandaarddeviatie wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+StDevP([Omzet])
+```
+Retourneert de populatiestandaarddeviatie van de omzet

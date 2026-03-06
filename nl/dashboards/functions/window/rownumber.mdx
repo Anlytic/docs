@@ -1,0 +1,51 @@
+---
+title: "RowNumber"
+---
+
+
+Wijst een uniek opeenvolgend nummer toe aan elke rij binnen een partitie, beginnend bij 1.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+RowNumber()
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+Deze functie heeft geen parameters. De rijnummering wordt bepaald door de ORDER BY-clausule in de vensterspecificatie.
+
+## Validatie
+- Minimum parameters: 0
+- Maximum parameters: 0
+
+## Voorbeelden
+
+```
+RowNumber()
+```
+Retourneert een opeenvolgend nummer voor elke rij, beginnend bij 1, ongeacht dubbele waarden.
+
+```
+RowNumber()
+```
+Bij sortering op omzet aflopend wordt 1 toegewezen aan de hoogste omzet, 2 aan de volgende, enz. In tegenstelling tot Rank krijgt elke rij een uniek nummer, zelfs als de omzetwaarden gelijk zijn.
+**Resultaat:** `1, 2, 3, 4, 5, ...`
+
+```
+RowNumber()
+```
+Handig voor paginering, het beperken van resultaten of het aanmaken van unieke identificaties binnen een partitie.
+
+## Gerelateerde functies
+
+- [Rank](rank) - Wijst rang toe met gaten
+- [DenseRank](denserank) - Wijst rang toe zonder gaten
+- [PercentRank](percentrank) - Berekent relatieve rang als percentage
+- [Ntile](ntile) - Verdeelt rijen in groepen
+- [RowNum](rownum) - Alternatieve rijnummeringsfunctie

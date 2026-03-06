@@ -1,0 +1,51 @@
+---
+title: "RowNum"
+---
+
+
+Wijst opeenvolgende nummers toe aan rijen binnen een partitie, beginnend vanaf 1.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+RowNum()
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+Deze functie heeft geen parameters. De rijnummering wordt bepaald door de ORDER BY-clausule in de vensterspecificatie.
+
+## Validatie
+- Minimum parameters: 0
+- Maximum parameters: 0
+
+## Voorbeelden
+
+```
+RowNum()
+```
+Retourneert een opeenvolgend nummer voor elke rij binnen de partitie, beginnend vanaf 1.
+
+```
+RowNum()
+```
+Wanneer gebruikt met een ORDER BY-clausule, worden opeenvolgende nummers toegewezen op basis van de opgegeven sortering.
+**Resultaat:** `1, 2, 3, 4, 5, ...`
+
+```
+RowNum()
+```
+Handig voor het toevoegen van rij-identificaties, paginering of het aanmaken van opeenvolgende nummering binnen
+ groepen.
+
+## Gerelateerde functies
+
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe (vergelijkbare functionaliteit)
+- [Rank](rank) - Wijst rang toe met gaten
+- [DenseRank](denserank) - Wijst rang toe zonder gaten
+- [CumulativeCount](cumulativecount) - Berekent het cumulatieve aantal

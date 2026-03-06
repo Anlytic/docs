@@ -1,0 +1,37 @@
+---
+title: "Choose"
+---
+
+
+Retourneert bij een opgegeven indexnummer de overeenkomstige waarde uit een lijst.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+Choose([index_kolom], waarde1, waarde2, ...)
+```
+
+**Retourneert:** `AnyColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `index` | `kolom\|geheel getal` | ✓ Ja | De 1-gebaseerde indexpositie van de waarde die moet worden geretourneerd. |
+| `waarde1` | `any` | ✓ Ja | De eerste waarde in de lijst. |
+| `aanvullende waarden` | `variabel` | ✗ Nee | Aanvullende waarden in de lijst. |
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: Onbeperkt
+
+## Voorbeelden
+
+```
+Choose(2, "Eerste", "Tweede", "Derde")
+```
+Retourneert de tweede waarde uit de lijst.
+**Resultaat:** `Second`

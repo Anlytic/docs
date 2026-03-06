@@ -1,0 +1,48 @@
+---
+title: "CumeDist"
+---
+
+
+Berekent de cumulatieve verdeling van een waarde binnen een partitie, die de relatieve positie van elke rij vertegenwoordigt op basis van de waarden in de opgegeven kolom.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumeDist([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvoor de cumulatieve verdeling wordt berekend |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CumeDist([Omzet])
+```
+Retourneert de cumulatieve verdeling van omzetwaarden. Als 80% van de rijen omzetwaarden heeft die kleiner dan of gelijk zijn aan de omzet van de huidige rij, retourneert dit 0.8.
+
+```
+CumeDist([Score])
+```
+Berekent welk deel van alle scores kleiner dan of gelijk is aan de score van elke rij. Een resultaat van 0.95 betekent dat de rij zich in het 95e percentiel bevindt.
+**Resultaat:** `varieert` (waarden tussen 0.0 en 1.0)
+
+## Gerelateerde functies
+
+- [PercentRank](percentrank) - Berekent de relatieve rang als percentage
+- [Rank](rank) - Wijst een rang toe met gaten
+- [DenseRank](denserank) - Wijst een rang toe zonder gaten
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe
+- [Ntile](ntile) - Verdeelt rijen in groepen

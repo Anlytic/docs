@@ -1,0 +1,36 @@
+---
+title: "Month"
+---
+
+
+Retourneert een geheel getal dat het maandcomponent in een opgegeven datetime-waarde vertegenwoordigt.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+Month([datum_kolom])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum waaruit de maand wordt geëxtraheerd. |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Month([Besteldatum])
+```
+Retourneert de maand (1-12) uit de datum.

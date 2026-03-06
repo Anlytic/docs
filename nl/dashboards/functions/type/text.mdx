@@ -1,0 +1,36 @@
+---
+title: "Text"
+---
+
+
+Converteert waarden naar tekenreeksen
+
+**Categorie:** `conversion`
+
+**Syntax:**
+```
+Text(invoer)
+```
+
+**Retourneert:** `TextColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `invoer` | `tekst of datum of getal of kolom` | ✓ Ja | De tekst-, datum- of getaldata die naar tekst moeten worden geconverteerd |
+
+**Toegestane kolomtypen voor `invoer`:** STRING, TEXT, INT, FLOAT, DECIMAL, DATETIME, DATE, BOOLEAN
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Text([Getal Kolom])
+```
+Converteert getalwaarden naar tekst

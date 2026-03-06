@@ -1,0 +1,34 @@
+---
+title: "CountDistinct"
+---
+
+
+Geeft het aantal unieke waarden in de opgegeven kolom terug
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+CountDistinct([kolom])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarin unieke waarden worden geteld |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CountDistinct([KlantID])
+```
+Geeft het aantal unieke klanten terug

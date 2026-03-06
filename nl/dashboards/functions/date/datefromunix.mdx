@@ -1,0 +1,43 @@
+---
+title: "DateFromUnix"
+---
+
+
+Converteert een Unix-tijdstempel naar een Date-gegevenstype.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DateFromUnix([getal])
+```
+
+**Retourneert:** `DateTimeColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal\|kolom` | ✓ Ja | Een getal of kolom met getallen die een Unix-tijdstempel vertegenwoordigen (seconden of milliseconden). |
+
+**Toegestane kolomtypen:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+DateFromUnix(0)
+```
+Begin van het tijdperk (epoch).
+**Resultaat:** `1970-01-01 00:00:00`
+
+```
+DateFromUnix(1503724894)
+```
+Converteert seconden sinds het tijdperk.
+**Resultaat:** `2017-08-26 05:21:34`

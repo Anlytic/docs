@@ -1,0 +1,37 @@
+---
+title: "MaxIf"
+---
+
+
+Retourneert de maximale waarde in een kolom alleen voor rijen die aan de voorwaarde voldoen
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+MaxIf([kolom], voorwaarde)
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de maximale waarde wordt gezocht wanneer de voorwaarde Waar is |
+| `voorwaarde` | `logical` | ✓ Ja | Logische expressie die per rij wordt geëvalueerd |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, DATE, DATETIME
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+MaxIf([Omzet], [Regio] = "Noord")
+```
+Maximale omzet waar Regio gelijk is aan Noord

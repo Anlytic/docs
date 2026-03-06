@@ -1,0 +1,96 @@
+---
+title: "Platformoverzicht"
+description: "Begrijp de kernconcepten en bouwstenen van Anlytic voordat je begint met het inrichten van je omgeving."
+---
+
+Anlytic is een modern analyseplatform dat rechtstreeks verbinding maakt met je datawarehouse of database, waardoor je team dashboards kan bouwen, data kan verkennen en inzichten kan delen — zonder data buiten je infrastructuur te verplaatsen.
+
+Deze pagina introduceert de belangrijkste concepten die je tegenkomt in het platform en de documentatie. Als je deze bouwstenen begrijpt, kun je het installatieproces soepeler doorlopen en het maximale uit Anlytic halen.
+
+## Kernconcepten
+
+### Werkruimtes
+
+Een **werkruimte** is de bovenste omgeving in Anlytic. Deze bevat al je dataverbindingen, catalogi, dashboards, teams en gebruikers. Zie het als het thuisadres van je organisatie binnen het platform.
+
+De meeste organisaties gebruiken één werkruimte. Elke werkruimte heeft eigen instellingen, leden en machtigingen.
+
+### Connectoren
+
+Een **connector** is een geconfigureerde verbinding met een externe databron, zoals PostgreSQL, MySQL, Snowflake of BigQuery. Connectoren slaan de inloggegevens en verbindingsdetails op die Anlytic gebruikt om je data in realtime te bevragen.
+
+Je hebt minstens één connector nodig voordat je kunt beginnen met het bouwen van dashboards.
+
+### Catalogi
+
+Een **catalogus** bepaalt welke tabellen en kolommen uit je verbonden databronnen beschikbaar zijn voor analyse. Het fungeert als een gecureerde datalaag tussen je ruwe database en de dashboards die je team bouwt.
+
+Binnen een catalogus kun je:
+- Selecteren welke tabellen beschikbaar worden gesteld
+- **Metadata** definiëren — labels, beschrijvingen en opmaak voor kolommen
+- **Relaties** aanmaken — definieer hoe tabellen aan elkaar gekoppeld worden zodat Anlytic automatisch data uit meerdere tabellen kan combineren
+
+### Teams
+
+Een **team** is een groep gebruikers binnen
+ een werkruimte. Teams bepalen de toegang tot dashboards en content. Elk teamlid krijgt een rol toegewezen die bepaalt wat ze kunnen bekijken, bewerken of beheren.
+
+Met teams kun je je werkruimte organiseren rondom afdelingen, projecten of elke andere structuur die bij je organisatie past.
+
+### Dashboards
+
+Een **dashboard** is een verzameling grafieken en visualisaties gerangschikt in rijen. Dashboards halen data op uit je catalogus en tonen deze via verschillende grafiektypen — tabellen, staafdiagrammen, kaarten, heatmaps en meer.
+
+Dashboards kunnen worden gedeeld met teams en interactief worden gefilterd om verschillende doorsnedes van je data te verkennen.
+
+### Werkboeken
+
+Een **werkboek** is de bewerkingsomgeving waarin je een dashboard bouwt en configureert. In een werkboek voeg je rijen toe, maak je grafieken aan, pas je filters toe en regel je de lay-out. Het eindresultaat is een gepubliceerd dashboard.
+
+### Functies
+
+**Functies** zijn formule-expressies die je kunt gebruiken in datatabellen om data te transformeren, berekenen en analyseren. Ze werken vergelijkbaar met spreadsheetformules en ondersteunen een breed scala aan bewerkingen — datummanipulatie, wiskunde, tekstverwerking, voorwaardelijke logica, aggregaties en vensterberekeningen.
+
+## Hoe alles samenkomt
+
+De typische workflow in Anlytic bestaat uit vier stappen:
+
+<Steps>
+  <Step title="Verbinden">
+    Stel een connector in naar je database of datawarehouse.
+  </Step>
+  <Step title="Catalogiseren">
+    Maak een catalogus aan die bepaalt welke tabellen, kolommen, metadata en relaties beschikbaar zijn voor analyse.
+  </Step>
+  <Step title="Bouwen">
+    Maak dashboards met grafieken die je catalogusdata in realtime bevragen.
+  </Step>
+  <Step title="Delen">
+    Organiseer dashboards en deel ze met teams binnen je werkruimte.
+  </Step>
+</Steps>
+
+## Volgende stappen
+
+Klaar om je omgeving in te richten? Volg de installatiehandleiding stap voor stap:
+
+<CardGroup cols={2}>
+  <Card title="Eerste configuratie" icon="rocket" href="/nl/quickstart/initial-setup">
+    Maak je account aan en configureer je werkruimte.
+  </Card>
+  <Card title="Gebruikersbeheer" icon="user-plus" href="/nl/quickstart/user-management">
+    Voeg gebruikers toe en wijs rollen toe.
+  </Card>
+  <Card title="Databron verbinden" icon="database" href="/nl/quickstart/connect-data-source">
+    Configureer je eerste databaseverbinding.
+  </Card>
+  <Card title="Teamconfiguratie" icon="people-group" href="/nl/quickstart/team-configuration">
+    Maak teams aan en beheer toegang.
+  </Card>
+  <Card title="Je eerste dashboard" icon="chart-mixed" href="/nl/quickstart/first-dashboard">
+    Maak je eerste grafieken en publiceer een dashboard.
+  </Card>
+  <Card title="Functiereferentie" icon="function" href="/nl/dashboards/functions/function-index">
+    Bekijk alle beschikbare formulefuncties per categorie.
+  </Card>
+</CardGroup>

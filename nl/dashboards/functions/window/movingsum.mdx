@@ -1,0 +1,55 @@
+---
+title: "MovingSum"
+---
+
+
+Berekent de voortschrijdende som van waarden binnen een opgegeven venster van rijen ten opzichte van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingSum([kolom], venster_start, venster_einde)
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de voortschrijdende som wordt berekend |
+| `venster_start` | `geheel getal` | ✓ Ja | Het aantal rijen vóór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_einde` | `geheel getal` | ✗ Nee | Het aantal rijen na de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+MovingSum([Omzet], -6, 0)
+```
+Retourneert de totale omzet in een voortschrijdend venster van 7 dagen (huidige rij en 6 voorgaande rijen).
+
+```
+MovingSum([Inkomsten], -29, 0)
+```
+Berekent een 30-daagse voortschrijdende som van inkomsten, handig voor het bijhouden van voortschrijdende maandtotalen.
+
+```
+MovingSum([Orders], -2, 2)
+```
+Berekent een gecentreerde voortschrijdende som over 5 dagen (2 dagen ervoor, huidige dag, 2 dagen erna).
+
+## Gerelateerde functies
+
+- [CumulativeSum](cumulativesum) - Berekent de cumulatieve som vanaf de eerste rij
+- [MovingAvg](movingavg) - Berekent het voortschrijdend gemiddelde met een venster
+- [Sum](../aggregate/sum) - Retourneert de totale som
+- [RunningTotal](runningtotal) - Berekent het lopende totaal

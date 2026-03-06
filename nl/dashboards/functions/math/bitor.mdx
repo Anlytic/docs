@@ -1,0 +1,45 @@
+---
+title: "BitOr"
+---
+
+
+Berekent de bitsgewijze OR van twee getallen
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+BitOr([getal1], [getal2])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal1` | `geheel getal of kolom` | ✓ Ja | Het eerste getal voor de bitsgewijze OR-bewerking |
+| `getal2` | `geheel getal of kolom` | ✓ Ja | Het tweede getal voor de bitsgewijze OR-bewerking |
+
+**Toegestane kolomtypen voor `getal1`:** INT
+
+**Toegestane kolomtypen voor `getal2`:** INT
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+BitOr(5, 3)
+```
+Retourneert de bitsgewijze OR van 5 en 3
+**Resultaat:** `7`
+
+```
+BitOr([Waarde1], [Waarde2])
+```
+Retourneert de bitsgewijze OR van waarden in twee kolommen

@@ -1,0 +1,51 @@
+---
+title: "RunningCount"
+---
+
+
+Berekent het lopende aantal waarden vanaf de eerste rij tot en met de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+RunningCount([kolom])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de waarden worden geteld |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+RunningCount([Order_ID])
+```
+Retourneert het lopende aantal orders vanaf de eerste rij tot de huidige rij.
+
+```
+RunningCount([Klant_ID])
+```
+Berekent het lopende aantal klanten, handig voor het bijhouden van cumulatieve klantinteracties in de loop van de tijd.
+
+```
+RunningCount([Transactie_ID])
+```
+Volgt het cumulatieve aantal transacties en toont hoe het aantal groeit bij elke transactie.
+
+## Gerelateerde functies
+
+- [CumulativeCount](cumulativecount) - Berekent het cumulatieve aantal (vergelijkbare functionaliteit)
+- [RunningTotal](runningtotal) - Berekent het lopende totaal
+- [MovingCount](movingcount) - Berekent het voortschrijdende aantal met een venster
+- [Count](../aggregate/count) - Retourneert het totale aantal

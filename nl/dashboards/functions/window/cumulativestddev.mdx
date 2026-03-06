@@ -1,0 +1,48 @@
+---
+title: "CumulativeStdDev"
+---
+
+
+Berekent de cumulatieve standaardafwijking van waarden vanaf de eerste rij tot en met de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumulativeStdDev([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de cumulatieve standaardafwijking wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CumulativeStdDev([Omzet])
+```
+Retourneert de lopende standaardafwijking van de omzet vanaf de eerste rij tot de huidige rij.
+
+```
+CumulativeStdDev([Responstijd])
+```
+Berekent de cumulatieve standaardafwijking van responstijden, handig voor het volgen van variabiliteit in de loop van de tijd.
+
+## Gerelateerde functies
+
+- [CumulativeVariance](cumulativevariance) - Berekent cumulatieve variantie
+- [MovingStdDev](movingstddev) - Berekent voortschrijdende standaardafwijking met een venster
+- [StDev](../aggregate/stdev) - Retourneert de totale standaardafwijking
+- [CumulativeAvg](cumulativeavg) - Berekent cumulatief gemiddelde

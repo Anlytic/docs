@@ -1,0 +1,44 @@
+---
+title: "ConvertTimezone"
+---
+
+
+Converteert datetime-waarden naar een opgegeven tijdzone.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+ConvertTimezone([datum], "tijdzone", |van_tijdzone|)
+```
+
+**Retourneert:** `DateTimeColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `date` | `kolom\|datetime` | ✓ Ja | De datetime-waarde om te converteren. |
+| `tijdzone` | `text` | ✓ Ja | De TZ-identificatie van de IANA-tijdzone waarnaar de datetime-waarde wordt geconverteerd. |
+| `van_tijdzone` | `text` | ✗ Nee | Optionele TZ-identificatie van de IANA-tijdzone van waaruit de datetime-waarde wordt geconverteerd. Standaard wordt de tijdzone van het organisatieaccount gebruikt indien niet opgegeven. |
+
+**Toegestane kolomtypen:** DATETIME
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+ConvertTimezone([Datum], "America/Los_Angeles")
+```
+Interpreteert waarden in de kolom Datum als datetime-waarden in de tijdzone van het organisatieaccount en converteert ze vervolgens naar de equivalente datetime-waarden in America/Los_Angeles (Pacific) tijd.
+
+```
+ConvertTimezone(Date("2014-07-18 10:58:00"), "America/Los_Angeles", "America/New_York")
+```
+Interpreteert 2014-07-18 10:58:00 in America/New_York (Eastern) tijd en converteert dit naar de equivalente tijd in America/Los_Angeles (Pacific).
+**Resultaat:** `2014-07-18 07:58:00`

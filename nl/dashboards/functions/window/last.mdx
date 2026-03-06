@@ -1,0 +1,51 @@
+---
+title: "Last"
+---
+
+
+Retourneert de laatste waarde in de huidige partitie of het venster, ongeacht de positie van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+Last([kolom])
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waaruit de laatste waarde wordt opgehaald |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Last([Omzet])
+```
+Retourneert de omzetwaarde van de laatste rij in de partitie.
+
+```
+Last([Slotkoers])
+```
+Retourneert de slotkoers van de laatste dag in de partitie, handig voor het vergelijken van huidige waarden met eindwaarden.
+
+```
+Last([Klantnaam])
+```
+Retourneert de laatste klantnaam in de geordende partitie.
+
+## Gerelateerde functies
+
+- [First](first) - Retourneert de eerste waarde in de partitie
+- [Lag](lag) - Retourneert de waarde van een vorige rij
+- [Lead](lead) - Retourneert de waarde van een volgende rij
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe

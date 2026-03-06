@@ -1,0 +1,35 @@
+---
+title: "CountDistinctIf"
+---
+
+
+Telt unieke waarden in een kolom alleen voor rijen die aan de voorwaarde voldoen
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+CountDistinctIf([kolom], voorwaarde)
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan unieke waarden worden geteld wanneer de voorwaarde Waar is |
+| `voorwaarde` | `logical` | ✓ Ja | Logische expressie die per rij wordt geëvalueerd |
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+CountDistinctIf([UserID], [IsActive] = TRUE)
+```
+Telt het aantal unieke actieve gebruikers

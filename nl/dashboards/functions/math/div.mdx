@@ -1,0 +1,51 @@
+---
+title: "Div"
+---
+
+
+Retourneert het gehele component van een delingsbewerking
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Div([deeltal], [deler])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `deeltal` | `getal of kolom` | ✓ Ja | Het getal dat wordt gedeeld |
+| `deler` | `getal of kolom` | ✓ Ja | Het getal waardoor wordt gedeeld |
+
+**Toegestane kolomtypen voor `deeltal`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `deler`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Div([Deeltal], [Deler])
+```
+Retourneert het gehele component van de deling voor elk paar waarden
+
+```
+Div(19, 5)
+```
+19 gedeeld door 5 is 3,8. Retourneert het gehele component 3
+**Resultaat:** `3`
+
+```
+Div(2, 3)
+```
+Als er geen geheel component is (0,6), is het resultaat 0
+**Resultaat:** `0`

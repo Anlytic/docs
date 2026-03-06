@@ -1,0 +1,42 @@
+---
+title: "Number"
+---
+
+
+Converteert de invoerwaarde naar een getaltype. Als de invoer niet numeriek is, retourneert de functie Null
+
+**Categorie:** `conversion`
+
+**Syntax:**
+```
+Number(invoer)
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `invoer` | `tekst of datum of getal of kolom` | ✓ Ja | De tekst, datum of het getal dat naar een getal moet worden geconverteerd |
+
+**Toegestane kolomtypen voor `invoer`:** STRING, TEXT, INT, FLOAT, DECIMAL, DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Number("15.25")
+```
+Retourneert 15.25
+**Resultaat:** `15.25`
+
+```
+Number([Tekst Kolom])
+```
+Converteert tekstwaarden naar getallen

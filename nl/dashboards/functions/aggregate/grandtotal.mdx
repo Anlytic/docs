@@ -1,0 +1,39 @@
+---
+title: "GrandTotal"
+---
+
+
+Retourneert het eindtotaal voor de opgegeven aggregatie-expressie of kolom. Equivalent aan Subtotal(aggregate, "grand_total").
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+GrandTotal([aggregatie_of_kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `aggregatie_of_kolom` | `any` | ✓ Ja | De aggregatiefunctie (bijv. Sum([Bedrag])) of kolom om het eindtotaal te berekenen. Als een kolom wordt opgegeven, wordt deze direct gebruikt. |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+GrandTotal(Sum([Bedrag]))
+```
+Retourneert de som van [Bedrag] over de gehele dataset.
+
+```
+GrandTotal([Aantal])
+```
+Retourneert het eindtotaal van de kolom [Aantal].

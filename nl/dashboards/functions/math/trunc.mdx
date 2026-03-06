@@ -1,0 +1,49 @@
+---
+title: "Trunc"
+---
+
+
+Kapt de invoerwaarde af tot het opgegeven aantal cijfers of decimalen
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Trunc([getal], [cijfers])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal dat wordt afgekapt |
+| `cijfers` | `getal` | ✗ Nee | Het aantal decimalen waarnaar wordt afgekapt. Standaard is 0 |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Trunc([Kosten], 3)
+```
+Kapt de waarde in elke rij van de kolom Kosten af tot 3 decimalen
+
+```
+Trunc(5.2463, 2)
+```
+Retourneert 5.24
+**Resultaat:** `5.24`
+
+```
+Trunc(5.678)
+```
+Retourneert 5
+**Resultaat:** `5`

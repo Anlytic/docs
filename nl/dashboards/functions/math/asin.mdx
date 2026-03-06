@@ -1,0 +1,48 @@
+---
+title: "Asin"
+---
+
+
+Berekent de arcsinus van de opgegeven hoek
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Asin([waarde])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal of kolom` | ✓ Ja | De waarde waarvan de arcsinus wordt berekend |
+
+**Toegestane kolomtypen voor `waarde`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Asin([Sinuswaarde])
+```
+Berekent de arcsinus voor elke waarde in de kolom Sinuswaarde
+
+```
+Asin(0.5)
+```
+Retourneert de arcsinus van 0.5
+**Resultaat:** `0.5235987755982989`
+
+```
+Asin(1)
+```
+Retourneert de arcsinus van 1
+**Resultaat:** `1.5707963267948966`

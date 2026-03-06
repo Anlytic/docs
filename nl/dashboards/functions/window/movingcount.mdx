@@ -1,0 +1,54 @@
+---
+title: "MovingCount"
+---
+
+
+Berekent het voortschrijdende aantal waarden binnen een opgegeven venster van rijen ten opzichte van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingCount([kolom], venster_start, venster_einde)
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de waarden worden geteld |
+| `venster_start` | `geheel getal` | ✓ Ja | Het aantal rijen vóór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_einde` | ✗ Nee | `geheel getal` | Het aantal rijen ná de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+MovingCount([Order_ID], -6, 0)
+```
+Retourneert het aantal orders in een voortschrijdend venster van 7 dagen (huidige rij en 6 vorige rijen).
+
+```
+MovingCount([Klant_ID], -29, 0)
+```
+Berekent een voortschrijdend aantal van 30 dagen voor klanten, handig voor het bijhouden van klantactiviteit in de loop van de tijd.
+
+```
+MovingCount([Transactie_ID], -2, 2)
+```
+Berekent een gecentreerd voortschrijdend aantal van 5 rijen (2 rijen ervoor, huidige rij, 2 rijen erna
+).
+
+## Gerelateerde functies
+
+- [CumulativeCount](cumulativecount) - Berekent het cumulatieve aantal vanaf de eerste rij
+- [MovingSum](movingsum) - Berekent de voortschrijdende som met een venster
+- [Count](../aggregate/count) - Retourneert het totale aantal
+- [RunningCount](runningcount) - Berekent het lopende aantal

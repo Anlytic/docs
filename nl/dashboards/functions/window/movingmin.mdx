@@ -1,0 +1,56 @@
+---
+title: "MovingMin"
+---
+
+
+Berekent het voortschrijdend minimum binnen een opgegeven venster van rijen ten opzichte van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingMin([
+kolom], venster_start, venster_eind)
+```
+
+**Retourneert:** `Zelfde als
+ invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het voortschrijdend minimum wordt berekend |
+| `venster_start` | `geheel getal` | ✓ Ja | Het aantal rijen vóór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_eind` | ✗ Nee | `geheel getal` | Het aantal rijen na de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+MovingMin([Omzet], -6, 0)
+```
+Retourneert de laagste omzetwaarde in een rollend venster van 7 dagen (huidige rij en 6 voorgaande rijen).
+
+```
+MovingMin([Temperatuur], -13, 0)
+```
+Berekent een voortschrijdend minimum van de temperatuur over 14 dagen, handig voor het volgen van de laagste temperaturen in de tijd.
+
+```
+MovingMin([Aandelenkoers], -4, 4)
+```
+Berekent een gecentreerd voortschrijdend minimum over 9 dagen (4 dagen ervoor, huidige dag, 4 dagen erna).
+
+## Gerelateerde functies
+
+- [CumulativeMin](cumulativemin) - Berekent het cumulatieve minimum vanaf de eerste rij
+- [MovingMax](movingmax) - Berekent het voortschrijdend maximum met een venster
+- [Min](../aggregate/min) - Retourneert het totale minimum

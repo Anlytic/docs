@@ -1,0 +1,48 @@
+---
+title: "RoundUp"
+---
+
+
+Rondt een getal naar boven af tot het opgegeven aantal cijfers
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+RoundUp([getal], [cijfers])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal dat wordt afgerond |
+| `cijfers` | `getal` | ✗ Nee | Het aantal decimalen waarnaar wordt afgerond. Indien niet opgegeven, standaard 0 |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+RoundUp([Kosten], 2)
+```
+Rondt de waarde voor elke rij in de kolom Kosten naar boven af met 2 cijfers
+
+```
+RoundUp(3.141, 2)
+```
+Retourneert 3.15
+**Resultaat:** `3.15`
+
+```
+RoundUp([Kosten], -2)
+```
+Rondt het invoergetal naar boven af en vervangt de laatste 2 cijfers door nullen

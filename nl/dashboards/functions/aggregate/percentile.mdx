@@ -1,0 +1,37 @@
+---
+title: "Percentile"
+---
+
+
+Retourneert de opgegeven percentielwaarde in de kolom
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+Percentile([kolom], percentiel)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het percentiel wordt berekend |
+| `percentiel` | `getal` | ✓ Ja | Het te berekenen percentiel (0-1) |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Percentile([Score], 0.95)
+```
+Retourneert het 95e percentiel van de scores

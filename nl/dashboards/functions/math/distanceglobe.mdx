@@ -1,0 +1,51 @@
+---
+title: "DistanceGlobe"
+---
+
+
+Berekent de afstand tussen twee punten op de aardbol, in kilometers
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+DistanceGlobe([lat1], [lon1], [lat2], [lon2])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `lat1` | `getal of kolom` | ✓ Ja | De breedtegraad van het eerste punt |
+| `lon1` | `getal of kolom` | ✓ Ja | De lengtegraad van het eerste punt |
+| `lat2` | `getal of kolom` | ✓ Ja | De breedtegraad van het tweede punt |
+| `lon2` | `getal of kolom` | ✓ Ja | De lengtegraad van het tweede punt |
+
+**Toegestane kolomtypen voor `lat1`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `lon1`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `lat2`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `lon2`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 4
+- Maximum parameters: 4
+
+## Voorbeelden
+
+```
+DistanceGlobe(40.7128, -74.0060, 34.0522, -118.2437)
+```
+Berekent de afstand tussen New York en Los Angeles
+**Resultaat:** `3944.0`
+
+```
+DistanceGlobe([StartLat], [StartLon], [EindLat], [EindLon])
+```
+Berekent de afstand tussen start- en eindpunten voor elke rij

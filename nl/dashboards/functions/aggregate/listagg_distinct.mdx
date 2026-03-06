@@ -1,0 +1,38 @@
+---
+title: "ListAggDistinct"
+---
+
+
+Voegt unieke waarden samen tot een tekenreeks met scheidingsteken
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+ListAggDistinct([kolom], scheidingsteken, richting)
+```
+
+**Retourneert:** `String`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de unieke waarden worden samengevoegd |
+| `scheidingsteken` | `text` | ✗ Nee | Scheidingsteken tussen waarden. Standaard ',' |
+| `richting` | `text` | ✗ Nee | Sorteerrichting: 'asc' of 'desc'. Standaard 'asc' |
+
+**Toegestane waarden voor `richting`:** `asc`, `desc`
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+ListAggDistinct([Categorie])
+```
+Voegt unieke categorieën samen met een komma als scheidingsteken

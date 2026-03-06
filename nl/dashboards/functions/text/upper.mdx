@@ -1,0 +1,41 @@
+---
+title: "Upper"
+---
+
+
+Converteert een opgegeven tekenreeks naar hoofdletters.
+
+**Categorie:** `text`
+
+**Syntax:**
+```
+Upper([tekst_kolom])
+```
+
+**Retourneert:** `StringColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `tekst_kolom` | `kolom` | ✓ Ja | Een tekstkolom. |
+
+**Toegestane kolomtypen:** STRING, TEXT
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Upper([Status])
+```
+Converteert elke status in de kolom naar hoofdletters.
+
+## Gerelateerde functies
+
+- [Lower](lower) - Converteren naar kleine letters
+- [Contains](contains) - Gebruik met Upper voor hoofdletterongevoelig zoeken

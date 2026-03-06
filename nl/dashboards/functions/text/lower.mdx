@@ -1,0 +1,41 @@
+---
+title: "Lower"
+---
+
+
+Converteert een opgegeven tekenreeks naar kleine letters.
+
+**Categorie:** `text`
+
+**Syntax:**
+```
+Lower([tekst_kolom])
+```
+
+**Retourneert:** `StringColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `tekst_kolom` | `kolom` | ✓ Ja | Een tekstkolom. |
+
+**Toegestane kolomtypen:** STRING, TEXT
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Lower([Naam])
+```
+Converteert elke naam in de kolom naar kleine letters.
+
+## Gerelateerde functies
+
+- [Upper](upper) - Converteren naar hoofdletters
+- [Contains](contains) - Gebruik met Lower voor hoofdletterongevoelig zoeken

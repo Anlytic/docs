@@ -1,0 +1,42 @@
+---
+title: "Sin"
+---
+
+
+Berekent de sinus van de opgegeven hoek
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Sin([waarde])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal of kolom` | ✓ Ja | De hoek (in radialen) waarvan de sinus wordt berekend |
+
+**Toegestane kolomtypen voor `waarde`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Sin([Hoek])
+```
+Berekent de sinus voor elke hoekwaarde in de kolom Hoek
+
+```
+Sin(0)
+```
+Retourneert de sinus van 0 radialen
+**Resultaat:** `0`

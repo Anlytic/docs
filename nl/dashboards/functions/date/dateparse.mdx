@@ -1,0 +1,48 @@
+---
+title: "DateParse"
+---
+
+
+Parseert een tekenreeks die een datum vertegenwoordigt in het opgegeven formaat en retourneert de equivalente ISO datetime-waarde
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DateParse([tekst_kolom], "formaat")
+```
+
+**Retourneert:** `String`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `tekst_kolom` | `kolom of tekst` | ✓ Ja | De tekenreeks of kolom met tekenreeksen om te parseren |
+| `formaat` | `text` | ✓ Ja | Het datetime-formaat van de tekenreeks met formaatspecificaties (bijv. %Y, %m, %d, %H, %M, %S, %B, %b, enz.) |
+
+**Toegestane kolomtypen voor `tekst_kolom`:** STRING, TEXT
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+DateParse("03-Sep-2020:03:05:13", "%d-%b-%Y:%H:%M:%S")
+```
+Parseert de tekenreeks en retourneert de equivalente ISO datetime-waarde
+**Resultaat:** `2020-09-03 03:05:13`
+
+```
+DateParse([Tekst Datum], "%d/%b/%Y:%H:%M:%S")
+```
+Parseert tekenreeksen in de kolom Tekst Datum met het opgegeven formaat
+
+```
+DateParse([Tekst Datum], "%d/%b/%Y")
+```
+Parseert tekenreeksen in de kolom Tekst Datum met alleen het datumformaat

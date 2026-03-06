@@ -1,0 +1,48 @@
+---
+title: "Floor"
+---
+
+
+Rondt het getal naar beneden af naar het dichtstbijzijnde veelvoud van gelijke of lagere waarde
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Floor([getal], [factor])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal of de kolom met getallen waarop de functie wordt toegepast |
+| `factor` | `getal` | ✗ Nee | Het veelvoud dat wordt toegepast op de Floor-functie. Kan niet 0 zijn. Standaard is 1 |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Floor([Kosten])
+```
+Retourneert de ondergrens voor elke rij in de kolom Kosten
+
+```
+Floor(3.6)
+```
+Retourneert 3
+**Resultaat:** `3`
+
+```
+Floor([Kosten], 0.5)
+```
+Retourneert de ondergrens met een factor van 0,5 voor elke rij in de kolom Kosten

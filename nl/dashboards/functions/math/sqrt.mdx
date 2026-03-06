@@ -1,0 +1,53 @@
+---
+title: "Sqrt"
+---
+
+
+Berekent de positieve vierkantswortel van een positief getal.
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Sqrt([getal_kolom])
+```
+
+**Retourneert:** `FloatColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal\|kolom` | ✓ Ja | Het getal of de kolom met getallen waarvan de vierkantswortel wordt berekend. |
+
+**Toegestane kolomtypen:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Sqrt(9)
+```
+Vierkantswortel van 9.
+**Resultaat:** `3`
+
+```
+Sqrt(16)
+```
+Vierkantswortel van 16.
+**Resultaat:** `4`
+
+```
+Sqrt([Waarde])
+```
+Vierkantswortel voor elke waarde in de kolom.
+
+## Gerelateerde functies
+
+- [Sign](sign) - Bepalen of een getal positief, negatief of nul is
+- [Int](int) - Naar beneden afronden naar het dichtstbijzijnde gehele getal

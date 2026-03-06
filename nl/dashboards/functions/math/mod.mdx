@@ -1,0 +1,51 @@
+---
+title: "Mod"
+---
+
+
+Berekent de rest van een delingsbewerking, waarbij de eerste waarde door de tweede waarde wordt gedeeld
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Mod([x], [y])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `x` | `getal of kolom` | ✓ Ja | Het deeltal; de waarde die wordt gedeeld |
+| `y` | `getal of kolom` | ✓ Ja | De deler; de waarde waardoor wordt gedeeld. Niet-nul |
+
+**Toegestane kolomtypen voor `x`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `y`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Mod([X], [Y])
+```
+Retourneert de modulus voor elk paar waarden in de kolommen X en Y
+
+```
+Mod(19, 5)
+```
+19 gedeeld door 5 heeft een modulus van 4
+**Resultaat:** `4`
+
+```
+Mod(2, 3)
+```
+2 gedeeld door 3 heeft een modulus van 2
+**Resultaat:** `2`

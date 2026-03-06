@@ -1,0 +1,52 @@
+---
+title: "Lag"
+---
+
+
+Retourneert de waarde uit een vorige rij op een opgegeven offset vóór de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+Lag([kolom], offset)
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waaruit de vorige waarde wordt opgehaald |
+| `offset` | `geheel getal` | ✗ Nee | Het aantal rijen vóór de huidige rij waaruit de waarde wordt opgehaald. Standaard is 1. |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Lag([Omzet])
+```
+Retourneert de omzetwaarde van de vorige rij (1 rij terug).
+
+```
+Lag([Prijs], 3)
+```
+Retourneert de prijswaarde van 3 rijen vóór de huidige rij.
+
+```
+Lag([Inkomsten], 7)
+```
+Retourneert de inkomsten van 7 dagen geleden, handig voor week-over-week vergelijkingen.
+
+## Gerelateerde functies
+
+- [Lead](lead) - Retourneert waarde van een volgende rij
+- [First](first) - Retourneert de eerste waarde in de partitie
+- [Last](last) - Retourneert de laatste waarde in de partitie
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe

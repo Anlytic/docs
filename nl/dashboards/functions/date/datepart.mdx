@@ -1,0 +1,46 @@
+---
+title: "DatePart"
+---
+
+
+Extraheert het opgegeven datumonderdeel uit een datumwaarde.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DatePart("precisie", [datum], |tijdzone|)
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `precisie` | `text` | ✓ Ja | Het datumonderdeel dat moet worden geëxtraheerd. |
+| `date` | `kolom\|datetime` | ✓ Ja | Datum of kolom met datums waaruit het datumonderdeel wordt geëxtraheerd. |
+| `tijdzone` | `text` | ✗ Nee | Optionele IANA-tijdzonenaam (bijv. "America/Los_Angeles"). Standaard UTC. |
+
+**Toegestane waarden voor `precisie`:** `year`, `quarter`, `month`, `week`, `day`, `weekday`, `day_of_year`, `hour`, `minute`, `second`, `millisecond`, `epoch`
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+DatePart("year", [Factuurdatum])
+```
+Extraheert het jaar uit elke waarde in de factuurdatumkolom.
+
+```
+DatePart("week", Date("2007-01-10 10:00:00"))
+```
+Retourneert het weeknummer voor de opgegeven datum (weken beginnen standaard op zondag).
+**Resultaat:** `2`

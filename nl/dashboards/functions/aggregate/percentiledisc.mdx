@@ -1,0 +1,37 @@
+---
+title: "PercentileDisc"
+---
+
+
+Retourneert de discrete k-de percentielwaarde van een kolom
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+PercentileDisc([kolom], k)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom om in te zoeken |
+| `k` | `getal` | ✓ Ja | Percentage tussen 0 en 1 |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+PercentileDisc([Score], 0.7)
+```
+Retourneert het discrete 70e percentiel

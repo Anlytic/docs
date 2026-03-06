@@ -1,0 +1,48 @@
+---
+title: "PercentRank"
+---
+
+
+Berekent de relatieve rang van elke rij binnen een partitie als een percentage, variërend van 0 tot 1.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+PercentRank([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvoor de procentuele rang wordt berekend |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+PercentRank([Omzet])
+```
+Retourneert de relatieve rang van elke omzetwaarde als een percentage. De laagste omzet krijgt 0.0, de hoogste krijgt 1.0, en tussenliggende waarden worden proportioneel verdeeld.
+
+```
+PercentRank([Score])
+```
+Berekent de percentielrang voor elke score. Een resultaat van 0.75 betekent dat de score hoger is dan 75% van de andere scores.
+**Resultaat:** Waarden variëren van `0.0` tot `1.0`
+
+## Gerelateerde functies
+
+- [Rank](rank) - Wijst een rang toe met gaten
+- [DenseRank](denserank) - Wijst een rang toe zonder gaten
+- [CumeDist](cumedist) - Berekent de cumulatieve verdeling
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe
+- [Ntile](ntile) - Verdeelt rijen in groepen

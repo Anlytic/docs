@@ -1,0 +1,39 @@
+---
+title: "DateTrunc"
+---
+
+
+Kapt de datum af tot het opgegeven datumonderdeel.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DateTrunc("onderdeel", [datumkolom])
+```
+
+**Retourneert:** `DateTimeColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `onderdeel` | `text` | ✓ Ja | Het onderdeel waarop wordt afgekapt (year, month, day, enz.). |
+| `datumkolom` | `column\|datetime` | ✓ Ja | De datum die wordt afgekapt. |
+
+**Toegestane waarden voor `onderdeel`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+DateTrunc("month", [Besteldatum])
+```
+Kapt af tot de eerste dag van de maand.

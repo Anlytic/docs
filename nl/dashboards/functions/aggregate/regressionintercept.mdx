@@ -1,0 +1,39 @@
+---
+title: "RegressionIntercept"
+---
+
+
+Y-snijpunt van de lineaire regressielijn (y op x)
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+RegressionIntercept([y], [x])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `y` | `kolom` | ✓ Ja |  |
+| `x` | `kolom` | ✓ Ja |  |
+
+**Toegestane kolomtypen voor `y`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `x`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+RegressionIntercept([Y], [X])
+```
+Regressie-snijpunt

@@ -1,0 +1,149 @@
+---
+title: "Werkruimtefilters"
+---
+
+
+Werkruimtefilters stellen u in staat om herbruikbare filterlogica te definiëren die kan worden toegepast op dashboards, werkboeken en teamomgevingen. Filters kunnen meerdere groepen en velden bevatten en ondersteunen verschillende invoertypes zoals tekstinvoer, radioselectie of dropdownlijsten.
+
+In dit gedeelte wordt uitgelegd hoe u een nieuw werkruimtefilter kunt aanmaken met groepen, velden en configuraties op meerdere niveaus.
+
+
+## Filters toevoegen – Schermoverzicht
+
+Voordat u een filter aanmaakt, moet u eerst naar het scherm voor filterconfiguratie navigeren.
+Klik op de **naam van de werkruimte**.  
+Klik op **Instellingen**.  
+Klik in de linkerzijbalk op **Filters** om toegang te krijgen tot het configuratiegebied waar filters worden aangemaakt.
+
+Bij het aanmaken van een filter ziet u het scherm **Filters toevoegen**, dat het volgende bevat:  
+- Filternaam  
+- Groepen en velden  
+- Knop groep toevoegen  
+- Knop veld toevoegen  
+- Voorbeeldpaneel  
+- Knop Implementeren  
+Elk filter kan meerdere groepen of velden bevatten, afhankelijk van uw filtervereisten.
+
+![alt text](/Resources/open%20filter.gif)
+
+## 1. Een filternaam aanmaken
+
+Voer rechtsboven in het scherm een duidelijke naam in voor uw filter.  
+Het gebruik van beschrijvende namen helpt gebruikers te begrijpen waar en hoe het filter wordt gebruikt.
+
+
+## 2. Een groep toevoegen
+
+Groepen helpen filters te ordenen in logische secties. Elke groep kan meerdere niveaus en velden bevatten.
+
+### 2.1 Een groep toevoegen
+
+1. Klik op **Groep toevoegen**.  
+2. Er verschijnt een nieuw paneel **Groep toevoegen**.  
+3. Selecteer een **Groepstype** uit het dropdownmenu.
+
+#### Opties voor groepstype
+
+| Optie | Beschrijving |
+|-------|-------------|
+| INP | Standaard tekstinvoerveld |
+| INPUT | Generiek invoerveld (tekst/nummer) |
+| RADIO | Radioknopselectie met vooraf gedefinieerde waarden |
+
+
+### 2.2 Groepsnaam invoeren
+
+Geef een duidelijke groepsnaam op, bijvoorbeeld:
+
+- Categorie  
+- Afdelingsselector  
+- Productniveau  
+- Regiogroep  
+
+Deze naam verschijnt als groepstitel binnen het filter.
+
+## 3. Velden configureren binnen een groep
+
+Elke groep bevat **Velden**, die meerdere niveaus kunnen omvatten (Categorie, Niveau 01, Niveau 02, …).
+
+### 3.1 Categoriesectie
+
+Elke categoriesectie bevat:
+
+- Placeholder
+- Kolommen toevoegen (kies een kolom uit uw catalogus)  
+- Waarde (standaard of selecteerbare waarden)  
+- Beschrijving (uitleg over hoe het veld wordt gebruikt)
+
+### Voorbeeldinvoer
+
+| Veld | Voorbeeld |
+|------|-----------|
+| Placeholder | "Voer categorie in…" |
+| Kolommen toevoegen | product_category |
+| Waarde | Elektronica, Meubels |
+| Beschrijving | Filteren op productcategorie |
+
+### 3.2 Niveau 01, Niveau 02, Niveau 03…
+
+U kunt extra niveaus toevoegen als uw filter hiërarchisch filteren vereist (bijv. Regio → Land → Stad).
+
+### 3.3 Niveau of veld toevoegen aan de groep
+
+Na het invoeren van alle benodigde informatie:
+
+- Klik op **Toevoegen** in het groepspaneel  
+- De groep verschijnt onder **Groepen en velden**  
+
+## 4. Een veld toevoegen (zonder groep)
+
+Als u geen groep wilt aanmaken, kunt u een zelfstandig veld toevoegen.
+
+### 4.1 Veld toevoegen
+
+1. Klik op **Veld toevoegen**.  
+2. Selecteer een **Veldtype** (INP / INPUT / RADIO / andere typen).  
+3. Voer velddetails in:
+
+#### Velddetails
+
+| Veld | Beschrijving |
+|------|-------------|
+| Veldnaam | Weergavenaam voor het filter |
+| Kolomtype selecteren | Kies het veldtype (String, Nummer, Boolean, enz.) |
+| Placeholder | Tekst die wordt weergegeven wanneer het veld leeg is |
+| Kolommen toevoegen | Koppeling naar een bronkolom |
+| Waarde | Standaard of vaste waarden |
+
+Klik op **Toevoegen** om op te slaan.
+
+## 5. Het filter bekijken
+
+Het **Voorbeeld**-paneel aan de rechterkant toont een realtime weergave van uw filter.  
+U kunt het volgende controleren:
+
+- Groeps- en niveaustructuur  
+- Veldnesting  
+- Invoertypes  
+- Standaardwaarden  
+
+Dit helpt de filterconfiguratie te verifiëren voordat u deze implementeert.
+
+## 6. Het filter implementeren
+
+Zodra uw filter gereed is:
+
+1. Controleer de configuratie  
+2. Klik op **Implementeren**  
+3. Het filter verschijnt onder **Werkruimtefilters** met de status **Actief**
+
+U kunt:
+
+- Een filter bewerken  
+- Als standaard instellen  
+- Een filter verwijderen (naar prullenbak verplaatst)  
+- Verwijderde filters herstellen   
+
+![alt text](/Resources/add%20filter.gif)
+
+Dit zorgt voor consistente en gestandaardiseerde filterlogica in uw werkruimte.

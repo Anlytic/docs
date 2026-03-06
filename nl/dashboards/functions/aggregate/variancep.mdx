@@ -1,0 +1,36 @@
+---
+title: "VarianceP"
+---
+
+
+Retourneert de populatievariantie van waarden in de opgegeven kolom
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+VarianceP([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de populatievariantie wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+VarianceP([Score])
+```
+Retourneert de populatievariantie van de scores

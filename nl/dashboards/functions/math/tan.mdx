@@ -1,0 +1,42 @@
+---
+title: "Tan"
+---
+
+
+Berekent de tangens van de opgegeven hoek
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Tan([waarde])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal of kolom` | ✓ Ja | De hoek (in radialen) waarvan de tangens wordt berekend |
+
+**Toegestane kolomtypen voor `waarde`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Tan([Hoek])
+```
+Berekent de tangens voor elke hoekwaarde in de kolom Hoek
+
+```
+Tan(0)
+```
+Retourneert de tangens van 0 radialen
+**Resultaat:** `0`

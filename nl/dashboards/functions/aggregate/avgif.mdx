@@ -1,0 +1,37 @@
+---
+title: "AvgIf"
+---
+
+
+Berekent het gemiddelde van waarden in een kolom alleen voor rijen die aan de voorwaarde voldoen
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+AvgIf([kolom], voorwaarde)
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het gemiddelde wordt berekend wanneer de voorwaarde Waar is |
+| `voorwaarde` | `logical` | ✓ Ja | Logische expressie die per rij wordt geëvalueerd |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+AvgIf([Omzet], [Regio] = "Noord")
+```
+Gemiddelde omzet waar Regio gelijk is aan Noord

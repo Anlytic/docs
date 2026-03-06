@@ -1,0 +1,42 @@
+---
+title: "Contains"
+---
+
+
+Zoekt naar opgegeven substring(s) in een tekstwaarde (hoofdlettergevoelig). Retourneert Waar als gevonden, Onwaar als niet gevonden.
+
+**Categorie:** `text`
+
+**Syntax:**
+```
+Contains([tekenreeks_kolom], "substring", |substring2|, ...)
+```
+
+**Retourneert:** `BooleanColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `tekenreeks_kolom` | `kolom` | ✓ Ja | Een kolom om in te zoeken naar tekstwaarden. |
+| `substring` | `text` | ✓ Ja | Substring om te zoeken in de tekstwaarde. Er kunnen maximaal 5 substrings worden opgegeven. |
+
+**Toegestane kolomtypen:** STRING, TEXT
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 6
+
+## Voorbeelden
+
+```
+Contains([Productnaam], "Digitale Camera")
+```
+Zoekt naar de substring in elke productnaam.
+
+## Gerelateerde functies
+
+- [Upper](upper) - Converteren naar hoofdletters voor standaardisatie
+- [Lower](lower) - Converteren naar kleine letters voor hoofdletterongevoelige bewerkingen

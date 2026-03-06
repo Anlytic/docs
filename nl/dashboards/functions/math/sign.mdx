@@ -1,0 +1,53 @@
+---
+title: "Sign"
+---
+
+
+Retourneert het teken van een getal: -1 als negatief, 1 als positief, 0 als nul.
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Sign([getal_kolom])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal\|kolom` | ✓ Ja | Het getal of de kolom met getallen waarvan het teken wordt geretourneerd. |
+
+**Toegestane kolomtypen:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Sign(-3)
+```
+Retourneert -1 voor negatieve getallen.
+**Resultaat:** `-1`
+
+```
+Sign(3745)
+```
+Retourneert 1 voor positieve getallen.
+**Resultaat:** `1`
+
+```
+Sign(0)
+```
+Retourneert 0 voor nul.
+**Resultaat:** `0`
+
+## Gerelateerde functies
+
+- [Int](int) - Naar beneden afronden naar het dichtstbijzijnde gehele getal

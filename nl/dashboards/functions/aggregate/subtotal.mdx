@@ -1,0 +1,41 @@
+---
+title: "Subtotal"
+---
+
+
+Retourneert het subtotaal voor een aggregatie-expressie of kolom met behulp van de opgegeven modus en, optioneel, partitie-/groepskolommen.
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+Subtotal([aggregatie_of_kolom], modus, |partitie_kolom|)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `aggregatie_of_kolom` | `any` | ✓ Ja | De aggregatiefunctie (bijv. Sum([Bedrag])) of kolom waarvan het subtotaal wordt berekend. Als een kolom wordt opgegeven, wordt deze direct gebruikt. |
+| `modus` | `text` | ✓ Ja | Subtotaalmodus ('grand_total', 'column', 'row', enz.). |
+| `partitie_kolom` | `kolom` | ✗ Nee | Partitie-/groepskolom voor het subtotaal (vereist voor sommige modi). |
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+Subtotal(Avg([Prijs]), "column", [Producttype])
+```
+Retourneert de subtotaal gemiddelde prijs voor elk Producttype-kolom.
+
+```
+Subtotal([Omzet], "column", [Regio])
+```
+Retourneert het subtotaal van de kolom [Omzet] voor elke Regio.

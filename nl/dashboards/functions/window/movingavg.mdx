@@ -1,0 +1,54 @@
+---
+title: "MovingAvg"
+---
+
+
+Berekent het voortschrijdend gemiddelde van waarden binnen een opgegeven venster van rijen ten opzichte van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingAvg([kolom], venster_start, venster_einde)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het voortschrijdend gemiddelde wordt berekend |
+| `venster_start` | `geheel getal` | ✓ Ja | Het aantal rijen vóór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_einde` | `geheel getal` | ✗ Nee | Het aantal rijen na de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+MovingAvg([Omzet], -2, 0)
+```
+Retourneert het 3-daags voortschrijdend gemiddelde (huidige rij en 2 vorige rijen).
+
+```
+MovingAvg([Temperatuur], -6, 0)
+```
+Berekent een 7-daags voortschrijdend gemiddelde van de temperatuur, handig voor het gladstrijken van dagelijkse schommelingen.
+
+```
+MovingAvg([Aandelenkoers], -4, 4)
+```
+Berekent een gecentreerd 9-daags voortschrijdend gemiddelde (4 dagen ervoor, huidige dag, 4 dagen erna).
+
+## Gerelateerde functies
+
+- [CumulativeAvg](cumulativeavg) - Berekent het cumulatieve gemiddelde vanaf de eerste rij
+- [MovingSum](movingsum) - Berekent de voortschrijdende som met een venster
+- [Avg](../aggregate/avg) - Retourneert het totale gemiddelde

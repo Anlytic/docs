@@ -1,0 +1,51 @@
+---
+title: "DistancePlane"
+---
+
+
+Berekent de afstand tussen twee punten op een vlak
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+DistancePlane([x1], [y1], [x2], [y2])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `x1` | `getal of kolom` | ✓ Ja | De x-coördinaat van het eerste punt |
+| `y1` | `getal of kolom` | ✓ Ja | De y-coördinaat van het eerste punt |
+| `x2` | `getal of kolom` | ✓ Ja | De x-coördinaat van het tweede punt |
+| `y2` | `getal of kolom` | ✓ Ja | De y-coördinaat van het tweede punt |
+
+**Toegestane kolomtypen voor `x1`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `y1`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `x2`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `y2`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 4
+- Maximum parameters: 4
+
+## Voorbeelden
+
+```
+DistancePlane(0, 0, 3, 4)
+```
+Berekent de afstand tussen punten (0,0) en (3,4)
+**Resultaat:** `5`
+
+```
+DistancePlane([X1], [Y1], [X2], [Y2])
+```
+Berekent de afstand tussen twee punten voor elke rij

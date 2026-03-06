@@ -1,0 +1,39 @@
+---
+title: "IsNull"
+---
+
+
+Retourneert Waar als het argument ontbrekende datawaarden bevat, en Onwaar als het argument niet Null is. Wordt vaak toegepast op een kolom met data om te testen op Null-waarden.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+IsNull(argument)
+```
+
+**Retourneert:** `BooleanColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `argument` | `kolom\|any` | ✓ Ja | Elk argument kan worden opgegeven. De functie kan één argument tegelijk analyseren. |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+IsNull([Omzet])
+```
+Retourneert Onwaar voor rijen waar omzetdata aanwezig is en Waar voor rijen waar geen data is.
+
+```
+IsNull([prm-date-range].start) and IsNull([prm-date-range].end)
+```
+Retourneert Waar wanneer er geen start- en einddatum is opgegeven in een Datumbereik-parameter.

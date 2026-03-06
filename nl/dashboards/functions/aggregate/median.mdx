@@ -1,0 +1,36 @@
+---
+title: "Median"
+---
+
+
+Retourneert de mediaanwaarde in de opgegeven kolom
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+Median([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de mediaan wordt bepaald |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Median([Leeftijd])
+```
+Retourneert de mediaan van de leeftijd

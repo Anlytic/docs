@@ -1,0 +1,54 @@
+---
+title: "InPriorDateRange"
+---
+
+
+Bepaalt of een datum binnen een opgegeven datumbereik in een vorige tijdsperiode valt.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+InPriorDateRange([datum_kolom], "bereik_periode", "vorige_periode", |offset|, |vandaag|)
+```
+
+**Retourneert:** `BooleanColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum die wordt geëvalueerd. |
+| `bereik_periode` | `text` | ✓ Ja | De periode voor het datumbereik. |
+| `vorige_periode` | `text` | ✓ Ja | De periode die wordt gebruikt om de bereikperiode te verschuiven. |
+| `offset` | `getal` | ✗ Nee | Aantal vorige perioden om te verschuiven. Standaard 1. |
+| `vandaag` | `kolom\|datetime` | ✗ Nee | Overschrijfwaarde voor Vandaag bij berekeningen relatief aan de huidige datum. |
+
+**Toegestane waarden voor `bereik_periode`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Toegestane waarden voor `vorige_periode`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 3
+- Maximum parameters: 5
+
+## Voorbeelden
+
+```
+InPriorDateRange([Datum], "hour", "day")
+```
+Retourneert Waar voor alle datums in het huidige uur van de dag op de vorige dag.
+
+```
+InPriorDateRange([Datum], "month", "year")
+```
+Retourneert Waar voor alle datums in deze maand vorig jaar.
+
+```
+InPriorDateRange([Datum], "month", "year", 2)
+```
+Retourneert Waar voor alle datums in deze maand twee jaar geleden.

@@ -1,0 +1,36 @@
+---
+title: "Json"
+---
+
+
+Converteert een waarde naar JSON
+
+**Categorie:** `conversion`
+
+**Syntax:**
+```
+Json(invoer)
+```
+
+**Retourneert:** `TextColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `invoer` | `tekst of kolom` | ✓ Ja | De data om te converteren naar JSON |
+
+**Toegestane kolomtypen voor `invoer`:** STRING, TEXT, VARIANT
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Json([Data Kolom])
+```
+Converteert data naar JSON-formaat

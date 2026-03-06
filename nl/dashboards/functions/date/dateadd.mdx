@@ -1,0 +1,51 @@
+---
+title: "DateAdd"
+---
+
+
+Voegt een opgegeven hoeveelheid tijd toe aan een datum.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DateAdd("eenheid", hoeveelheid, [datum])
+```
+
+**Retourneert:** `DateTimeColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `eenheid` | `text` | ✓ Ja | De tijdseenheid die wordt toegevoegd. |
+| `hoeveelheid` | `getal` | ✓ Ja | Het aantal eenheden dat wordt toegevoegd. Decimale waarden worden afgerond naar het dichtstbijzijnde gehele getal. |
+| `date` | `kolom\|datetime` | ✓ Ja | De datumwaarde of kolom met datumwaarden waaraan tijd wordt toegevoegd. |
+
+**Toegestane waarden voor `eenheid`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 3
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+DateAdd("minute", 60, Date("1999-12-31 23:00:00"))
+```
+Voegt 60 minuten toe aan de opgegeven datum.
+**Resultaat:** `2000-01-01 00:00:00`
+
+```
+DateAdd("day", 7, [Datum])
+```
+Voegt zeven dagen toe aan elke datum in de kolom Datum.
+
+```
+DateAdd("year", -1, [Datum])
+```
+Trekt één jaar af van elke datum in de kolom Datum.

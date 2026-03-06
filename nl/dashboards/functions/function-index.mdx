@@ -1,0 +1,352 @@
+---
+title: "Functie-index"
+---
+
+
+Functies bieden krachtige formulemogelijkheden voor het transformeren en analyseren van je data in realtime. Deze referentie bevat alle beschikbare functies georganiseerd per categorie.
+
+
+
+## Datumfuncties
+
+Functies voor het werken met datums en tijden, inclusief extractie, berekening en manipulatie van temporele data.
+
+**[ConvertTimezone](date/converttimezone)** Converteert datum-/tijdwaarden naar een opgegeven tijdzone.
+
+**[DateAdd](date/dateadd)** Voegt een opgegeven hoeveelheid tijd toe aan een datum.
+
+**[DateDiff](date/datediff)** Berekent het tijdsverschil tussen twee datums.
+
+**[DateFromUnix](date/datefromunix)** Converteert een Unix-tijdstempel naar een Datum-datatype.
+
+**[DatePart](date/datepart)** Extraheert het opgegeven datumdeel uit een datumwaarde.
+
+**[DateTrunc](date/datetrunc)** Kapt de datum af tot het opgegeven datumdeel.
+
+**[Day](date/day)** Retourneert de dag van de maand van een datumwaarde als een getal.
+
+**[DayOfYear](date/dayofyear)** Converteert een datum naar het dagnummer van het jaar, van 1 (1 jan) tot 365 (31 dec). Houdt rekening met schrikkeljaren.
+
+**[EndOfMonth](date/endofmonth)** Retourneert de laatste dag van de maand van een datumwaarde.
+
+**[Hour](date/hour)** Retourneert de uurcomponent van de opgegeven datum als een getal.
+
+**[InDateRange](date/indaterange)** Bepaalt of een datum binnen een opgegeven datumbereik valt.
+
+**[InPriorDateRange](date/inpriordaterange)** Bepaalt of een datum binnen een opgegeven datumbereik in een vorige tijdsperiode valt.
+
+**[LastDay](date/lastday)** Evalueert een opgegeven datumcomponent in een datumwaarde en retourneert de laatste datum en tijd in dat component als een tijdstempel.
+
+**[MakeDate](date/makedate)** Evalueert opgegeven jaar-, maand-, dagcomponenten (en optioneel uur, minuut, seconde) en retourneert een datum-/tijdwaarde in ISO-formaat.
+
+**[Minute](date/minute)** Retourneert een geheel getal dat de minuutcomponent van een opgegeven datum en tijd vertegenwoordigt.
+
+**[Month](date/month)** Retourneert een geheel getal dat de maandcomponent in een opgegeven datum-/tijdwaarde vertegenwoordigt.
+
+**[MonthName](date/monthname)** Retourneert de naam van de maandcomponent uit een opgegeven datum-/tijdwaarde.
+
+**[Now](date/now)** Retourneert de huidige datum en tijd met de tijdzone van je organisatieaccount.
+
+**[Quarter](date/quarter)** Retourneert een geheel getal dat de kwartaalcomponent in een opgegeven datum-/tijdwaarde vertegenwoordigt.
+
+**[Second](date/second)** Retourneert een geheel getal dat de secondecomponent van een opgegeven datum en tijd vertegenwoordigt.
+
+**[Today](date/today)** Retourneert de huidige datum in ISO-formaat met de accounttijdzone.
+
+**[Weekday](date/weekday)** Retourneert een geheel getal dat de dag van de week in een opgegeven datum-/tijdwaarde vertegenwoordigt.
+
+**[WeekdayName](date/weekdayname)** Retourneert de naam van de dag van de week in een opgegeven datum-/tijdwaarde.
+
+**[Year](date/year)** Retourneert een geheel getal dat de jaarcomponent in een opgegeven datum-/tijdwaarde vertegenwoordigt.
+
+**[DateFormat](date/dateformat)** Formatteert een datumwaarde als een tekenreeks volgens een opgegeven formaatpatroon.
+
+**[DateParse](date/dateparse)** Parseert een tekenreeksrepresentatie van een datum naar een Datum-datatype.
+
+---
+
+## Logische functies
+
+Functies voor voorwaardelijke logica, null-afhandeling en vergelijkingsoperaties.
+
+**[Between](logical/between)** Controleert of een waarde binnen een opgegeven bereik valt. De functie is inclusief, dus de begin- en eindwaarden van het bereik worden meegerekend.
+
+**[Choose](logical/choose)** Retourneert bij een opgegeven indexnummer de overeenkomende waarde uit een lijst.
+
+**[Coalesce](logical/coalesce)** Retourneert de waarde van het eerste argument dat niet Null is. Wordt vaak toegepast op kolommen om Null-waarden te controleren en vervangende waarden toe te wijzen.
+
+**[If](logical/if)** Retourneert Waarde 1 voor elke rij waar aan de eerste voorwaarde wordt voldaan. Als er meer dan één voorwaarde wordt opgegeven, worden de volgende voorwaarden geëvalueerd en worden hun bijbehorende waarden geretourneerd. Als alle voorwaarden Onwaar zijn, wordt de Anders-waarde toegepast.
+
+**[In](logical/in)** Test of een waarde overeenkomt met een kandidaatwaarde in een lijst met kandidaatwaarden. Retourneert Waar als de waarde overeenkomt met een van de kandidaatwaarden, Onwaar als er geen waarden overeenkomen.
+
+**[IsNotNull](logical/isnotnull)** Retourneert Waar als het argument niet Null is (data bevat), en Onwaar als het argument ontbrekende datawaarden bevat.
+
+**[IsNull](logical/isnull)** Retourneert Waar als het argument ontbrekende datawaarden bevat, en Onwaar als het argument niet Null is. Wordt vaak toegepast op een kolom met data om te testen op Null-waarden.
+
+**[Switch](logical/switch)** Retourneert het resultaat dat overeenkomt met de eerste overeenkomende waarde. Als het case-argument Waar evalueert, wordt het bijbehorende resultaat geretourneerd, anders wordt het anders-argument geretourneerd.
+
+**[Zn](logical/zn)** Retourneert niet-Null waarden, of 0 (nul) in plaats van Null-waarden.
+
+---
+
+## Wiskundige functies
+
+Functies voor wiskundige bewerkingen en berekeningen op numerieke data.
+
+**[Int](math/int)** Rondt het invoergetal naar beneden af naar het grootste gehele getal dat gelijk aan of kleiner is dan de waarde.
+
+**[IsEven](math/iseven)** Retourneert Waar als het gehele getal even is, Onwaar als het oneven is.
+
+**[IsOdd](math/isodd)** Retourneert Waar als het gehele getal oneven is, Onwaar als het even is.
+
+**[Sign](math/sign)** Retourneert het teken van een getal: -1 als negatief, 1 als positief, 0 als nul.
+
+**[Sqrt](math/sqrt)** Berekent de positieve vierkantswortel van een positief getal.
+
+**[Abs](math/abs)** Retourneert de absolute waarde van een getal.
+
+**[Acos](math/acos)** Retourneert de arccosinus (inverse cosinus) van een getal in radialen.
+
+**[Asin](math/asin)** Retourneert de arcsinus (inverse sinus) van een getal in radialen.
+
+**[Atan](math/atan)** Retourneert de arctangens (inverse tangens) van een getal in radialen.
+
+**[Atan2](math/atan2)** Retourneert de arctangens van het quotiënt van de argumenten in radialen.
+
+**[Tan](math/tan)** Retourneert de tangens van een hoek opgegeven in radialen.
+
+**[Sin](math/sin)** Retourneert de sinus van een hoek opgegeven in radialen.
+
+**[Cos](math/cos)** Retourneert de cosinus van een hoek opgegeven in radialen.
+
+**[Ceiling](math/ceiling)** Rondt een getal naar boven af naar het dichtstbijzijnde gehele getal.
+
+**[Floor](math/floor)** Rondt een getal naar beneden af naar het dichtstbijzijnde gehele getal.
+
+**[Round](math/round)** Rondt een getal af op een opgegeven aantal decimalen.
+
+**[RoundUp](math/roundup)** Rondt een getal naar boven af op een opgegeven aantal decimalen.
+
+**[RoundDown](math/rounddown)** Rondt een getal naar beneden af op een opgegeven aantal decimalen.
+
+**[Trunc](math/trunc)** Kapt een getal af op een opgegeven aantal decimalen.
+
+**[Mod](math/mod)** Retourneert de rest na het delen van het ene getal door het andere.
+
+**[Div](math/div)** Voert gehele deling uit en retourneert het quotiënt.
+
+**[Pi](math/pi)** Retourneert de waarde van pi (π) tot 15 decimalen.
+
+**[Power](math/power)** Verheft een getal tot een opgegeven macht.
+
+**[Ln](math/ln)** Retourneert de natuurlijke logaritme van een getal.
+
+**[Log](math/log)** Retourneert de logaritme van een getal naar een opgegeven basis.
+
+**[Radians](math/radians)** Converteert graden naar radialen.
+
+**[Degrees](math/degrees)** Converteert radialen naar graden.
+
+**[Cot](math/cot)** Retourneert de cotangens van een hoek opgegeven in radialen.
+
+**[Exp](math/exp)** Retourneert e verheven tot de macht van een opgegeven getal.
+
+**[MRound](math/mround)** Rondt een getal af naar het dichtstbijzijnde veelvoud van een opgegeven waarde.
+
+**[Least](math/least)** Retourneert de kleinste waarde uit een lijst met argumenten.
+
+**[Greatest](math/greatest)** Retourneert de grootste waarde uit een lijst met argumenten.
+
+**[BinFixed](math/binfixed)** Maakt bins met vaste breedte voor numerieke waarden.
+
+**[BinRange](math/binrange)** Maakt aangepaste bereikgebaseerde bins voor numerieke waarden.
+
+**[RowAvg](math/rowavg)** Berekent het gemiddelde van waarden over meerdere kolommen in een rij.
+
+**[BitAnd](math/bitand)** Voert een bitsgewijze AND-bewerking uit op twee gehele getallen.
+
+**[BitOr](math/bitor)** Voert een bitsgewijze OR-bewerking uit op twee gehele getallen.
+
+**[DistanceGlobe](math/distanceglobe)** Berekent de afstand tussen twee geografische coördinaten op een bol (aarde).
+
+**[DistancePlane](math/distanceplane)** Berekent de Euclidische afstand tussen twee punten op een 2D-vlak.
+
+---
+
+## Tekstfuncties
+
+Functies voor tekstmanipulatie en -opmaak, inclusief hoofdletteromzetting, subtekenreeksextractie en tekenreeksbewerkingen.
+
+**[Contains](text/contains)** Zoekt naar opgegeven subtekenreeks(en) in een tekstwaarde (hoofdlettergevoelig). Retourneert Waar als gevonden, Onwaar anders.
+
+**[Left](text/left)** Retourneert een subtekenreeks vanaf het begin van een opgegeven tekenreekskolomwaarde.
+
+**[Lower](text/lower)** Converteert een opgegeven tekenreeks naar kleine letters.
+
+**[Right](text/right)** Retourneert een subtekenreeks vanaf het einde van een tekenreekskolomwaarde. De laatste n tekens waarbij n het getalargument is.
+
+**[Upper](text/upper)** Converteert een opgegeven tekenreeks naar hoofdletters.
+
+---
+
+## Aggregatiefuncties
+
+Functies die berekeningen uitvoeren over meerdere rijen data, zoals sommen, gemiddelden en tellingen.
+
+**[Avg](aggregate/avg)** Berekent het gemiddelde van waarden in een kolom.
+
+**[Count](aggregate/count)** Telt het aantal rijen in een dataset.
+
+**[CountDistinct](aggregate/countdistinct)** Telt het aantal unieke waarden in een kolom.
+
+**[Max](aggregate/max)** Retourneert de maximumwaarde in een kolom.
+
+**[Median](aggregate/median)** Berekent de mediaan (middelste waarde) van waarden in een kolom.
+
+**[Min](aggregate/min)** Retourneert de minimumwaarde in een kolom.
+
+**[Mode](aggregate/mode)** Retourneert de meest voorkomende waarde in een kolom.
+
+**[Percentile](aggregate/percentile)** Berekent de waarde op een opgegeven percentiel in een kolom.
+
+**[Stdev](aggregate/stdev)** Berekent de steekproefstandaardafwijking van waarden in een kolom.
+
+**[StdevP](aggregate/stdevp)** Berekent de populatiestandaardafwijking van waarden in een kolom.
+
+**[Sum](aggregate/sum)** Berekent de som van waarden in een kolom.
+
+**[Variance](aggregate/variance)** Berekent de steekproefvariantie van waarden in een kolom.
+
+**[VarianceP](aggregate/variancep)** Berekent de populatievariantie van waarden in een kolom.
+
+**[GrandTotal](aggregate/grandtotal)** Berekent het eindtotaal over alle data.
+
+**[SubTotal](aggregate/subtotal)** Berekent subtotalen binnen gegroepeerde data.
+
+**[PercentOfTotal](aggregate/percentoftotal)** Berekent het percentage van een waarde ten opzichte van het totaal.
+
+**[Array_Agg](aggregate/array_agg)** Aggregeert waarden uit meerdere rijen in een array.
+
+**[Array_Agg_Distinct](aggregate/array_agg_distinct)** Aggregeert unieke waarden uit meerdere rijen in een array.
+
+**[Corr](aggregate/corr)** Berekent de correlatiecoëfficiënt tussen twee kolommen.
+
+**[RegressionIntercept](aggregate/regressionintercept)** Berekent het y-snijpunt van de lineaire regressielijn.
+
+**[RegressionR2](aggregate/regressionr2)** Berekent de R-kwadraat waarde van de lineaire regressie.
+
+**[RegressionSlope](aggregate/regressionslope)** Berekent de helling van de lineaire regressielijn.
+
+**[PercentileDisc](aggregate/percentiledisc)** Retourneert een discrete percentielwaarde uit de dataset.
+
+**[PercentileCont](aggregate/percentilecont)** Retourneert een continue (geïnterpoleerde) percentielwaarde.
+
+**[ListAgg](aggregate/listagg)** Voegt tekenreekswaarden uit meerdere rijen samen tot één gescheiden tekenreeks.
+
+**[ListAgg_Distinct](aggregate/listagg_distinct)** Voegt unieke tekenreekswaarden uit meerdere rijen samen tot één gescheiden tekenreeks.
+
+**[SumIf](aggregate/sumif)** Berekent de som van waarden die aan een opgegeven voorwaarde voldoen.
+
+**[CountIf](aggregate/countif)** Telt het aantal rijen dat aan een opgegeven voorwaarde voldoet.
+
+**[AvgIf](aggregate/avgif)** Berekent het gemiddelde van waarden die aan een opgegeven voorwaarde voldoen.
+
+**[CountDistinctIf](aggregate/countdistinctif)** Telt het aantal unieke waarden dat aan een opgegeven voorwaarde voldoet.
+
+**[MaxIf](aggregate/maxif)** Retourneert de maximumwaarde die aan een opgegeven voorwaarde voldoet.
+
+**[MinIf](aggregate/minif)** Retourneert de minimumwaarde die aan een opgegeven voorwaarde voldoet.
+
+**[SumProduct](aggregate/sumproduct)** Vermenigvuldigt overeenkomstige waarden en retourneert de som van producten.
+
+---
+
+## Typefuncties
+
+Functies die waarden converteren tussen verschillende datatypes.
+
+**[Date](type/date)** Converteert een waarde naar een Datum-datatype.
+
+**[Number](type/number)** Converteert een waarde naar een numeriek datatype.
+
+**[Text](type/text)** Converteert een waarde naar een tekst-/tekenreeks-datatype.
+
+**[Logical](type/logical)** Converteert een waarde naar een booleaans (Waar/Onwaar) datatype.
+
+**[Json](type/json)** Converteert een waarde naar JSON-formaat.
+
+---
+
+## Vensterfuncties
+
+Functies die berekeningen uitvoeren over een set rijen gerelateerd aan de huidige rij, zonder de resultaatset samen te vouwen. Essentieel voor analysetaken zoals lopende totalen, voortschrijdende gemiddelden, rangschikkingen en rijvergelijkingen.
+
+### Cumulatieve functies
+
+**[CumulativeAvg](window/cumulativeavg)** Berekent het cumulatieve gemiddelde van de eerste rij tot de huidige rij.
+
+**[CumulativeCorr](window/cumulativecorr)** Berekent de cumulatieve correlatie tussen twee kolommen van de eerste rij tot de huidige rij.
+
+**[CumulativeCount](window/cumulativecount)** Berekent de cumulatieve telling van de eerste rij tot de huidige rij.
+
+**[CumeDist](window/cumedist)** Berekent de cumulatieve verdeling van een waarde binnen een partitie.
+
+**[CumulativeMax](window/cumulativemax)** Berekent het cumulatieve maximum van de eerste rij tot de huidige rij.
+
+**[CumulativeMin](window/cumulativemin)** Berekent het cumulatieve minimum van de eerste rij tot de huidige rij.
+
+**[CumulativeStdDev](window/cumulativestddev)** Berekent de cumulatieve standaardafwijking van de eerste rij tot de huidige rij.
+
+**[CumulativeSum](window/cumulativesum)** Berekent de cumulatieve som van de eerste rij tot de huidige rij.
+
+**[CumulativeVariance](window/cumulativevariance)** Berekent de cumulatieve variantie van de eerste rij tot de huidige rij.
+
+### Voortschrijdende vensterfuncties
+
+**[MovingAvg](window/movingavg)** Berekent het voortschrijdend gemiddelde binnen een opgegeven venster van rijen.
+
+**[MovingCorr](window/movingcorr)** Berekent de voortschrijdende correlatie tussen twee kolommen binnen een opgegeven venster.
+
+**[MovingCount](window/movingcount)** Berekent de voortschrijdende telling binnen een opgegeven venster van rijen.
+
+**[MovingMax](window/movingmax)** Berekent het voortschrijdende maximum binnen een opgegeven venster van rijen.
+
+**[MovingMin](window/movingmin)** Berekent het voortschrijdende minimum binnen een opgegeven venster van rijen.
+
+**[MovingStdDev](window/movingstddev)** Berekent de voortschrijdende standaardafwijking binnen een opgegeven venster van rijen.
+
+**[MovingSum](window/movingsum)** Berekent de voortschrijdende som binnen een opgegeven venster van rijen.
+
+**[MovingVariance](window/movingvariance)** Berekent de voortschrijdende variantie binnen een opgegeven venster van rijen.
+
+### Rijpositiefuncties
+
+**[Lag](window/lag)** Retourneert de waarde van een vorige rij op een opgegeven afstand.
+
+**[Lead](window/lead)** Retourneert de waarde van een volgende rij op een opgegeven afstand.
+
+**[First](window/first)** Retourneert de eerste waarde in de huidige partitie of het venster.
+
+**[Last](window/last)** Retourneert de laatste waarde in de huidige partitie of het venster.
+
+### Rangschikkingsfuncties
+
+**[Rank](window/rank)** Wijst een rang toe aan elke rij binnen een partitie, met gaten bij gelijke waarden.
+
+**[DenseRank](window/denserank)** Wijst een rang toe aan elke rij binnen een partitie, zonder gaten bij gelijke waarden.
+
+**[PercentRank](window/percentrank)** Berekent de relatieve rang van elke rij als een percentage (0 tot 1).
+
+**[Ntile](window/ntile)** Verdeelt rijen in een opgegeven aantal ongeveer gelijke groepen.
+
+**[RowNumber](window/rownumber)** Wijst een uniek volgnummer toe aan elke rij binnen een partitie.
+
+### Lopend totaal functies
+
+**[RunningTotal](window/runningtotal)** Berekent het lopende totaal (cumulatieve som) van de eerste rij tot de huidige rij.
+
+**[RunningCount](window/runningcount)** Berekent de lopende telling van de eerste rij tot de huidige rij.
+
+**[RowNum](window/rownum)** Wijst volgnummers toe aan rijen binnen een partitie.
+
+---

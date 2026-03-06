@@ -1,0 +1,42 @@
+---
+title: "EndOfMonth"
+---
+
+
+Retourneert de laatste dag van de maand van een datumwaarde.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+EndOfMonth([datum])
+```
+
+**Retourneert:** `DateTimeColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `date` | `kolom\|datetime` | ✓ Ja | De datum waarvan het einde van de maand wordt berekend. |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+EndOfMonth([Factuurdatum])
+```
+Extraheert de laatste dag van de maand uit de kolom Factuurdatum.
+
+```
+EndOfMonth(Date("2023-03-07"))
+```
+Retourneert het einde van de maand voor maart 2023.
+**Resultaat:** `2023-03-31 23:59:59`

@@ -1,32 +1,95 @@
 ---
-title: "Overview"
+title: "Platform overview"
+description: "Understand the core concepts and building blocks of Anlytic before you start setting up your environment."
 ---
 
-# Overview
+Anlytic is a modern analytics platform that connects directly to your data warehouse or database, allowing your team to build dashboards, explore data, and share insights — without moving data out of your infrastructure.
 
-This document provides everything you need to get started with the Anlytic platform. It introduces the core concepts of the system and outlines the essential steps required to configure your environment for the first time. You will learn how to set up your account, create and manage workspaces, add users, connect your database, configure teams, and build your first visualizations. Once you complete these steps, you will have a fully functional analytics environment that enables you to explore data, collaborate with your team, and create meaningful dashboards with ease.
+This page introduces the key concepts you will encounter throughout the platform and documentation. Understanding these building blocks will help you navigate the setup process and get the most out of Anlytic.
 
-This chapter is organized into five key areas, representing the full onboarding process for new users:
+## Core concepts
 
-### 1. [Initial Setup](initial-setup)
-Create and activate your account, verify your email, and set up your workspace — the central environment where your data sources, dashboards, and team access are managed.
+### Workspaces
 
-### 2. [User Management](user-management)
-Add users to your workspace, assign appropriate roles, and manage permissions so your team can collaborate securely and efficiently.
+A **workspace** is the top-level environment in Anlytic. It contains all your data connections, catalogs, dashboards, teams, and users. Think of it as your organization's home within the platform.
 
-### 3. [Connect a Data Source](connect-data-source)
-Configure your first data connection, enter connection credentials, and begin preparing your catalog by defining metadata, relationships, and metrics.
+Most organizations use a single workspace. Each workspace has its own settings, members, and permissions.
 
-### 4. [Team Configuration](team-configuration)
-Create teams within your workspace, define team roles, and manage how users access shared dashboards and content across the platform.
+### Connectors
 
-### 5. [Build Your First Dashboard](first-dashboard)
-Create your first dashboard, add rows, and build visualizations using data from your catalog. This section introduces the chart creation interface and the basic workflow for assembling dashboards.
+A **connector** is a configured connection to an external data source such as PostgreSQL, MySQL, Snowflake, or BigQuery. Connectors store the credentials and connection details that Anlytic uses to query your data in real-time.
 
-![(image of the platform with sectioned highlighted such as sidebar, creating visualization page)  ](/Resources/getting%20started%201.png)
+You need at least one connector before you can start building dashboards.
 
-Each section includes clear explanations, step-by-step instructions, and screenshots to guide you through the setup process, even if you are new to analytics tools.
+### Catalogs
 
-Once you complete all five areas, your Anlytic environment will be fully configured and ready for you to explore data, build dashboards, and collaborate with your team.
+A **catalog** defines which tables and columns from your connected data sources are available for analysis. It acts as a curated data layer between your raw database and the dashboards your team builds.
 
+Within a catalog, you can:
+- Select which tables to expose
+- Define **metadata** — labels, descriptions, and formatting for columns
+- Create **relationships** — define how tables join together so Anlytic can automatically combine data across tables
 
+### Teams
+
+A **team** is a group of users within a workspace. Teams control access to dashboards and content. Each team member is assigned a role that determines what they can view, edit, or manage.
+
+Teams allow you to organize your workspace around departments, projects, or any structure that fits your organization.
+
+### Dashboards
+
+A **dashboard** is a collection of charts and visualizations arranged in rows. Dashboards pull data from your catalog and display it through various chart types — tables, bar charts, maps, heatmaps, and more.
+
+Dashboards can be shared with teams and filtered interactively to explore different slices of your data.
+
+### Workbooks
+
+A **workbook** is the editing environment where you build and configure a dashboard. Inside a workbook, you add rows, create charts, apply filters, and arrange your layout. Once you are done, the result is a published dashboard.
+
+### Functions
+
+**Functions** are formula expressions you can use inside data tables to transform, calculate, and analyze data. They work similarly to spreadsheet formulas and support a wide range of operations — date manipulation, math, text processing, conditional logic, aggregations, and window calculations.
+
+## How it all fits together
+
+The typical workflow in Anlytic follows four steps:
+
+<Steps>
+  <Step title="Connect">
+    Set up a connector to your database or data warehouse.
+  </Step>
+  <Step title="Catalog">
+    Create a catalog that defines which tables, columns, metadata, and relationships are available for analysis.
+  </Step>
+  <Step title="Build">
+    Create dashboards with charts that query your catalog data in real-time.
+  </Step>
+  <Step title="Share">
+    Organize dashboards and share them with teams across your workspace.
+  </Step>
+</Steps>
+
+## What's next
+
+Ready to set up your environment? Follow the setup guide step by step:
+
+<CardGroup cols={2}>
+  <Card title="Initial setup" icon="rocket" href="/quickstart/initial-setup">
+    Create your account and configure your workspace.
+  </Card>
+  <Card title="User management" icon="user-plus" href="/quickstart/user-management">
+    Add users and assign roles.
+  </Card>
+  <Card title="Connect a data source" icon="database" href="/quickstart/connect-data-source">
+    Configure your first database connection.
+  </Card>
+  <Card title="Team configuration" icon="people-group" href="/quickstart/team-configuration">
+    Create teams and manage access.
+  </Card>
+  <Card title="Build your first dashboard" icon="chart-mixed" href="/quickstart/first-dashboard">
+    Create your first charts and publish a dashboard.
+  </Card>
+  <Card title="Function reference" icon="function" href="/dashboards/functions/function-index">
+    Browse all available formula functions by category.
+  </Card>
+</CardGroup>

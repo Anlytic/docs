@@ -1,0 +1,55 @@
+---
+title: "MovingVariance"
+---
+
+
+Berekent de voortschrijdende variantie van waarden binnen een opgegeven venster van rijen ten opzichte van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingVariance([kolom], venster_start, venster_eind)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de voortschrijdende variantie wordt berekend |
+| `venster_start` | `geheel getal` | ✓ Ja | Het aantal rijen vóór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_eind` | ✗ Nee | `geheel getal` | Het aantal rijen na de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+MovingVariance([Omzet], -6, 0)
+```
+Retourneert de variantie van de omzet in een voortschrijdend venster van 7 dagen (huidige rij en 6 voorgaande rijen).
+
+```
+MovingVariance([Responstijd], -29, 0)
+```
+Berekent een 30-daagse voortschrijdende variantie van responstijden, handig voor het volgen van dataspreiding in de loop van de tijd.
+
+```
+MovingVariance([Aandeelrendementen], -19, 0)
+```
+Berekent een 20-daagse voortschrijdende variantie voor aandeelrendementen om volatiliteit te analyseren.
+
+## Gerelateerde functies
+
+- [CumulativeVariance](cumulativevariance) - Berekent de cumulatieve variantie vanaf de eerste rij
+- [MovingStdDev](movingstddev) - Berekent de voortschrijdende standaardafwijking met een venster
+- [Variance](../aggregate/variance) - Retourneert de totale variantie
+- [MovingAvg](movingavg) - Berekent het voortschrijdend gemiddelde met een venster

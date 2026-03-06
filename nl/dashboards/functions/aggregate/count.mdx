@@ -1,0 +1,34 @@
+---
+title: "Count"
+---
+
+
+Retourneert het aantal rijen in de opgegeven kolom, exclusief null-waarden
+
+**Categorie:** `aggregate`
+
+**Syntaxis:**
+```
+Count([kolom])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan niet-null-waarden worden geteld |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Count([OrderID])
+```
+Retourneert het aantal niet-null order-ID's

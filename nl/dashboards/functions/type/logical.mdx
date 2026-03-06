@@ -1,0 +1,49 @@
+---
+title: "Logical"
+---
+
+
+Converteert de invoerwaarde naar een Boolean-type, met een logische waarde van Waar of Onwaar
+
+**Categorie:** `conversion`
+
+**Syntax:**
+```
+Logical(invoer)
+```
+
+**Retourneert:** `Boolean`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `invoer` | `tekst of getal of kolom` | ✓ Ja | De invoer die je als logische operator wilt laten interpreteren. Invoer kan van het type tekst of getal zijn |
+
+**Toegestane kolomtypen voor `invoer`:** STRING, TEXT, INT, FLOAT, DECIMAL, BOOLEAN
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Logical(0)
+```
+Retourneert Onwaar
+**Resultaat:** `False`
+
+```
+Logical(1)
+```
+Retourneert Waar
+**Resultaat:** `True`
+
+```
+Logical("True")
+```
+Retourneert Waar
+**Resultaat:** `True`

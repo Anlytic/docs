@@ -1,0 +1,181 @@
+---
+title: "Overzicht functies"
+---
+
+
+Functies bieden krachtige formulemogelijkheden voor het transformeren en analyseren van je data in realtime. Net als Excel-formules stellen functies je in staat om berekende kolommen te maken die bewerkingen uitvoeren op je tabeldata.
+
+## Functies openen
+
+Functies zijn beschikbaar binnen **Datatabellen** in je dashboards. Om functies te openen:
+
+1. Navigeer naar **Dashboard** → **Team**
+2. Maak een nieuwe **Datatabel** aan of open een bestaande
+3. De **Functie-invoerbalk** verschijnt bovenaan de tabelweergave
+
+Je kunt functies gebruiken in elke datatabel, of je nu:
+- Een nieuwe datatabel aanmaakt
+- Een bestaande datatabel opent
+- Een tabel bekijkt vanuit een opgeslagen dashboard
+
+
+## Wat zijn functies?
+
+Functies zijn expressies die je kunt gebruiken om:
+
+- **Datum-/tijdwaarden te transformeren** - Onderdelen extraheren, verschillen berekenen, tijdsperioden optellen/aftrekken
+- **Tekst te bewerken** - Hoofdlettergebruik wijzigen, substrings extraheren, tekst doorzoeken
+- **Berekeningen uit te voeren** - Getallen afronden, vierkantswortels berekenen, getaleigenschappen controleren
+- **Voorwaardelijke logica toe te passen** - Als-dan-regels maken, null-waarden afhandelen, bereiken controleren
+
+
+## Functiecategorieën
+
+### [Datumfuncties](date-functions)
+Functies voor het werken met datums en tijden:
+
+- Datumonderdelen extraheren (Jaar, Maand, Dag, Uur, Minuut, Seconde)
+- Verschillen berekenen (DateDiff)
+- Tijd optellen of aftrekken (DateAdd)
+- Datums afkappen (DateTrunc)
+- Datumbereiken controleren (InDateRange, InPriorDateRange)
+- Tijdzones converteren (ConvertTimezone)
+
+**Voorbeelden:**
+```
+=Year([Orderdatum])
+=DateDiff("day", [Startdatum], [Einddatum])
+=DateAdd("month", 1, Today())
+```
+
+### [Tekstfuncties](text-functions)
+Functies voor tekstbewerking:
+
+- Hoofdlettergebruik wijzigen (Upper, Lower)
+- Substrings extraheren (Left, Right)
+- Tekst doorzoeken (Contains)
+
+**Voorbeelden:**
+```
+=Upper([Status])
+=Left([Productcode], 5)
+=Contains([Beschrijving], "urgent")
+```
+
+### [Wiskundige functies](math-functions)
+Functies voor wiskundige bewerkingen:
+
+- Getallen afronden (Int)
+- Vierkantswortels berekenen (Sqrt)
+- Getaleigenschappen controleren (IsEven, IsOdd, Sign)
+
+**Voorbeelden:**
+```
+=Int([Prijs])
+=Sqrt([Oppervlakte])
+=Sign([Saldo])
+```
+
+### [Logische functies](logical-functions)
+Functies voor voorwaardelijke logica:
+
+- Voorwaardelijke vertakkingen (If, Switch, Choose)
+- Null-afhandeling (IsNull, IsNotNull, Coalesce, Zn)
+- Bereikcontrole (Between, In)
+
+**Voorbeelden:**
+```
+=If([Score] > 90, "A", "B")
+=Coalesce([Waarde], 0)
+=Between([Datum], Startdatum, Einddatum)
+```
+
+## Basissyntaxis
+
+Alle formules beginnen met een gelijkteken (`=`):
+
+```
+=Functienaam(parameter1, parameter2, ...)
+```
+
+### Kolomverwijzingen
+
+Verwijs naar kolommen door de kolomnaam tussen vierkante haken te plaatsen:
+
+```
+=[Kolomnaam]
+```
+
+### Voorbeeldformule
+
+```
+=DateDiff("day", [Orderdatum], Today())
+```
+
+Deze formule:
+1. Roept de functie `DateDiff` aan
+2. Gebruikt `"day"` als tijdseenheid
+3. Verwijst naar de kolom `[Orderdatum]`
+4. Gebruikt de functie `Today()` voor de huidige datum
+5. Retourneert het aantal dagen tussen de orderdatum en vandaag
+
+## De functie-invoer gebruiken
+
+![Voorbeeld functie-invoer](/Resources/function-input.png)
+
+De functie-invoer verschijnt bovenaan je tabelweergave en biedt:
+
+- **Automatisch aanvullen** - Typ `/` om functiesuggesties te zien
+- **Kolompalet** - Typ `[` om kolommen visueel te selecteren
+- **Parameterhints** - Beweeg over functies om parametervereisten te zien
+- **Realtime validatie** - Fouten worden gemarkeerd terwijl je typt
+- **Syntaxkleuring** - Verschillende kleuren voor functies, kolommen en waarden
+
+### Een formule aanmaken
+
+1. Klik in de functie-invoerbalk
+2. Typ `=` om een formule te starten
+3. Typ een functienaam (suggesties verschijnen)
+4. Vul parameters in met kolomverwijzingen of waarden
+5. Druk op **Enter** of klik op **✓** om te bevestigen
+
+## Veelvoorkomende patronen
+
+### Tijdsverschillen berekenen
+
+```
+=DateDiff("day", [Aangemaakt op], Today())
+=DateDiff("hour", [Starttijd], [Eindtijd])
+```
+
+### Voorwaardelijke logica
+
+```
+=If([Omzet] > 10000, "Hoog", "Laag")
+=Switch([Status], 1, "Actief", 2, "Inactief", "Onbekend")
+```
+
+### Null-waarden afhandelen
+
+```
+=Coalesce([Optioneel veld], "Geen waarde")
+=If(IsNull([Waarde]), 0, [Waarde])
+```
+
+### Teksttransformaties
+
+```
+=Upper([Status])
+=Left([Productcode], 3)
+```
+
+## Volgende stappen
+
+- **[Functie-index](function-index)** - Bekijk alle beschikbare functies georganiseerd per categorie
+
+Verken de functiecategorieën:
+
+- **[Datumfuncties](date-functions)** - Volledige referentie voor datum- en tijdfuncties
+- **[Tekstfuncties](text-functions)** - Volledige referentie voor tekstbewerkingsfuncties
+- **[Wiskundige functies](math-functions)** - Volledige referentie voor wiskundige functies
+- **[Logische functies](logical-functions)** - Volledige referentie voor voorwaardelijke logicafuncties

@@ -1,0 +1,39 @@
+---
+title: "Corr"
+---
+
+
+Pearson-correlatiecoëfficiënt tussen twee kolommen
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+Corr([x], [y])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `x` | `kolom` | ✓ Ja |  |
+| `y` | `kolom` | ✓ Ja |  |
+
+**Toegestane kolomtypen voor `x`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `y`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Corr([X], [Y])
+```
+Correlatie tussen X en Y

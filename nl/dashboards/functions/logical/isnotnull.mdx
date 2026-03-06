@@ -1,0 +1,34 @@
+---
+title: "IsNotNull"
+---
+
+
+Retourneert Waar als het argument niet Null is (data bevat), en Onwaar als het argument ontbrekende datawaarden bevat.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+IsNotNull(argument)
+```
+
+**Retourneert:** `BooleanColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `argument` | `kolom\|any` | ✓ Ja | Elk argument kan worden opgegeven. De functie kan één argument tegelijk analyseren. |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+IsNotNull([Omzet])
+```
+Retourneert Waar voor rijen waar verkoopdata aanwezig is en Onwaar voor rijen waar geen data is.

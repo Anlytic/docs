@@ -1,0 +1,42 @@
+---
+title: "Degrees"
+---
+
+
+Converteert de hoekmeting van radialen naar graden
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Degrees([getal_kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | De hoek in radialen om te converteren naar graden |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Degrees(3.14159)
+```
+Converteert π radialen naar graden
+**Resultaat:** `180`
+
+```
+Degrees([Hoek])
+```
+Converteert elke hoek van radialen naar graden

@@ -1,0 +1,42 @@
+---
+title: "In"
+---
+
+
+Test of een waarde overeenkomt met een kandidaatwaarde in een daaropvolgende lijst van kandidaatwaarden. Retourneert Waar als de waarde overeenkomt met een van de daaropvolgende kandidaatwaarden, Onwaar als er geen waarden overeenkomen.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+In([waarde_kolom], kandidaat1, [kandidaten 2+])
+```
+
+**Retourneert:** `BooleanColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `kolom\|any` | ✓ Ja | De waarde om te testen. |
+| `kandidaat 1` | `any` | ✓ Ja | De eerste kandidaat om de waarde tegen te testen. |
+| `aanvullende kandidaten` | `variabel` | ✗ Nee | Aanvullende kandidaten om de waarde tegen te testen. |
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: Onbeperkt
+
+## Voorbeelden
+
+```
+In("groen", "rood", "groen", "blauw")
+```
+Test of "groen" overeenkomt met een van de kandidaatwaarden.
+**Resultaat:** `true`
+
+```
+In([Klant ID], 2000, 3000, 4000)
+```
+Retourneert Waar voor rijen waar Klant ID 2000, 3000 of 4000 is.

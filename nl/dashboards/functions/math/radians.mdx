@@ -1,0 +1,42 @@
+---
+title: "Radians"
+---
+
+
+Converteert graden naar radialen
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Radians([getal_kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | De hoek in graden om te converteren naar radialen |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Radians(180)
+```
+Converteert 180 graden naar radialen
+**Resultaat:** `3.14159`
+
+```
+Radians([Hoek])
+```
+Converteert elke hoek van graden naar radialen

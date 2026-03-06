@@ -1,0 +1,48 @@
+---
+title: "Between"
+---
+
+
+Controleert of een waarde binnen een opgegeven bereik valt. De functie is inclusief, dus de begin- en eindwaarden van het bereik worden meegerekend.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+Between([waarde_kolom], ondergrens, bovengrens)
+```
+
+**Retourneert:** `BooleanColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal\|datum\|datetime\|kolom` | ✓ Ja | De invoerwaarde of kolom met waarden om te controleren. |
+| `ondergrens` | `getal\|datum\|datetime` | ✓ Ja | De ondergrens van het bereik om te controleren. |
+| `bovengrens` | `getal\|datum\|datetime` | ✓ Ja | De bovengrens van het bereik om te controleren. |
+
+**Toegestane kolomtypen:** INT, FLOAT, DECIMAL, DATE, DATETIME
+
+## Validatie
+- Minimum parameters: 3
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+Between([Factuurdatum], MakeDate(2015, 1, 1), MakeDate(2020, 1, 1))
+```
+Retourneert Waar als een datumwaarde tussen 1 januari 2015 en 1 januari 2020 valt.
+
+```
+Between([Verkoopdatum], DateAdd("day", -7, Now()), Now())
+```
+Retourneert Waar als een verkoop in de afgelopen 7 dagen heeft plaatsgevonden.
+
+## Gerelateerde functies
+
+- [In](in) - Controleer of een waarde overeenkomt met specifieke waarden
+- [If](if) - Logica toepassen op basis van voorwaarden

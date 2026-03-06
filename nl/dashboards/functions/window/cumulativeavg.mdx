@@ -1,0 +1,47 @@
+---
+title: "CumulativeAvg"
+---
+
+
+Berekent het cumulatieve gemiddelde van waarden vanaf de eerste rij tot de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumulativeAvg([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het cumulatieve gemiddelde wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CumulativeAvg([Omzet])
+```
+Retourneert het lopende gemiddelde van de omzet vanaf de eerste rij tot de huidige rij.
+
+```
+CumulativeAvg([Opbrengst])
+```
+Berekent het cumulatieve gemiddelde van de opbrengst, handig voor het volgen van gemiddelde prestaties in de loop van de tijd.
+
+## Gerelateerde functies
+
+- [CumulativeSum](cumulativesum) - Berekent de cumulatieve som
+- [MovingAvg](movingavg) - Berekent het voortschrijdend gemiddelde met een venster
+- [Avg](../aggregate/avg) - Retourneert het totale gemiddelde

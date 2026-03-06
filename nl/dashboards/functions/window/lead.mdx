@@ -1,0 +1,52 @@
+---
+title: "Lead"
+---
+
+
+Retourneert de waarde uit een volgende rij op een opgegeven offset na de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+Lead([kolom], offset)
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waaruit de volgende waarde wordt opgehaald |
+| `offset` | `geheel getal` | ✗ Nee | Het aantal rijen na de huidige rij waaruit de waarde wordt opgehaald. Standaard is 1. |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Lead([Omzet])
+```
+Retourneert de omzetwaarde van de volgende rij (1 rij vooruit).
+
+```
+Lead([Prijs], 3)
+```
+Retourneert de prijswaarde van 3 rijen na de huidige rij.
+
+```
+Lead([Inkomsten], 7)
+```
+Retourneert de inkomsten van 7 dagen vooruit, handig voor vooruitkijkende vergelijkingen.
+
+## Gerelateerde functies
+
+- [Lag](lag) - Retourneert de waarde van een vorige rij
+- [First](first) - Retourneert de eerste waarde in een partitie
+- [Last](last) - Retourneert de laatste waarde in een partitie
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe

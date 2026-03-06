@@ -1,0 +1,43 @@
+---
+title: "BinRange"
+---
+
+
+Berekent de bin voor een waarde op basis van de opgegeven ondergrenzen
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+BinRange([waarde], [grens1], [grens2], ...)
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal of kolom` | ✓ Ja | De waarde die in de gedefinieerde bins moet worden geplaatst |
+| `grenzen` | `getal` | ✓ Ja | De ondergrenzen om de waarde mee te vergelijken. De eerste grens geeft de ondergrens van bin 2 aan |
+
+**Toegestane kolomtypen voor `waarde`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 10
+
+## Voorbeelden
+
+```
+BinRange(25, 50)
+```
+Retourneert 1. Alle getallen lager dan 50 worden in bin 1 geplaatst en alle getallen van 50 en hoger worden in bin 2 geplaatst
+**Resultaat:** `1`
+
+```
+BinRange([Inkomen], 100000, 500000)
+```
+Inkomens lager dan 100.000 worden in bin 1 geplaatst; inkomens van 100.000 – 499.999 worden in bin 2 geplaatst; inkomens van 500.000 en hoger worden in bin 3 geplaatst

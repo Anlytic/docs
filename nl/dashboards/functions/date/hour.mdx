@@ -1,0 +1,43 @@
+---
+title: "Hour"
+---
+
+
+Retourneert het uurcomponent van de opgegeven datum als een getal.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+Hour([datum_kolom], |tijdzone|)
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum waaruit het uurcomponent wordt geëxtraheerd. |
+| `tijdzone` | `text` | ✗ Nee | Naam van de IANA-tijdzone om het datumonderdeel op te halen (bijv. "America/Los_Angeles"). Bij het berekenen van een tijdzone worden invoerdatums behandeld als UTC. |
+
+**Toegestane kolomtypen:** DATETIME
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Hour(Date("2007-08-14 07:11:00"))
+```
+Retourneert het uur uit de opgegeven datumwaarde.
+**Resultaat:** `7`
+
+```
+Hour([Datum])
+```
+Retourneert het uurcomponent van elke datumwaarde in de kolom [Datum] als een getal.

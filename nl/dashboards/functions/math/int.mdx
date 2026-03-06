@@ -1,0 +1,53 @@
+---
+title: "Int"
+---
+
+
+Rondt het invoergetal naar beneden af naar het grootste gehele getal van gelijke of lagere waarde.
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Int([getal_kolom])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal\|kolom` | ✓ Ja | Het getal dat naar beneden wordt afgerond. |
+
+**Toegestane kolomtypen:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Int(3.6)
+```
+Rondt naar beneden af naar het grootste gehele getal.
+**Resultaat:** `3`
+
+```
+Int(-3.2)
+```
+Rondt een negatief getal naar beneden af.
+**Resultaat:** `-4`
+
+```
+Int([Kosten])
+```
+Retourneert de Int voor elke rij in de invoerkolom.
+
+## Gerelateerde functies
+
+- [Sqrt](sqrt) - Vierkantswortel van een getal berekenen
+- [Sign](sign) - Bepalen of een getal positief, negatief of nul is

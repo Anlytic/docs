@@ -1,0 +1,44 @@
+---
+title: "Switch"
+---
+
+
+Retourneert het resultaat dat overeenkomt met de eerste overeenkomende waarde. Als het case-argument evalueert naar Waar, wordt het bijbehorende resultaat geretourneerd, anders wordt het else-argument geretourneerd.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+Switch(waarde, case1, resultaat1, [case2], [resultaat2], ..., [anders])
+```
+
+**Retourneert:** `AnyColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `kolom\|any` | ✓ Ja | De waarde om te testen. |
+| `case 1` | `any` | ✓ Ja | De case om de waarde tegen te testen. |
+| `resultaat 1` | `any` | ✓ Ja | Het resultaat dat wordt geretourneerd als de voorgaande case overeenkomt met de invoerwaarde. |
+| `aanvullende cases en resultaten` | `variabel` | ✗ Nee | Meerdere paren kunnen in een enkele functie worden opgesomd. Elke opgegeven case moet een bijbehorend resultaat hebben. |
+| `anders` | `any` | ✗ Nee | Het resultaat dat wordt geretourneerd als geen enkele case overeenkomt met de waarde. Indien niet opgegeven, wordt een Null-resultaat geretourneerd. |
+
+## Validatie
+- Minimum parameters: 3
+- Maximum parameters: Onbeperkt
+
+## Voorbeelden
+
+```
+Switch(1, 0, "Geen", 1, "Eén", "Veel")
+```
+Test waarde 1 tegen de cases en retourneert het bijbehorende resultaat.
+**Resultaat:** `Eén`
+
+```
+Switch([dimensie-param], "Productfamilie", [Productfamilie], "Producttype", [Producttype])
+```
+Retourneert dynamisch verschillende kolommen op basis van parameterselectie.

@@ -1,0 +1,37 @@
+---
+title: "Day"
+---
+
+
+Retourneert de dag van de maand van een datumwaarde als een getal.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+Day([datum_kolom], |tijdzone|)
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum waaruit het dagcomponent wordt geëxtraheerd. |
+| `tijdzone` | `text` | ✗ Nee | Optionele IANA-tijdzonenaam (bijv. "Europe/Amsterdam"). |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Day([Datum])
+```
+Retourneert de dag van de maand van elke datumwaarde in de kolom [Datum] als een getal.

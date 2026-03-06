@@ -1,0 +1,34 @@
+---
+title: "ArrayAgg"
+---
+
+
+Retourneert een array van alle niet-null waarden in de opgegeven kolom, waarbij de invoervolgorde behouden blijft.
+
+**Categorie:** `aggregate`
+
+**Syntaxis:**
+```
+ArrayAgg([kolom])
+```
+
+**Retourneert:** `ArrayColumn`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de waarden worden samengevoegd tot een array. |
+
+## Validatie
+- Minimum aantal parameters: 1
+- Maximum aantal parameters: 1
+
+## Voorbeelden
+
+```
+ArrayAgg([Score])
+```
+Retourneert een array van alle Score-waarden.

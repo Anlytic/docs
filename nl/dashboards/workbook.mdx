@@ -1,0 +1,114 @@
+---
+title: "Werkboeken bouwen"
+---
+
+
+Een werkboek is de plek waar je je dataset voorbereidt, transformaties toepast en visualisaties bouwt met de Graphbuilder.  
+Dit hoofdstuk laat zien hoe je een werkboek aanmaakt, data toevoegt en je dataset vormgeeft.
+
+## Een werkboek aanmaken
+
+### Een werkboek openen
+
+Een werkboek wordt automatisch geopend bij het aanmaken van een visualisatie.
+
+1. Open een **dashboard**.  
+2. Schakel over naar **Bewerkingsmodus**.  
+3. Klik op **Rij toevoegen** → voer een titel in → klik op **Toevoegen**.  
+4. Klik op **Visualisatie toevoegen** → selecteer **Datavisualisatie**.  
+5. Klik op **Aanmaken** om het werkboek en de Data Builder te openen.  
+
+![alt text](/Resources/add%20a%20catalog.gif)
+
+Er wordt een nieuw werkboek aangemaakt of een bestaand werkboek hergebruikt.  
+
+### Data toevoegen aan het werkboek
+
+1. Het linkerpaneel toont je **catalogus**.  
+2. Selecteer een tabel.  
+3. Dubbelklik op kolommen om ze toe te voegen.  
+4. Kolommen verschijnen in het **werkboek-datablad**.  
+5. Je kunt velden uit meerdere tabellen toevoegen.  
+6. Joins worden automatisch afgehandeld op basis van de in de catalogus gedefinieerde relaties.
+
+
+## Werkboekdata beheren
+
+Het werkboek biedt tools voor het voorbereiden en transformeren van je dataset.
+
+### Meerdere bladen beheren
+
+Werkboeken kunnen meerdere databladen bevatten, waarmee je datasets kunt organiseren, transformeren of scheiden binnen hetzelfde werkboek.  
+Meerdere bladen kunnen ook worden gebruikt om meerdere grafieken in hetzelfde dashboard te ondersteunen. Elke grafiek kan naar een ander blad verwijzen, afhankelijk van de benodigde data.
+
+### Bladen beheren in een werkboek
+- **Een nieuw blad aanmaken:** Klik op het **"+"**-icoon linksonder in het werkboek.
+- **Een blad hernoemen:** Klik op de **bladkop** die je wilt hernoemen en selecteer **Blad hernoemen** in het menu.
+- **Een blad verwijderen:** Klik op de **bladkop** die je wilt verwijderen en selecteer **Verwijderen**.
+
+![alt text](/Resources/add%20multiple%20sheet.gif)
+
+### Kolomkop hernoemen
+
+1. Klik op een kolomkop.  
+2. Selecteer **Kolom hernoemen**.  
+3. Voer de nieuwe naam in.  
+
+Handig voor bedrijfsvriendelijke labels.
+
+![alt text](/Resources/rename%20header.gif)
+
+### Filters toepassen
+
+Filters beperken je dataset tot specifieke voorwaarden.
+
+1. Klik op het **filtericoon** op een kolom.  
+2. Selecteer een filtertype:
+   - Gelijk aan / Niet gelijk aan  
+   - Bevat / Begint met / Eindigt met  
+   - Groter dan / Kleiner dan  
+   - Datumfilters  
+3. Voer de waarde in → klik op **Toepassen**.
+
+Filters werken het datablad direct bij en worden toegepast op visualisaties.
+
+![alt text](/Resources/workbook%20filter.gif)
+
+### Data groeperen
+
+Groeperen organiseert rijen in samenvattingscategorieën.
+
+1. Klik op de kolomkop.  
+2. Selecteer **Groeperen op deze kolom**.  
+
+Meerdere groeperingen worden ondersteund (bijv. Regio + Categorie + Jaar).
+
+Veelgebruikte toepassingen: Heatmaps, staafdiagrammen, draaitabellen,...
+
+![alt text](/Resources/groupby.gif)
+
+### Aggregatie
+
+Aggregatie reduceert gedetailleerde rijen tot samengevatte waarden.
+
+1. Klik op het **⋮**-menu op een numerieke kolom.  
+2. Kies een aggregatie: Aantal, Som, Gemiddelde, Min, Max  
+
+Resultaten verschijnen direct.
+
+![alt text](/Resources/aggregate.gif)
+
+### Ondersteunde functies in het werkboek
+
+Werkboeken ondersteunen formules voor geavanceerde datatransformaties.
+
+#### Wiskundig: `ABS()`, `ROUND()`, `CEILING()`, `FLOOR()`, `POWER()`
+
+#### Tekst: `CONCAT()`, `LOWER()`, `UPPER()`, `LEFT()`, `RIGHT()`
+
+#### Datum/Tijd: `DATE()`, `YEAR()`, `MONTH()`, `DAY()`,...
+
+![alt text](/Resources/support%20function.gif)
+
+Je werkboek is nu volledig voorbereid voor analyse en visualisatie.  
+Na het vormgeven van je dataset, het organiseren van meerdere bladen, het toepassen van filters en het uitvoeren van transformaties, kun je beginnen met het bouwen van grafieken bovenop het werkboek.

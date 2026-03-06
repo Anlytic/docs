@@ -1,0 +1,42 @@
+---
+title: "Right"
+---
+
+
+Retourneert een substring vanaf het einde van de waarden in een tekenreekskolom. De laatste n tekens waarbij n het getalargument is.
+
+**Categorie:** `text`
+
+**Syntax:**
+```
+Right([tekst_kolom], getal)
+```
+
+**Retourneert:** `StringColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `tekst_kolom` | `kolom` | ✓ Ja | De tekenreekskolom waarvan een rechter-substring wordt geretourneerd. |
+| `getal` | `getal` | ✓ Ja | De gewenste lengte van de geretourneerde substring. |
+
+**Toegestane kolomtypen:** STRING, TEXT
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Right([Telefoon], 4)
+```
+Retourneert de laatste 4 cijfers van elk telefoonnummer.
+
+## Gerelateerde functies
+
+- [Left](left) - Extraheren vanaf het begin van een tekenreeks
+- [Contains](contains) - Zoeken naar patronen in tekenreeksen

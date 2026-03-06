@@ -1,0 +1,47 @@
+---
+title: "RowAvg"
+---
+
+
+Berekent de gemiddelde waarde van een lijst getallen
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+RowAvg([getal1], [getal2], ...)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getallen` | `getal of kolom` | ✓ Ja | Getallen waarvan het gemiddelde wordt berekend |
+
+**Toegestane kolomtypen voor `getallen`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 10
+
+## Voorbeelden
+
+```
+RowAvg([Verkoop], [Marketing], [Support])
+```
+Berekent het gemiddelde van de kolommen Verkoop, Marketing en Support voor elke rij
+
+```
+RowAvg(10, 20, 30)
+```
+Retourneert 20
+**Resultaat:** `20`
+
+```
+RowAvg([K1], [K2], [K3], [K4])
+```
+Berekent het gemiddelde van vier kwartaalwaarden voor elke rij

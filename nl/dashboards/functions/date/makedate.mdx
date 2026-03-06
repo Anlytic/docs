@@ -1,0 +1,40 @@
+---
+title: "MakeDate"
+---
+
+
+Evalueert opgegeven jaar-, maand-, dag- (en optioneel uur-, minuut-, seconde-)componenten en retourneert een datetime-waarde in ISO-formaat.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+MakeDate(jaar, maand, dag, |uur|, |minuut|, |seconde|)
+```
+
+**Retourneert:** `DateTimeColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `jaar` | `getal` | ✓ Ja | Een geheel getal dat het jaar vertegenwoordigt. |
+| `maand` | `getal` | ✓ Ja | Een geheel getal dat de maand vertegenwoordigt (1-12). |
+| `dag` | `getal` | ✓ Ja | Een geheel getal dat de dag van de maand vertegenwoordigt (1-31). |
+| `uur` | `getal` | ✗ Nee | Een geheel getal dat het uur vertegenwoordigt (0-23). |
+| `minuut` | `getal` | ✗ Nee | Een geheel getal dat de minuten vertegenwoordigt (0-59). |
+| `seconde` | `getal` | ✗ Nee | Een geheel getal dat de seconden vertegenwoordigt (0-59). |
+
+## Validatie
+- Minimum parameters: 3
+- Maximum parameters: 6
+
+## Voorbeelden
+
+```
+MakeDate(2019, 1, 31, 16, 30, 0)
+```
+Retourneert de datetime-waarde.
+**Resultaat:** `2019-01-31 16:30:00`

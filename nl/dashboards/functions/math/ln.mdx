@@ -1,0 +1,42 @@
+---
+title: "Ln"
+---
+
+
+Retourneert de natuurlijke logaritme (grondtal e) van een getal
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Ln([getal_kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal waarvan de natuurlijke logaritme wordt berekend |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Ln(2.71828)
+```
+Natuurlijke logaritme van e
+**Resultaat:** `1`
+
+```
+Ln([Waarde])
+```
+Natuurlijke logaritme voor elke waarde in de kolom

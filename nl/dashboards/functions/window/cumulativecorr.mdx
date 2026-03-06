@@ -1,0 +1,50 @@
+---
+title: "CumulativeCorr"
+---
+
+
+Berekent de cumulatieve correlatiecoëfficiënt tussen twee kolommen vanaf de eerste rij tot en met de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumulativeCorr([kolom1], [kolom2])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom1` | `kolom` | ✓ Ja | De eerste numerieke kolom voor de correlatieberekening |
+| `kolom2` | `kolom` | ✓ Ja | De tweede numerieke kolom voor de correlatieberekening |
+
+**Toegestane kolomtypen voor `kolom1`:** INT, FLOAT, DECIMAL, NUMBER
+
+**Toegestane kolomtypen voor `kolom2`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+CumulativeCorr([Omzet], [Marketinguitgaven])
+```
+Retourneert de lopende correlatie tussen omzet en marketinguitgaven vanaf de eerste rij tot en met de huidige rij.
+
+```
+CumulativeCorr([Temperatuur], [IJsverkoop])
+```
+Berekent de cumulatieve correlatie om bij te houden hoe de relatie tussen temperatuur en ijsverkoop zich in de loop van de tijd ontwikkelt.
+
+## Gerelateerde functies
+
+- [Corr](../aggregate/corr) - Berekent de totale correlatie
+- [MovingCorr](movingcorr) - Berekent de voortschrijdende correlatie met een venster
+- [CumulativeAvg](cumulativeavg) - Berekent het cumulatieve gemiddelde

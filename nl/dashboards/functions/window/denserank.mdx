@@ -1,0 +1,48 @@
+---
+title: "DenseRank"
+---
+
+
+Wijst een rang toe aan elke rij binnen een partitie op basis van de waarden in de opgegeven kolom. Bij gelijke waarden wordt dezelfde rang toegewezen, maar er verschijnen geen gaten in de rangvolgorde.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+DenseRank([kolom])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarop de rangschikking wordt gebaseerd |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+DenseRank([Omzet])
+```
+Retourneert de dichte rang van elke rij op basis van omzetwaarden. Als twee rijen gelijk zijn op rang 2, krijgen beide rang 2 en de volgende rij krijgt rang 3 (geen gaten).
+
+```
+DenseRank([Score])
+```
+Rangschikt rijen op scorewaarden. Gelijke scores krijgen dezelfde rang, met daaropvolgende rangen die opeenvolgend doorlopen zonder gaten.
+**Resultaat:** `1, 2, 2, 3, 4, 5, ...`
+
+## Gerelateerde functies
+
+- [Rank](rank) - Wijst rang toe met gaten
+- [PercentRank](percentrank) - Berekent relatieve rang als percentage
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe
+- [CumeDist](cumedist) - Berekent cumulatieve verdeling
+- [Ntile](ntile) - Verdeelt rijen in groepen

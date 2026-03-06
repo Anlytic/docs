@@ -1,0 +1,52 @@
+---
+title: "Power"
+---
+
+
+Verheft een getal tot de opgegeven macht
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Power(getal, macht)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal of de kolom met getallen dat tot de opgegeven macht wordt verheven |
+| `macht` | `getal of kolom` | ✓ Ja | De exponent waarnaar het getal wordt verheven |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `macht`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Power(2, 0)
+```
+Retourneert 1
+**Resultaat:** `1`
+
+```
+Power(2, 3)
+```
+Retourneert 8
+**Resultaat:** `8`
+
+```
+Power(2, -1)
+```
+Retourneert 0.5
+**Resultaat:** `0.5`

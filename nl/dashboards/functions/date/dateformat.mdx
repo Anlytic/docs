@@ -1,0 +1,42 @@
+---
+title: "DateFormat"
+---
+
+
+Evalueert een datumwaarde en extraheert datum-/tijdcomponenten in het opgegeven formaat
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DateFormat([datumkolom], "formaat")
+```
+
+**Retourneert:** `String`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datumkolom` | `kolom of datetime` | ✓ Ja | De datum of kolom met datumwaarden om te formatteren |
+| `formaat` | `text` | ✓ Ja | De datum-/tijdformaattekenreeks, met datumformaatspecificaties (bijv. %Y, %m, %d, %H, enz.) |
+
+**Toegestane kolomtypen voor `datumkolom`:** DATE, DATETIME
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+DateFormat([Besteldatum], "%Y-%m-%d")
+```
+Formatteert de datum als JJJJ-MM-DD
+
+```
+DateFormat(Date("2023-07-15"), "%B %d, %Y")
+```
+Formatteert een letterlijke datum naar bijv. July 15, 2023

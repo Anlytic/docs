@@ -1,0 +1,46 @@
+---
+title: "CumulativeCount"
+---
+
+
+Berekent het cumulatieve aantal waarden van de eerste rij tot en met de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumulativeCount([kolom])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de waarden worden geteld |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CumulativeCount([Order_ID])
+```
+Retourneert het lopende aantal orders van de eerste rij tot de huidige rij.
+
+```
+CumulativeCount([Klant_ID])
+```
+Berekent het cumulatieve aantal klanten, handig voor het bijhouden van het totale aantal klantinteracties in de tijd.
+
+## Gerelateerde functies
+
+- [CumulativeSum](cumulativesum) - Berekent de cumulatieve som
+- [MovingCount](movingcount) - Berekent het voortschrijdende aantal met een venster
+- [Count](../aggregate/count) - Retourneert het totale aantal
+- [RunningCount](runningcount) - Berekent het lopende aantal

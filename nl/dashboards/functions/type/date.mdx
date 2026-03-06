@@ -1,0 +1,36 @@
+---
+title: "Date"
+---
+
+
+Converteert een tekst- of getalwaarde naar het datum-gegevenstype in ISO datetime-formaat
+
+**Categorie:** `conversion`
+
+**Syntax:**
+```
+Date(waarde)
+```
+
+**Retourneert:** `DateTime`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `tekst of getal of kolom` | ✓ Ja | De waarde of kolom met waarden die moeten worden geconverteerd naar datumwaarden in ISO datetime-formaat |
+
+**Toegestane kolomtypen voor `waarde`:** STRING, TEXT, INT, DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Date([Factuurdatum])
+```
+Converteert de kolom Factuurdatum naar het datum-gegevenstype

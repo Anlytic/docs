@@ -1,0 +1,35 @@
+---
+title: "PercentileCont"
+---
+
+
+Retourneert de continue k-de percentielwaarde voor een kolom of groep. Het percentiel moet een getal tussen 0 en 1 zijn.
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+PercentileCont([kolom], percentiel)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarover het percentiel wordt berekend. |
+| `percentiel` | `nummer` | ✓ Ja | Een getal, 0 < percentiel < 1, dat het gewenste continue percentiel aangeeft. |
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+PercentileCont([Score], 0.7)
+```
+Retourneert het 70e continue percentiel in Score.

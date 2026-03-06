@@ -1,0 +1,62 @@
+---
+title: "Een verbinding instellen"
+---
+
+Het instellen van een dataverbinding omvat het verbinden van uw datawarehouse met het platform, het toevoegen van metadata, het aanmaken van relaties, het aanmaken van formules en het organiseren van data in een catalogus.
+
+In dit onderdeel begeleiden we u bij het instellen van dataverbindingen in het Anlytic platform.
+
+U kunt nieuwe verbindingen toevoegen en bestaande verbindingen bekijken onder bronnen via de instellingenopties.
+
+![!\[alt text\](/Resources/data%20connection.png) ](/Resources/data%20connection.gif)
+
+
+## Hoe stelt u een dataverbinding in?
+
+Bovenaan de linkerzijbalk ziet u de naam van de werkruimtes.
+
+1. Klik op de `naam` van de werkruimte. Er verschijnt een optiemenu met de naam van de werkruimtes, instellingen, werkruimte aanmaken en uitlogoptie. Klik op `instellingen`. Klik in de linkerzijbalk op `Databases`. Klik op de knop `nieuwe verbinding` rechtsboven in het scherm. Selecteer het cloud `datawarehouse` en klik op `opslaan en doorgaan`. Voeg de verbindingsgegevens toe voor uw database en klik op `opslaan en doorgaan`.
+
+![alt text](/Resources/data%20connection%201.gif)
+
+Uw verbinding met de database is tot stand gebracht. U kunt op opslaan en doorgaan klikken om metadata toe te voegen en uiteindelijk de data in een catalogus te organiseren.
+
+## Een bestand uploaden als databron
+
+Naast clouddatabases biedt Anlytic de mogelijkheid om bestanden als databronnen te uploaden. Dit is handig wanneer u werkt met CSV-, JSON- of Parquet-bestanden.
+
+Om een nieuw bestand te uploaden:
+
+1. Ga naar **Bronnen** in de linkerzijbalk onder het onderdeel *Data*.
+2. Sleep uw bestand naar het uploadgebied in het paneel **Een bestand uploaden**, of klik op **Bestand selecteren** om handmatig een bestand te kiezen.
+3. Zodra het bestand is geüpload, verschijnt er een **Configuratietabel** met alle kolommen die uit uw bestand zijn gedetecteerd.
+
+### Upload-instellingen configureren
+
+Nadat het bestand is verwerkt, configureert u hoe de data in Anlytic wordt opgeslagen:
+
+1. **Kies waar de data wordt geüpload**
+   Selecteer of u de data wilt uploaden naar een **Nieuwe tabel** of een **Bestaande tabel**.
+
+2. **Selecteer een database**
+   Gebruik de vervolgkeuzelijst om de doeldatabase te kiezen waar de nieuwe tabel wordt aangemaakt of waar de geselecteerde bestaande tabel zich bevindt.
+
+3. **Geef uw tabel een naam**
+   Geef een tabelnaam op als u een nieuwe tabel aanmaakt.
+
+4. **Controleer kolominstellingen**
+   Elke kolom verschijnt in het onderdeel **Kolominstellingen**.
+   Voor elke kolom kunt u:
+   - Het **Datatype** selecteren (Integer, Lange tekst, Tekst, Boolean, Datum, etc.)
+   - Een **Standaardwaarde** instellen
+   - **Nullable** of **Niet-nullable** instellen
+   - Een veld markeren als **Primaire sleutel** indien nodig
+   - Een kolom verwijderen met het **Verwijdericoon**
+
+5. Klik na het bevestigen van alle instellingen op **Importeren naar Anlytic**.
+
+    Er verschijnt een importstatusbericht zodra de verwerking is voltooid, met de melding of de import is geslaagd of mislukt.
+
+![alt text](/Resources/upload%20file.gif)
+
+Zodra uw data is verbonden — via een clouddatabase of via bestandsupload — kunt u doorgaan met het toevoegen van metadata, het aanmaken van relaties, het opbouwen van catalogi en het voorbereiden van uw data voor analyse in werkmappen en visualisaties.

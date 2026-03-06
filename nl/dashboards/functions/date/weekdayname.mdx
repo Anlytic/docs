@@ -1,0 +1,36 @@
+---
+title: "WeekdayName"
+---
+
+
+Retourneert de naam van de dag van de week in een opgegeven datetime-waarde.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+WeekdayName([datum_kolom])
+```
+
+**Retourneert:** `StringColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum waaruit de naam van de weekdag wordt geëxtraheerd. |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+WeekdayName([Besteldatum])
+```
+Retourneert de naam van de weekdag (bijv. 'Monday').

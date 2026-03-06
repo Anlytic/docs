@@ -1,0 +1,36 @@
+---
+title: "Year"
+---
+
+
+Retourneert een geheel getal dat het jaarcomponent in een opgegeven datetime-waarde vertegenwoordigt.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+Year([datum_kolom])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum waaruit het jaar wordt geëxtraheerd. |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Year([Besteldatum])
+```
+Retourneert het jaar uit de datum.

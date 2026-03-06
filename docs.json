@@ -2,345 +2,654 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Anlytic",
+  "description": "Anlytic documentation — learn how to automate repetitive tasks, orchestrate workflows, and turn live data into real-time decisions with Anlytic's AI Command Centre.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#4F46E5",
+    "light": "#6366F1",
+    "dark": "#241F25"
   },
-  "favicon": "/favicon.svg",
+  "appearance": {
+    "default": "system"
+  },
+  "favicon": "/anlytic-fav-icon.svg",
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weight": 700
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
+    }
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs",
+    "codeblocks": {
+      "theme": {
+        "light": "github-light",
+        "dark": "github-dark"
+      }
+    }
+  },
+  "background": {
+    "decoration": "gradient"
+  },
+  "thumbnails": {
+    "appearance": "dark"
+  },
+  "search": {
+    "prompt": "Search Anlytic docs..."
+  },
+  "contextual": {
+    "options": ["copy", "view", "chatgpt", "claude"]
+  },
+  "metadata": {
+    "timestamp": true
+  },
   "navigation": {
-    "tabs": [
+    "languages": [
       {
-        "tab": "Getting started",
-        "groups": [
+        "language": "en",
+        "default": true,
+        "tabs": [
           {
-            "group": "Overview",
-            "pages": [
-              "index",
-              "quickstart/overview"
+            "tab": "Docs",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": ["index", "quickstart/overview"]
+              },
+              {
+                "group": "Setup guide",
+                "pages": [
+                  "quickstart/initial-setup",
+                  "quickstart/user-management",
+                  "quickstart/connect-data-source",
+                  "quickstart/team-configuration",
+                  "quickstart/first-dashboard"
+                ]
+              },
+              {
+                "group": "Dashboards",
+                "pages": [
+                  "dashboards/overview",
+                  "dashboards/workbook",
+                  "dashboards/organize"
+                ]
+              },
+              {
+                "group": "Charts",
+                "pages": [
+                  "dashboards/charts/overview",
+                  "dashboards/charts/point",
+                  "dashboards/charts/heatmap",
+                  "dashboards/charts/icicle",
+                  "dashboards/charts/headline",
+                  "dashboards/charts/piechart",
+                  "dashboards/charts/pivottable",
+                  "dashboards/charts/datatable",
+                  "dashboards/charts/geomap"
+                ]
+              },
+              {
+                "group": "Filters",
+                "pages": [
+                  "data/filters/create",
+                  "data/filters/dashboard-filters",
+                  "data/filters/edit",
+                  "data/filters/delete"
+                ]
+              },
+              {
+                "group": "Functions",
+                "pages": [
+                  "dashboards/functions/overview",
+                  "dashboards/functions/function-index"
+                ]
+              },
+              {
+                "group": "Connectors",
+                "pages": [
+                  "data/connectors/overview",
+                  "data/connectors/create",
+                  "data/connectors/errors"
+                ]
+              },
+              {
+                "group": "Authentication",
+                "pages": [
+                  "auth/overview",
+                  "auth/system-roles",
+                  "auth/workspace-roles",
+                  "auth/team-roles"
+                ]
+              },
+              {
+                "group": "Catalogs",
+                "pages": [
+                  "data/catalogs/overview",
+                  "data/catalogs/create",
+                  "data/catalogs/edit",
+                  "data/catalogs/multi-catalog"
+                ]
+              },
+              {
+                "group": "Metadata",
+                "pages": [
+                  "data/meta/overview",
+                  "data/meta/create",
+                  "data/meta/edit"
+                ]
+              },
+              {
+                "group": "Relationships",
+                "pages": [
+                  "data/relationships/overview",
+                  "data/relationships/create",
+                  "data/relationships/edit"
+                ]
+              }
             ]
           },
           {
-            "group": "Setup guide",
-            "pages": [
-              "quickstart/initial-setup",
-              "quickstart/user-management",
-              "quickstart/connect-data-source",
-              "quickstart/team-configuration",
-              "quickstart/first-dashboard"
+            "tab": "Function reference",
+            "groups": [
+              {
+                "group": "Aggregate Functions",
+                "pages": [
+                  "dashboards/functions/aggregate/array_agg",
+                  "dashboards/functions/aggregate/array_agg_distinct",
+                  "dashboards/functions/aggregate/avg",
+                  "dashboards/functions/aggregate/avgif",
+                  "dashboards/functions/aggregate/corr",
+                  "dashboards/functions/aggregate/count",
+                  "dashboards/functions/aggregate/countdistinct",
+                  "dashboards/functions/aggregate/countdistinctif",
+                  "dashboards/functions/aggregate/countif",
+                  "dashboards/functions/aggregate/grandtotal",
+                  "dashboards/functions/aggregate/listagg",
+                  "dashboards/functions/aggregate/listagg_distinct",
+                  "dashboards/functions/aggregate/max",
+                  "dashboards/functions/aggregate/maxif",
+                  "dashboards/functions/aggregate/median",
+                  "dashboards/functions/aggregate/min",
+                  "dashboards/functions/aggregate/minif",
+                  "dashboards/functions/aggregate/mode",
+                  "dashboards/functions/aggregate/percentile",
+                  "dashboards/functions/aggregate/percentilecont",
+                  "dashboards/functions/aggregate/percentiledisc",
+                  "dashboards/functions/aggregate/percentoftotal",
+                  "dashboards/functions/aggregate/regressionintercept",
+                  "dashboards/functions/aggregate/regressionr2",
+                  "dashboards/functions/aggregate/regressionslope",
+                  "dashboards/functions/aggregate/stdev",
+                  "dashboards/functions/aggregate/stdevp",
+                  "dashboards/functions/aggregate/subtotal",
+                  "dashboards/functions/aggregate/sum",
+                  "dashboards/functions/aggregate/sumif",
+                  "dashboards/functions/aggregate/sumproduct",
+                  "dashboards/functions/aggregate/variance",
+                  "dashboards/functions/aggregate/variancep"
+                ]
+              },
+              {
+                "group": "Date Functions",
+                "pages": [
+                  "dashboards/functions/date/converttimezone",
+                  "dashboards/functions/date/dateadd",
+                  "dashboards/functions/date/datediff",
+                  "dashboards/functions/date/dateformat",
+                  "dashboards/functions/date/datefromunix",
+                  "dashboards/functions/date/dateparse",
+                  "dashboards/functions/date/datepart",
+                  "dashboards/functions/date/datetrunc",
+                  "dashboards/functions/date/day",
+                  "dashboards/functions/date/dayofyear",
+                  "dashboards/functions/date/endofmonth",
+                  "dashboards/functions/date/hour",
+                  "dashboards/functions/date/indaterange",
+                  "dashboards/functions/date/inpriordaterange",
+                  "dashboards/functions/date/lastday",
+                  "dashboards/functions/date/makedate",
+                  "dashboards/functions/date/minute",
+                  "dashboards/functions/date/month",
+                  "dashboards/functions/date/monthname",
+                  "dashboards/functions/date/now",
+                  "dashboards/functions/date/quarter",
+                  "dashboards/functions/date/second",
+                  "dashboards/functions/date/today",
+                  "dashboards/functions/date/weekday",
+                  "dashboards/functions/date/weekdayname",
+                  "dashboards/functions/date/year"
+                ]
+              },
+              {
+                "group": "Logical Functions",
+                "pages": [
+                  "dashboards/functions/logical/between",
+                  "dashboards/functions/logical/choose",
+                  "dashboards/functions/logical/coalesce",
+                  "dashboards/functions/logical/if",
+                  "dashboards/functions/logical/in",
+                  "dashboards/functions/logical/isnotnull",
+                  "dashboards/functions/logical/isnull",
+                  "dashboards/functions/logical/switch",
+                  "dashboards/functions/logical/zn"
+                ]
+              },
+              {
+                "group": "Math Functions",
+                "pages": [
+                  "dashboards/functions/math/abs",
+                  "dashboards/functions/math/acos",
+                  "dashboards/functions/math/asin",
+                  "dashboards/functions/math/atan",
+                  "dashboards/functions/math/atan2",
+                  "dashboards/functions/math/binfixed",
+                  "dashboards/functions/math/binrange",
+                  "dashboards/functions/math/bitand",
+                  "dashboards/functions/math/bitor",
+                  "dashboards/functions/math/ceiling",
+                  "dashboards/functions/math/cos",
+                  "dashboards/functions/math/cot",
+                  "dashboards/functions/math/degrees",
+                  "dashboards/functions/math/distanceglobe",
+                  "dashboards/functions/math/distanceplane",
+                  "dashboards/functions/math/div",
+                  "dashboards/functions/math/exp",
+                  "dashboards/functions/math/floor",
+                  "dashboards/functions/math/greatest",
+                  "dashboards/functions/math/int",
+                  "dashboards/functions/math/iseven",
+                  "dashboards/functions/math/isodd",
+                  "dashboards/functions/math/least",
+                  "dashboards/functions/math/ln",
+                  "dashboards/functions/math/log",
+                  "dashboards/functions/math/mod",
+                  "dashboards/functions/math/mround",
+                  "dashboards/functions/math/pi",
+                  "dashboards/functions/math/power",
+                  "dashboards/functions/math/radians",
+                  "dashboards/functions/math/round",
+                  "dashboards/functions/math/rounddown",
+                  "dashboards/functions/math/roundup",
+                  "dashboards/functions/math/rowavg",
+                  "dashboards/functions/math/sign",
+                  "dashboards/functions/math/sin",
+                  "dashboards/functions/math/sqrt",
+                  "dashboards/functions/math/tan",
+                  "dashboards/functions/math/trunc"
+                ]
+              },
+              {
+                "group": "Text Functions",
+                "pages": [
+                  "dashboards/functions/text/contains",
+                  "dashboards/functions/text/left",
+                  "dashboards/functions/text/lower",
+                  "dashboards/functions/text/right",
+                  "dashboards/functions/text/upper"
+                ]
+              },
+              {
+                "group": "Type Functions",
+                "pages": [
+                  "dashboards/functions/type/date",
+                  "dashboards/functions/type/json",
+                  "dashboards/functions/type/logical",
+                  "dashboards/functions/type/number",
+                  "dashboards/functions/type/text"
+                ]
+              },
+              {
+                "group": "Window Functions",
+                "pages": [
+                  "dashboards/functions/window/cumedist",
+                  "dashboards/functions/window/cumulativeavg",
+                  "dashboards/functions/window/cumulativecorr",
+                  "dashboards/functions/window/cumulativecount",
+                  "dashboards/functions/window/cumulativemax",
+                  "dashboards/functions/window/cumulativemin",
+                  "dashboards/functions/window/cumulativestddev",
+                  "dashboards/functions/window/cumulativesum",
+                  "dashboards/functions/window/cumulativevariance",
+                  "dashboards/functions/window/denserank",
+                  "dashboards/functions/window/first",
+                  "dashboards/functions/window/lag",
+                  "dashboards/functions/window/last",
+                  "dashboards/functions/window/lead",
+                  "dashboards/functions/window/movingavg",
+                  "dashboards/functions/window/movingcorr",
+                  "dashboards/functions/window/movingcount",
+                  "dashboards/functions/window/movingmax",
+                  "dashboards/functions/window/movingmin",
+                  "dashboards/functions/window/movingstddev",
+                  "dashboards/functions/window/movingsum",
+                  "dashboards/functions/window/movingvariance",
+                  "dashboards/functions/window/ntile",
+                  "dashboards/functions/window/percentrank",
+                  "dashboards/functions/window/rank",
+                  "dashboards/functions/window/rownum",
+                  "dashboards/functions/window/rownumber",
+                  "dashboards/functions/window/runningcount",
+                  "dashboards/functions/window/runningtotal"
+                ]
+              }
             ]
           }
         ]
       },
       {
-        "tab": "Authentication",
-        "groups": [
+        "language": "nl",
+        "tabs": [
           {
-            "group": "User roles",
-            "pages": [
-              "auth/overview",
-              "auth/system-roles",
-              "auth/workspace-roles",
-              "auth/team-roles"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Data",
-        "groups": [
-          {
-            "group": "Connectors",
-            "pages": [
-              "data/connectors/overview",
-              "data/connectors/create",
-              "data/connectors/errors"
-            ]
-          },
-          {
-            "group": "Catalogs",
-            "pages": [
-              "data/catalogs/overview",
-              "data/catalogs/create",
-              "data/catalogs/edit",
-              "data/catalogs/multi-catalog"
-            ]
-          },
-          {
-            "group": "Metadata",
-            "pages": [
-              "data/meta/overview",
-              "data/meta/create",
-              "data/meta/edit"
-            ]
-          },
-          {
-            "group": "Relationships",
-            "pages": [
-              "data/relationships/overview",
-              "data/relationships/create",
-              "data/relationships/edit"
-            ]
-          },
-          {
-            "group": "Calculations",
-            "pages": [
-              "data/calculations/overview",
-              "data/calculations/create",
-              "data/calculations/edit"
-            ]
-          },
-          {
-            "group": "Filters",
-            "pages": [
-              "data/filters/create",
-              "data/filters/dashboard-filters",
-              "data/filters/edit",
-              "data/filters/delete"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Dashboards",
-        "groups": [
-          {
-            "group": "Dashboards",
-            "pages": [
-              "dashboards/overview",
-              "dashboards/workbook",
-              "dashboards/organize"
-            ]
-          },
-          {
-            "group": "Charts",
-            "pages": [
-              "dashboards/charts/overview",
-              "dashboards/charts/point",
-              "dashboards/charts/heatmap",
-              "dashboards/charts/icicle",
-              "dashboards/charts/headline",
-              "dashboards/charts/piechart",
-              "dashboards/charts/pivottable",
-              "dashboards/charts/datatable",
-              "dashboards/charts/geomap"
-            ]
-          },
-          {
-            "group": "Functions",
-            "pages": [
-              "dashboards/functions/overview",
-              "dashboards/functions/function-index"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Function reference",
-        "groups": [
-          {
-            "group": "Aggregate",
-            "pages": [
-              "dashboards/functions/aggregate/array_agg",
-              "dashboards/functions/aggregate/array_agg_distinct",
-              "dashboards/functions/aggregate/avg",
-              "dashboards/functions/aggregate/avgif",
-              "dashboards/functions/aggregate/corr",
-              "dashboards/functions/aggregate/count",
-              "dashboards/functions/aggregate/countdistinct",
-              "dashboards/functions/aggregate/countdistinctif",
-              "dashboards/functions/aggregate/countif",
-              "dashboards/functions/aggregate/grandtotal",
-              "dashboards/functions/aggregate/listagg",
-              "dashboards/functions/aggregate/listagg_distinct",
-              "dashboards/functions/aggregate/max",
-              "dashboards/functions/aggregate/maxif",
-              "dashboards/functions/aggregate/median",
-              "dashboards/functions/aggregate/min",
-              "dashboards/functions/aggregate/minif",
-              "dashboards/functions/aggregate/mode",
-              "dashboards/functions/aggregate/percentile",
-              "dashboards/functions/aggregate/percentilecont",
-              "dashboards/functions/aggregate/percentiledisc",
-              "dashboards/functions/aggregate/percentoftotal",
-              "dashboards/functions/aggregate/regressionintercept",
-              "dashboards/functions/aggregate/regressionr2",
-              "dashboards/functions/aggregate/regressionslope",
-              "dashboards/functions/aggregate/stdev",
-              "dashboards/functions/aggregate/stdevp",
-              "dashboards/functions/aggregate/subtotal",
-              "dashboards/functions/aggregate/sum",
-              "dashboards/functions/aggregate/sumif",
-              "dashboards/functions/aggregate/sumproduct",
-              "dashboards/functions/aggregate/variance",
-              "dashboards/functions/aggregate/variancep"
+            "tab": "Documentatie",
+            "groups": [
+              {
+                "group": "Aan de slag",
+                "pages": ["nl/index", "nl/quickstart/overview"]
+              },
+              {
+                "group": "Installatiehandleiding",
+                "pages": [
+                  "nl/quickstart/initial-setup",
+                  "nl/quickstart/user-management",
+                  "nl/quickstart/connect-data-source",
+                  "nl/quickstart/team-configuration",
+                  "nl/quickstart/first-dashboard"
+                ]
+              },
+              {
+                "group": "Dashboards",
+                "pages": [
+                  "nl/dashboards/overview",
+                  "nl/dashboards/workbook",
+                  "nl/dashboards/organize"
+                ]
+              },
+              {
+                "group": "Grafieken",
+                "pages": [
+                  "nl/dashboards/charts/overview",
+                  "nl/dashboards/charts/point",
+                  "nl/dashboards/charts/heatmap",
+                  "nl/dashboards/charts/icicle",
+                  "nl/dashboards/charts/headline",
+                  "nl/dashboards/charts/piechart",
+                  "nl/dashboards/charts/pivottable",
+                  "nl/dashboards/charts/datatable",
+                  "nl/dashboards/charts/geomap"
+                ]
+              },
+              {
+                "group": "Filters",
+                "pages": [
+                  "nl/data/filters/create",
+                  "nl/data/filters/dashboard-filters",
+                  "nl/data/filters/edit",
+                  "nl/data/filters/delete"
+                ]
+              },
+              {
+                "group": "Functies",
+                "pages": [
+                  "nl/dashboards/functions/overview",
+                  "nl/dashboards/functions/function-index"
+                ]
+              },
+              {
+                "group": "Connectoren",
+                "pages": [
+                  "nl/data/connectors/overview",
+                  "nl/data/connectors/create",
+                  "nl/data/connectors/errors"
+                ]
+              },
+              {
+                "group": "Authenticatie",
+                "pages": [
+                  "nl/auth/overview",
+                  "nl/auth/system-roles",
+                  "nl/auth/workspace-roles",
+                  "nl/auth/team-roles"
+                ]
+              },
+              {
+                "group": "Catalogi",
+                "pages": [
+                  "nl/data/catalogs/overview",
+                  "nl/data/catalogs/create",
+                  "nl/data/catalogs/edit",
+                  "nl/data/catalogs/multi-catalog"
+                ]
+              },
+              {
+                "group": "Metadata",
+                "pages": [
+                  "nl/data/meta/overview",
+                  "nl/data/meta/create",
+                  "nl/data/meta/edit"
+                ]
+              },
+              {
+                "group": "Relaties",
+                "pages": [
+                  "nl/data/relationships/overview",
+                  "nl/data/relationships/create",
+                  "nl/data/relationships/edit"
+                ]
+              }
             ]
           },
           {
-            "group": "Date",
-            "pages": [
-              "dashboards/functions/date/converttimezone",
-              "dashboards/functions/date/dateadd",
-              "dashboards/functions/date/datediff",
-              "dashboards/functions/date/dateformat",
-              "dashboards/functions/date/datefromunix",
-              "dashboards/functions/date/dateparse",
-              "dashboards/functions/date/datepart",
-              "dashboards/functions/date/datetrunc",
-              "dashboards/functions/date/day",
-              "dashboards/functions/date/dayofyear",
-              "dashboards/functions/date/endofmonth",
-              "dashboards/functions/date/hour",
-              "dashboards/functions/date/indaterange",
-              "dashboards/functions/date/inpriordaterange",
-              "dashboards/functions/date/lastday",
-              "dashboards/functions/date/makedate",
-              "dashboards/functions/date/minute",
-              "dashboards/functions/date/month",
-              "dashboards/functions/date/monthname",
-              "dashboards/functions/date/now",
-              "dashboards/functions/date/quarter",
-              "dashboards/functions/date/second",
-              "dashboards/functions/date/today",
-              "dashboards/functions/date/weekday",
-              "dashboards/functions/date/weekdayname",
-              "dashboards/functions/date/year"
-            ]
-          },
-          {
-            "group": "Logical",
-            "pages": [
-              "dashboards/functions/logical/between",
-              "dashboards/functions/logical/choose",
-              "dashboards/functions/logical/coalesce",
-              "dashboards/functions/logical/if",
-              "dashboards/functions/logical/in",
-              "dashboards/functions/logical/isnotnull",
-              "dashboards/functions/logical/isnull",
-              "dashboards/functions/logical/switch",
-              "dashboards/functions/logical/zn"
-            ]
-          },
-          {
-            "group": "Math",
-            "pages": [
-              "dashboards/functions/math/abs",
-              "dashboards/functions/math/acos",
-              "dashboards/functions/math/asin",
-              "dashboards/functions/math/atan",
-              "dashboards/functions/math/atan2",
-              "dashboards/functions/math/binfixed",
-              "dashboards/functions/math/binrange",
-              "dashboards/functions/math/bitand",
-              "dashboards/functions/math/bitor",
-              "dashboards/functions/math/ceiling",
-              "dashboards/functions/math/cos",
-              "dashboards/functions/math/cot",
-              "dashboards/functions/math/degrees",
-              "dashboards/functions/math/distanceglobe",
-              "dashboards/functions/math/distanceplane",
-              "dashboards/functions/math/div",
-              "dashboards/functions/math/exp",
-              "dashboards/functions/math/floor",
-              "dashboards/functions/math/greatest",
-              "dashboards/functions/math/int",
-              "dashboards/functions/math/iseven",
-              "dashboards/functions/math/isodd",
-              "dashboards/functions/math/least",
-              "dashboards/functions/math/ln",
-              "dashboards/functions/math/log",
-              "dashboards/functions/math/mod",
-              "dashboards/functions/math/mround",
-              "dashboards/functions/math/pi",
-              "dashboards/functions/math/power",
-              "dashboards/functions/math/radians",
-              "dashboards/functions/math/round",
-              "dashboards/functions/math/rounddown",
-              "dashboards/functions/math/roundup",
-              "dashboards/functions/math/rowavg",
-              "dashboards/functions/math/sign",
-              "dashboards/functions/math/sin",
-              "dashboards/functions/math/sqrt",
-              "dashboards/functions/math/tan",
-              "dashboards/functions/math/trunc"
-            ]
-          },
-          {
-            "group": "Text",
-            "pages": [
-              "dashboards/functions/text/contains",
-              "dashboards/functions/text/left",
-              "dashboards/functions/text/lower",
-              "dashboards/functions/text/right",
-              "dashboards/functions/text/upper"
-            ]
-          },
-          {
-            "group": "Type",
-            "pages": [
-              "dashboards/functions/type/date",
-              "dashboards/functions/type/json",
-              "dashboards/functions/type/logical",
-              "dashboards/functions/type/number",
-              "dashboards/functions/type/text"
-            ]
-          },
-          {
-            "group": "Window",
-            "pages": [
-              "dashboards/functions/window/cumedist",
-              "dashboards/functions/window/cumulativeavg",
-              "dashboards/functions/window/cumulativecorr",
-              "dashboards/functions/window/cumulativecount",
-              "dashboards/functions/window/cumulativemax",
-              "dashboards/functions/window/cumulativemin",
-              "dashboards/functions/window/cumulativestddev",
-              "dashboards/functions/window/cumulativesum",
-              "dashboards/functions/window/cumulativevariance",
-              "dashboards/functions/window/denserank",
-              "dashboards/functions/window/first",
-              "dashboards/functions/window/lag",
-              "dashboards/functions/window/last",
-              "dashboards/functions/window/lead",
-              "dashboards/functions/window/movingavg",
-              "dashboards/functions/window/movingcorr",
-              "dashboards/functions/window/movingcount",
-              "dashboards/functions/window/movingmax",
-              "dashboards/functions/window/movingmin",
-              "dashboards/functions/window/movingstddev",
-              "dashboards/functions/window/movingsum",
-              "dashboards/functions/window/movingvariance",
-              "dashboards/functions/window/ntile",
-              "dashboards/functions/window/percentrank",
-              "dashboards/functions/window/rank",
-              "dashboards/functions/window/rownum",
-              "dashboards/functions/window/rownumber",
-              "dashboards/functions/window/runningcount",
-              "dashboards/functions/window/runningtotal"
+            "tab": "Functiereferentie",
+            "groups": [
+              {
+                "group": "Aggregatiefuncties",
+                "pages": [
+                  "nl/dashboards/functions/aggregate/array_agg",
+                  "nl/dashboards/functions/aggregate/array_agg_distinct",
+                  "nl/dashboards/functions/aggregate/avg",
+                  "nl/dashboards/functions/aggregate/avgif",
+                  "nl/dashboards/functions/aggregate/corr",
+                  "nl/dashboards/functions/aggregate/count",
+                  "nl/dashboards/functions/aggregate/countdistinct",
+                  "nl/dashboards/functions/aggregate/countdistinctif",
+                  "nl/dashboards/functions/aggregate/countif",
+                  "nl/dashboards/functions/aggregate/grandtotal",
+                  "nl/dashboards/functions/aggregate/listagg",
+                  "nl/dashboards/functions/aggregate/listagg_distinct",
+                  "nl/dashboards/functions/aggregate/max",
+                  "nl/dashboards/functions/aggregate/maxif",
+                  "nl/dashboards/functions/aggregate/median",
+                  "nl/dashboards/functions/aggregate/min",
+                  "nl/dashboards/functions/aggregate/minif",
+                  "nl/dashboards/functions/aggregate/mode",
+                  "nl/dashboards/functions/aggregate/percentile",
+                  "nl/dashboards/functions/aggregate/percentilecont",
+                  "nl/dashboards/functions/aggregate/percentiledisc",
+                  "nl/dashboards/functions/aggregate/percentoftotal",
+                  "nl/dashboards/functions/aggregate/regressionintercept",
+                  "nl/dashboards/functions/aggregate/regressionr2",
+                  "nl/dashboards/functions/aggregate/regressionslope",
+                  "nl/dashboards/functions/aggregate/stdev",
+                  "nl/dashboards/functions/aggregate/stdevp",
+                  "nl/dashboards/functions/aggregate/subtotal",
+                  "nl/dashboards/functions/aggregate/sum",
+                  "nl/dashboards/functions/aggregate/sumif",
+                  "nl/dashboards/functions/aggregate/sumproduct",
+                  "nl/dashboards/functions/aggregate/variance",
+                  "nl/dashboards/functions/aggregate/variancep"
+                ]
+              },
+              {
+                "group": "Datumfuncties",
+                "pages": [
+                  "nl/dashboards/functions/date/converttimezone",
+                  "nl/dashboards/functions/date/dateadd",
+                  "nl/dashboards/functions/date/datediff",
+                  "nl/dashboards/functions/date/dateformat",
+                  "nl/dashboards/functions/date/datefromunix",
+                  "nl/dashboards/functions/date/dateparse",
+                  "nl/dashboards/functions/date/datepart",
+                  "nl/dashboards/functions/date/datetrunc",
+                  "nl/dashboards/functions/date/day",
+                  "nl/dashboards/functions/date/dayofyear",
+                  "nl/dashboards/functions/date/endofmonth",
+                  "nl/dashboards/functions/date/hour",
+                  "nl/dashboards/functions/date/indaterange",
+                  "nl/dashboards/functions/date/inpriordaterange",
+                  "nl/dashboards/functions/date/lastday",
+                  "nl/dashboards/functions/date/makedate",
+                  "nl/dashboards/functions/date/minute",
+                  "nl/dashboards/functions/date/month",
+                  "nl/dashboards/functions/date/monthname",
+                  "nl/dashboards/functions/date/now",
+                  "nl/dashboards/functions/date/quarter",
+                  "nl/dashboards/functions/date/second",
+                  "nl/dashboards/functions/date/today",
+                  "nl/dashboards/functions/date/weekday",
+                  "nl/dashboards/functions/date/weekdayname",
+                  "nl/dashboards/functions/date/year"
+                ]
+              },
+              {
+                "group": "Logische functies",
+                "pages": [
+                  "nl/dashboards/functions/logical/between",
+                  "nl/dashboards/functions/logical/choose",
+                  "nl/dashboards/functions/logical/coalesce",
+                  "nl/dashboards/functions/logical/if",
+                  "nl/dashboards/functions/logical/in",
+                  "nl/dashboards/functions/logical/isnotnull",
+                  "nl/dashboards/functions/logical/isnull",
+                  "nl/dashboards/functions/logical/switch",
+                  "nl/dashboards/functions/logical/zn"
+                ]
+              },
+              {
+                "group": "Wiskundige functies",
+                "pages": [
+                  "nl/dashboards/functions/math/abs",
+                  "nl/dashboards/functions/math/acos",
+                  "nl/dashboards/functions/math/asin",
+                  "nl/dashboards/functions/math/atan",
+                  "nl/dashboards/functions/math/atan2",
+                  "nl/dashboards/functions/math/binfixed",
+                  "nl/dashboards/functions/math/binrange",
+                  "nl/dashboards/functions/math/bitand",
+                  "nl/dashboards/functions/math/bitor",
+                  "nl/dashboards/functions/math/ceiling",
+                  "nl/dashboards/functions/math/cos",
+                  "nl/dashboards/functions/math/cot",
+                  "nl/dashboards/functions/math/degrees",
+                  "nl/dashboards/functions/math/distanceglobe",
+                  "nl/dashboards/functions/math/distanceplane",
+                  "nl/dashboards/functions/math/div",
+                  "nl/dashboards/functions/math/exp",
+                  "nl/dashboards/functions/math/floor",
+                  "nl/dashboards/functions/math/greatest",
+                  "nl/dashboards/functions/math/int",
+                  "nl/dashboards/functions/math/iseven",
+                  "nl/dashboards/functions/math/isodd",
+                  "nl/dashboards/functions/math/least",
+                  "nl/dashboards/functions/math/ln",
+                  "nl/dashboards/functions/math/log",
+                  "nl/dashboards/functions/math/mod",
+                  "nl/dashboards/functions/math/mround",
+                  "nl/dashboards/functions/math/pi",
+                  "nl/dashboards/functions/math/power",
+                  "nl/dashboards/functions/math/radians",
+                  "nl/dashboards/functions/math/round",
+                  "nl/dashboards/functions/math/rounddown",
+                  "nl/dashboards/functions/math/roundup",
+                  "nl/dashboards/functions/math/rowavg",
+                  "nl/dashboards/functions/math/sign",
+                  "nl/dashboards/functions/math/sin",
+                  "nl/dashboards/functions/math/sqrt",
+                  "nl/dashboards/functions/math/tan",
+                  "nl/dashboards/functions/math/trunc"
+                ]
+              },
+              {
+                "group": "Tekstfuncties",
+                "pages": [
+                  "nl/dashboards/functions/text/contains",
+                  "nl/dashboards/functions/text/left",
+                  "nl/dashboards/functions/text/lower",
+                  "nl/dashboards/functions/text/right",
+                  "nl/dashboards/functions/text/upper"
+                ]
+              },
+              {
+                "group": "Typefuncties",
+                "pages": [
+                  "nl/dashboards/functions/type/date",
+                  "nl/dashboards/functions/type/json",
+                  "nl/dashboards/functions/type/logical",
+                  "nl/dashboards/functions/type/number",
+                  "nl/dashboards/functions/type/text"
+                ]
+              },
+              {
+                "group": "Vensterfuncties",
+                "pages": [
+                  "nl/dashboards/functions/window/cumedist",
+                  "nl/dashboards/functions/window/cumulativeavg",
+                  "nl/dashboards/functions/window/cumulativecorr",
+                  "nl/dashboards/functions/window/cumulativecount",
+                  "nl/dashboards/functions/window/cumulativemax",
+                  "nl/dashboards/functions/window/cumulativemin",
+                  "nl/dashboards/functions/window/cumulativestddev",
+                  "nl/dashboards/functions/window/cumulativesum",
+                  "nl/dashboards/functions/window/cumulativevariance",
+                  "nl/dashboards/functions/window/denserank",
+                  "nl/dashboards/functions/window/first",
+                  "nl/dashboards/functions/window/lag",
+                  "nl/dashboards/functions/window/last",
+                  "nl/dashboards/functions/window/lead",
+                  "nl/dashboards/functions/window/movingavg",
+                  "nl/dashboards/functions/window/movingcorr",
+                  "nl/dashboards/functions/window/movingcount",
+                  "nl/dashboards/functions/window/movingmax",
+                  "nl/dashboards/functions/window/movingmin",
+                  "nl/dashboards/functions/window/movingstddev",
+                  "nl/dashboards/functions/window/movingsum",
+                  "nl/dashboards/functions/window/movingvariance",
+                  "nl/dashboards/functions/window/ntile",
+                  "nl/dashboards/functions/window/percentrank",
+                  "nl/dashboards/functions/window/rank",
+                  "nl/dashboards/functions/window/rownum",
+                  "nl/dashboards/functions/window/rownumber",
+                  "nl/dashboards/functions/window/runningcount",
+                  "nl/dashboards/functions/window/runningtotal"
+                ]
+              }
             ]
           }
         ]
       }
     ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Support",
-          "href": "https://anlytic.com/contact",
-          "icon": "envelope"
-        }
-      ]
-    }
+    "global": {}
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://anlytic.com"
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "https://anlytic.com/contact"
+        "label": "Book a Demo",
+        "href": "https://www.anlytic.com/book-a-demo"
+      },
+      {
+        "label": "Articles",
+        "href": "https://anlytic.com/articles"
+      },
+      {
+        "label": "Pricing",
+        "href": "https://anlytic.com/pricing"
       }
     ],
     "primary": {
@@ -350,6 +659,73 @@
     }
   },
   "footer": {
-    "socials": {}
+    "socials": {
+      "website": "https://anlytic.com",
+      "linkedin": "https://www.linkedin.com/company/anlytic"
+    },
+    "links": [
+      {
+        "header": "Product",
+        "items": [
+          {
+            "label": "Dashboards",
+            "href": "https://anlytic.com/dashboards-feature"
+          },
+          {
+            "label": "Automated Workflows",
+            "href": "https://anlytic.com/automated-workflows-feature"
+          },
+          {
+            "label": "Data Organisation",
+            "href": "https://anlytic.com/data-organisation-features"
+          },
+          {
+            "label": "Pricing",
+            "href": "https://anlytic.com/pricing"
+          }
+        ]
+      },
+      {
+        "header": "Resources",
+        "items": [
+          {
+            "label": "Articles",
+            "href": "https://anlytic.com/articles"
+          },
+          {
+            "label": "Book a Demo",
+            "href": "https://anlytic.com/book-a-demo"
+          },
+          {
+            "label": "Get Started",
+            "href": "https://anlytic.com/get-started"
+          }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          {
+            "label": "Terms of Service",
+            "href": "https://anlytic.com/terms-of-service"
+          },
+          {
+            "label": "Privacy Policy",
+            "href": "https://anlytic.com/privacy-policy"
+          },
+          {
+            "label": "Cookie Policy",
+            "href": "https://anlytic.com/cookie-policy"
+          }
+        ]
+      }
+    ]
+  },
+  "errors": {
+    "404": {
+      "redirect": false,
+      "title": "Page not found",
+      "description": "The page you're looking for doesn't exist or has been moved. [Return to docs](/)."
+    }
   }
 }

@@ -1,0 +1,38 @@
+---
+title: "SumIf"
+---
+
+
+Sommeert waarden in een kolom alleen voor rijen die aan de voorwaarde voldoen
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+SumIf([kolom], voorwaarde 1, [voorwaarde 2], ...)
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de som wordt berekend wanneer de voorwaarde Waar is |
+| `voorwaarde 1` | `logical` | ✓ Ja | Logische expressie die per rij wordt geëvalueerd |
+| `aanvullende voorwaarden` | `variabel` | ✗ Nee | Aanvullende voorwaarden die standaard met AND worden gecombineerd |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: Geen
+
+## Voorbeelden
+
+```
+SumIf([Omzet], [Regio] = "Noord")
+```
+Sommeert de omzet waar Regio gelijk is aan Noord

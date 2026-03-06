@@ -1,0 +1,35 @@
+---
+title: "ArrayAggDistinct"
+---
+
+
+Retourneert een array met unieke, niet-null waarden in een kolom of groep. Ondersteunt optioneel een sorteerrichting.
+
+**Categorie:** `aggregate`
+
+**Syntaxis:**
+```
+ArrayAggDistinct([kolom], |richting|)
+```
+
+**Retourneert:** `ArrayColumn`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `column` | ✓ Ja | De kolom met waarden om samen te voegen. |
+| `richting` | `text` | ✗ Nee | Sorteerrichting. "asc" voor oplopend of "desc" voor aflopend. Standaard oplopend. |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+ArrayAggDistinct([Producttype], "asc")
+```
+Retourneert unieke Producttype-waarden oplopend gesorteerd als een array.

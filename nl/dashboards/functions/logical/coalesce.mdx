@@ -1,0 +1,53 @@
+---
+title: "Coalesce"
+---
+
+
+Retourneert de waarde van het eerste argument dat niet Null is. Wordt vaak toegepast op kolommen om te controleren op Null-waarden en plaatsvervangende waarden toe te wijzen ter vervanging van Nulls.
+
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+Coalesce([kolom_naam], ...)
+```
+
+**Retourneert:** `AnyColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom_naam` | `kolom` | ✓ Ja | Het getal, de datum, de tekenreeks, de kolom of de functie die wordt geëvalueerd. |
+| `aanvullende argumenten` | `variabel` | ✗ Nee | Aanvullende argumenten die worden geëvalueerd. Alle argumenten moeten van hetzelfde gegevenstype zijn. |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: Onbeperkt
+
+## Voorbeelden
+
+```
+Coalesce(Null, 1/0, 1/1, 1/2)
+```
+Retourneert het derde argument (1) omdat dit de eerste niet-Null waarde is.
+**Resultaat:** `1`
+
+```
+Coalesce([Omzet], 0)
+```
+Converteert alle Null-waarden in Omzet naar 0.
+
+```
+Coalesce([Producttype], [Productfamilie], [Sku Nummer])
+```
+Retourneer Producttype als het bestaat; retourneer Productfamilie als er geen Producttype is. Als beide niet bestaan, retourneer SKU-nummer.
+
+## Gerelateerde functies
+
+- [IsNull](isnull) - Controleren of een waarde null is
+- [Zn](zn) - Specifiek nulls naar nul converteren
+- [If](if) - Voorwaardelijke logica voor complexere null-afhandeling

@@ -1,0 +1,54 @@
+---
+title: "MovingMax"
+---
+
+
+Berekent de voortschrijdende maximumwaarde binnen een opgegeven venster van rijen relatief aan de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingMax([kolom], venster_start, venster_einde)
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het voortschrijdend maximum wordt berekend |
+| `venster_start` | `geheel getal` | ✓ Ja | Het aantal rijen vóór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_einde` | ✗ Nee | `geheel getal` | Het aantal rijen na de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+MovingMax([Omzet], -6, 0)
+```
+Retourneert de hoogste omzetwaarde in een voortschrijdend venster van 7 dagen (huidige rij en 6 voorgaande rijen).
+
+```
+MovingMax([Temperatuur], -13, 0)
+```
+Berekent een voortschrijdend maximum van de temperatuur over 14 dagen, handig voor het volgen van piektemperaturen in de loop van de tijd.
+
+```
+MovingMax([Aandeelkoers], -4, 4)
+```
+Berekent een gecentreerd voortschrijdend maximum over 9 dagen (4 dagen ervoor, huidige dag, 4 dagen erna).
+
+## Gerelateerde functies
+
+- [CumulativeMax](cumulativemax) - Berekent het cumulatieve maximum vanaf de eerste rij
+- [MovingMin](movingmin) - Berekent het voortschrijdend minimum met een venster
+- [Max](../aggregate/max) - Retourneert het totale maximum

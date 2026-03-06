@@ -1,0 +1,44 @@
+---
+title: "LastDay"
+---
+
+
+Evalueert een opgegeven datumcomponent in een datumwaarde en retourneert de laatste datum en tijd in dat component als een tijdstempel.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+LastDay([datum], "precisie")
+```
+
+**Retourneert:** `DateTimeColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `date` | `kolom\|datetime` | ✓ Ja | De datum of kolom met datumwaarden waaruit het datumcomponent wordt geëxtraheerd. |
+| `precisie` | `text` | ✓ Ja | Het datumcomponent waarvan de laatste datum en tijd worden bepaald. |
+
+**Toegestane waarden voor `precisie`:** `year`, `quarter`, `month`, `week`
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+LastDay([Factuurdatum], "month")
+```
+Extraheert het maandcomponent en retourneert de laatste datum en tijd voor die maand.
+
+```
+LastDay(Date("2020-01-10 10:34:29"), "year")
+```
+Retourneert de laatste datum en tijd voor het jaar van de opgegeven datum.

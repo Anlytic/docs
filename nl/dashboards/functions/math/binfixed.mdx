@@ -1,0 +1,44 @@
+---
+title: "BinFixed"
+---
+
+
+Berekent de bin voor een waarde onder het opgegeven aantal identiek grote bins binnen de opgegeven grenzen
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+BinFixed([waarde], [min], [max], [bins])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal of kolom` | ✓ Ja | De waarde waarvoor de bin wordt berekend |
+| `min` | `getal` | ✓ Ja | De ondergrens. Als de waarde kleiner is dan min, wordt de bin 0 |
+| `max` | `getal` | ✓ Ja | Als de waarde groter is dan of gelijk aan max, wordt de bin bins + 1 |
+| `bins` | `getal` | ✓ Ja | Het aantal bins binnen het interval. Bins worden genummerd van 1 tot en met bins |
+
+**Toegestane kolomtypen voor `waarde`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 4
+- Maximum parameters: 4
+
+## Voorbeelden
+
+```
+BinFixed([Dagen Sinds Aanmelding], 0, 90, 3)
+```
+Plaatst alle getallen kleiner dan 0 in bin 0, alle getallen van 90 of groter in bin 4, en alle getallen tussen 0 en 90 worden toegewezen aan een van de 3 gelijk grote bins
+
+```
+BinFixed(25, 0, 100, 5)
+```
+Retourneert het bin-nummer voor waarde 25 onder 5 bins tussen 0 en 100

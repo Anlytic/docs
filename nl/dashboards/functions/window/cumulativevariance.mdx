@@ -1,0 +1,48 @@
+---
+title: "CumulativeVariance"
+---
+
+
+Berekent de cumulatieve variantie van waarden vanaf de eerste rij tot en met de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumulativeVariance([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de cumulatieve variantie wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CumulativeVariance([Omzet])
+```
+Retourneert de lopende variantie van de omzet vanaf de eerste rij tot de huidige rij.
+
+```
+CumulativeVariance([Responstijd])
+```
+Berekent de cumulatieve variantie van responstijden, nuttig voor het volgen van dataspreiding in de tijd.
+
+## Gerelateerde functies
+
+- [CumulativeStdDev](cumulativestddev) - Berekent de cumulatieve standaardafwijking
+- [MovingVariance](movingvariance) - Berekent de voortschrijdende variantie met een venster
+- [Variance](../aggregate/variance) - Retourneert de totale variantie
+- [CumulativeAvg](cumulativeavg) - Berekent het cumulatieve gemiddelde

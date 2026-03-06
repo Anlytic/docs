@@ -1,0 +1,57 @@
+---
+title: "MovingCorr"
+---
+
+
+Berekent de voortschrijdende correlatiecoëfficiënt tussen twee kolommen binnen een opgegeven venster van rijen relatief aan de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingCorr([kolom1], [kolom2], venster_start, venster_eind)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom1` | `kolom` | ✓ Ja | De eerste numerieke kolom voor de correlatieberekening |
+| `kolom2` | `kolom` | ✓ Ja | De tweede numerieke kolom voor de correlatieberekening |
+| `venster_start` | `geheel getal` | ✓ Ja | Het aantal rijen vóór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_eind` | ✗ Nee | `geheel getal` | Het aantal rijen ná de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+**Toegestane kolomtypen voor `kolom1`:** INT, FLOAT, DECIMAL, NUMBER
+
+**Toegestane kolomtypen voor `kolom2`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 3
+- Maximum parameters: 4
+
+## Voorbeelden
+
+```
+MovingCorr([Omzet], [Marketinguitgaven], -6, 0)
+```
+Retourneert de 7-daagse voortschrijdende correlatie tussen omzet en marketinguitgaven (huidige rij en 6 voorgaande rijen).
+
+```
+MovingCorr([Temperatuur], [IJsverkoop], -29, 0)
+```
+Berekent een 30-daagse voortschrijdende correlatie tussen temperatuur en ijsverkoop, handig om bij te houden hoe de relatie in de loop van de tijd verandert.
+
+```
+MovingCorr([Aandeel_A], [Aandeel_B], -19, 0)
+```
+Berekent een 20-daagse voortschrijdende correlatie tussen twee aandelen om hun onderlinge relatie te analyseren.
+
+## Gerelateerde functies
+
+- [CumulativeCorr](cumulativecorr) - Berekent de cumulatieve correlatie vanaf de eerste rij
+- [Corr](../aggregate/corr) - Retourneert de totale correlatie
+- [MovingAvg](movingavg) - Berekent het voortschrijdend gemiddelde met een venster

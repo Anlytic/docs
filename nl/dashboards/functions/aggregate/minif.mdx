@@ -1,0 +1,37 @@
+---
+title: "MinIf"
+---
+
+
+Retourneert de minimale waarde in een kolom alleen voor rijen die aan de voorwaarde voldoen
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+MinIf([kolom], voorwaarde)
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de minimale waarde wordt gezocht wanneer de voorwaarde Waar is |
+| `voorwaarde` | `logical` | ✓ Ja | Logische expressie die per rij wordt geëvalueerd |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, DATE, DATETIME
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+MinIf([Omzet], [Regio] = "Noord")
+```
+Minimale omzet waar Regio gelijk is aan Noord

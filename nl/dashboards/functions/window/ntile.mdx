@@ -1,0 +1,52 @@
+---
+title: "Ntile"
+---
+
+
+Verdeelt rijen in een partitie in een opgegeven aantal ongeveer gelijke groepen en wijst een bucketnummer toe aan elke rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+Ntile(aantal_buckets)
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `aantal_buckets` | `geheel getal` | ✓ Ja | Het aantal groepen waarin de rijen worden verdeeld |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Ntile(4)
+```
+Verdeelt rijen in 4 kwartielen en retourneert waarden 1, 2, 3 of 4 voor elke rij.
+
+```
+Ntile(10)
+```
+Verdeelt rijen in 10 decielen, handig voor het maken van percentielgroepen (top 10%, volgende 10%, enz.).
+
+```
+Ntile(3)
+```
+Verdeelt rijen in 3 tertielen en retourneert waarden 1, 2 of 3. Als er 100 rijen zijn, bevatten de groepen respectievelijk 34, 33 en 33 rijen.
+
+## Gerelateerde functies
+
+- [Rank](rank) - Wijst rang toe met gaten
+- [DenseRank](denserank) - Wijst rang toe zonder gaten
+- [PercentRank](percentrank) - Berekent relatieve rang als percentage
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe
+- [CumeDist](cumedist) - Berekent cumulatieve verdeling

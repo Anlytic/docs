@@ -1,0 +1,42 @@
+---
+title: "Cot"
+---
+
+
+Berekent de cotangens van de opgegeven hoek
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Cot([waarde])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal of kolom` | ✓ Ja | De hoek (in radialen) waarvan de cotangens wordt berekend |
+
+**Toegestane kolomtypen voor `waarde`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Cot([Hoek])
+```
+Berekent de cotangens voor elke hoekwaarde in de kolom Hoek
+
+```
+Cot(1.5708)
+```
+Retourneert de cotangens van π/2 radialen
+**Resultaat:** `0`

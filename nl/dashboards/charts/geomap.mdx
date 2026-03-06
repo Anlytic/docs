@@ -1,0 +1,189 @@
+---
+title: "Geo kaart"
+---
+
+
+In dit hoofdstuk nemen we je mee door het maken van geografische visualisaties met de Geo Map-functie van het Anlytic-platform.
+
+Geo Maps zijn krachtige tools voor het visualiseren van locatiegebonden data, waarmee je patronen, trends en verdelingen over geografische gebieden kunt weergeven. Of je nu verkoop per regio analyseert, logistieke routes volgt of bevolkingsdichtheid visualiseert, geo maps bieden een intuïtieve manier om ruimtelijke relaties in je data te begrijpen.
+
+## Overzicht
+
+Het Geo Map-grafiektype ondersteunt meerdere visualisatiestijlen:
+
+- **Puntgebaseerde visualisaties** - Toon individuele datapunten op een kaart met behulp van scatterplots of heatmaplayres
+- **Pad- en boogvisualisaties** - Toon verbindingen en routes tussen locaties
+- **Aangepaste geografische lagen** - Visualiseer polygonen en aangepaste geografische grenzen
+
+Voordat je een geo map maakt, moet je ervoor zorgen dat je data geografische informatie bevat. Dit kan in de vorm van coördinaten (breedte-/lengtegraad) of geografische labels die zijn gekoppeld aan coördinaatgegevens.
+
+## Geografische data instellen
+
+### Kolommen markeren als geografische labels
+
+Om geografische data in je visualisaties te gebruiken, moet je eerst je datakolommen configureren met geografische metadata:
+
+1. Navigeer naar **Databeheer** in de zijbalk en selecteer **Databronnen**.
+
+2. Kies de databron die je geografische data bevat en klik op **Metadata**.
+
+3. Zoek de kolom die geografische informatie bevat (zoals landnamen, stadsnamen of regiocodes).
+
+4. In de metadataconfiguratie voor die kolom zie je de optie **Markeren als geografisch label**. Schakel dit selectievakje in.
+
+5. Zodra ingeschakeld, verschijnen er extra koppelingsopties:
+
+   **Standaardkoppeling:**  
+      - Selecteer **Geo-kolom**  
+      - Kies de geografische systeemkolom die de coördinaatgegevens bevat (bijv. "Landen", "Amerikaanse staten", "Wereldsteden")  
+      - Selecteer **Labelkolom**  
+      - Kies de kolom in de geo-dataset die overeenkomt met je data (bijv. landnamen, staatscodes)  
+
+   **Koppelen via ID (Geavanceerd):**  
+   - Schakel **Koppelen via ID** in als je wilt koppelen met een identificatiekolom  
+   - Selecteer **ID-kolom**  
+   - Kies de kolom in je data die de unieke identificatiecode bevat  
+   - Selecteer **Geo-kolom**  
+   - Kies de geografische systeemkolom  
+   - Selecteer **Referentiekolom**  
+   - Kies de kolom in de geo-dataset die overeenkomt met je ID  
+
+6. Klik op **Implementeren** om de geografische koppelingsconfiguratie op te slaan.  
+
+![alt text](/Resources/config%20geomap.gif)
+
+Deze configuratie stelt het platform in staat om je geografische labels automatisch om te zetten naar coördinaten die op een kaart kunnen worden weergegeven.
+
+### Geografische datatypes begrijpen
+
+Het platform ondersteunt twee hoofdtypen geografische data:
+
+1. **Puntdata (coördinaten)**  
+- Breedte- en lengtegraadwaarden die specifieke locaties vertegenwoordigen
+2. **Polygoondata (grenzen)**  
+- Geografische vormen die gebieden vertegenwoordigen zoals landen, staten of aangepaste regio's
+
+Wanneer je een kolom markeert als geografisch label, bepaalt het systeem automatisch het juiste datatype en biedt het de juiste visualisatieopties.
+
+## Hoe maak je een Geo Map?
+
+### 1. Configureer je werkboek
+1. Open je dashboard, schakel over naar **Bewerkingsmodus** en klik op **Container toevoegen**.
+2. Selecteer **Datavisualisatie** en klik op **Aanmaken** om de grafiekbouwer te openen.  
+3. Kies een dataset uit het cataloguspaneel en dubbelklik op de kolomnamen die je wilt gebruiken. De geselecteerde kolommen verschijnen in het **Werkboek**.
+
+### 3. Configureer je grafiek
+1. Open je dashboard, schakel over naar **Bewerkingsmodus** en voeg een nieuwe visualisatiecontainer toe.  
+2. Selecteer **Datavisualisatie** en klik op **Aanmaken** om de grafiekbouwer te openen.  
+3. Kies een dataset uit de catalogus en controleer of de werkboekfilters correct zijn toegepast.  
+4. Stel in het gedeelte **Algemeen** de grafiektitel en beschrijving in en selecteer het grafiektype **Geomap**.  
+5. Kies in het gedeelte **Data** het datablad, selecteer het **Label**-veld, wijs de **Data** (geo-identificatie) toe en configureer **Aangepaste geometrie** indien nodig.  
+6. Configureer in **Weergaveopties** de kaartstijl, zoals het inschakelen van de kaartachtergrond, het wisselen van donkere modus, het aanpassen van dekking, het selecteren van kleurverlopen en optioneel het inschakelen van 3D-extrusie met hoogteschaalbesturing.
+
+### 4. Sla de grafiek op
+Zodra alle configuraties zijn voltooid:  
+1. Bekijk het grafiekvoorbeeld om te controleren of het de correct gefilterde werkboekdata weergeeft.  
+2. Klik op **Visualisatie aanmaken** in de rechterbovenhoek.  
+3. De grafiek wordt opgeslagen en toegevoegd aan je dashboard, waar je deze kunt verkleinen, vergroten of verplaatsen.
+
+![alt text](/Resources/create%20geomap.gif)
+
+## Hoe bewerk je een Geo Map?
+
+Volg deze stappen om een bestaande geo map te bewerken:
+
+1. Beweeg de muis over de geo map-container op je dashboard. Er verschijnen drie puntjes in de rechterbovenhoek van de grafiekcontainer. Klik op de drie puntjes om het optiemenu te openen.
+
+2. Klik op **Bewerken** in het optiemenu. Dit brengt je naar de grafiekbouwer met je huidige configuratie geladen.
+
+3. Breng wijzigingen aan in je data, laagtype of weergaveopties:
+   - Wissel tussen verschillende laagtypen om verschillende visualisaties te bekijken
+   - Pas kleuren, formaten en dekkingsinstellingen aan
+   - Voeg datavelden toe of verwijder ze
+   - Wijzig filters om te focussen op specifieke regio's of datapunten
+
+4. Klik na het aanbrengen van je wijzigingen op **Visualisatie bijwerken** in de rechterbovenhoek van de pagina. Je bijgewerkte geo map wordt opgeslagen en weergegeven op het dashboard.
+
+![alt text](/Resources/edit%20geomap.gif)
+
+## Hoe verwijder je een Geo Map?
+
+Volg deze stappen om een geo map te verwijderen:
+
+1. Beweeg de muis over de geo map-container op je dashboard. Er verschijnen drie puntjes in de rechterbovenhoek van de grafiekcontainer. Klik op de drie puntjes om het optiemenu te openen.
+
+2. Klik op **Verwijderen** in het optiemenu.
+
+3. Er verschijnt een bevestigingsvenster. Klik op **Verwijderen** om je keuze te bevestigen. Je geo map wordt permanent verwijderd van het dashboard.
+
+![alt text](/Resources/delete%20geomap.gif)
+
+## Geavanceerde Geo Map-functies
+
+### Filters toepassen op Geo Maps
+
+Net als bij andere visualisaties kun je filters toepassen op geo maps om te focussen op specifieke regio's of datasubsets:
+
+1. Klik in de grafiekbouwer op een kolom in het tabblad Data om een filter toe te passen.
+
+2. Configureer de filtercriteria (bijv. alleen specifieke landen, datumbereiken of waardedrempels tonen).
+
+3. De kaart wordt bijgewerkt om alleen de gefilterde datapunten te tonen.
+
+Filters zijn bijzonder nuttig voor geo maps wanneer je:
+- Wilt inzoomen op specifieke geografische regio's
+- Wilt filteren op tijdsperioden om temporele veranderingen te tonen
+- Alleen datapunten wilt weergeven die aan bepaalde criteria voldoen
+
+### Aggregaten gebruiken met Geo Maps
+
+Je kunt aggregaten toepassen op kolommen voordat je ze in geo maps gebruikt:
+
+1. Klik in het tabblad Data op de drie puntjes naast een numerieke kolom.
+
+2. Selecteer een aggregatiefunctie (Som, Gem, Aantal, etc.).
+
+3. De geaggregeerde kolom verschijnt in je tabblad Data en kan worden gebruikt voor de Formaat- of Kleurvelden in je geo map.
+
+Dit is handig voor het maken van kaarten die samengevatte data tonen, zoals totale verkoop per stad of gemiddelde temperaturen per regio.
+
+### Interactieve kaartfuncties
+
+Bij het bekijken van een geo map op je dashboard:
+
+- **Verschuiven** - Klik en sleep om over de kaart te navigeren
+- **Zoomen** - Gebruik het muiswiel of knijpgebaar om in en uit te zoomen
+- **Zweven** - Beweeg de muis over datapunten om gedetailleerde informatie in tooltips te zien
+- **Volledig scherm** - Klik op het volledig-schermicoon om de kaart uit te breiden voor gedetailleerd onderzoek
+
+## Tips voor effectieve Geo Maps
+
+1. **Kies het juiste laagtype** - Gebruik scatterplot voor individuele locaties, heatmap voor dichtheidsvisualisatie en pad-/booglagen voor het tonen van verbindingen.
+
+2. **Configureer geografische metadata correct** - Zorg ervoor dat je geografische labels correct zijn gekoppeld aan coördinaatgegevens voor nauwkeurige positionering.
+
+3. **Gebruik kleur en formaat zinvol** - Benut de kleur- en formaatvelden om extra datadimensies op je kaart te coderen.
+
+4. **Pas dekking aan bij overlappende punten** - Wanneer je veel overlappende punten hebt, helpt het verlagen van de dekking om de dichtheid van data zichtbaar te maken.
+
+5. **Test verschillende kaartthema's** - Probeer zowel lichte als donkere kaartthema's om te zien welke het beste contrast biedt voor je data.
+
+6. **Gebruik filters voor regionale focus** - Gebruik filters om meerdere kaarten te maken die gericht zijn op verschillende regio's of tijdsperioden.
+
+7. **Houd rekening met het datavolume** - Geo maps met duizenden punten presteren mogelijk beter met heatmaplayres dan scatterplotlagen.
+
+## Veelvoorkomende toepassingen
+
+Geo maps zijn ideaal voor het visualiseren van:
+
+- **Verkoopprestaties per regio** - Toon verkoopmetrieken over geografische gebieden
+- **Winkel- of filiaallocaties** - Geef de verdeling van fysieke locaties weer
+- **Logistiek en verzendroutes** - Visualiseer transportpaden en verbindingen
+- **Demografische analyse** - Toon bevolking, inkomen of andere demografische patronen
+- **Evenemententracking** - Geef de locaties en verdeling van evenementen in de tijd weer
+- **Middelverdeling** - Visualiseer de toewijzing van middelen over regio's
+- **Klantgeografie** - Begrijp waar je klanten zich bevinden
+
+Door geo maps te beheersen kun je krachtige ruimtelijke inzichten uit je data ontsluiten en overtuigende visualisaties maken die belanghebbenden helpen geografische patronen en trends te begrijpen.
+
+In het volgende gedeelte verkennen we [filters](../filters) om je te helpen interactief te bepalen welke data wordt weergegeven op je dashboards.

@@ -1,0 +1,47 @@
+---
+title: "CumulativeMax"
+---
+
+
+Berekent de cumulatieve maximumwaarde vanaf de eerste rij tot en met de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumulativeMax([kolom])
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het cumulatieve maximum wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CumulativeMax([Omzet])
+```
+Retourneert de hoogste omzetwaarde gezien vanaf de eerste rij tot en met de huidige rij.
+
+```
+CumulativeMax([Temperatuur])
+```
+Volgt de piektemperatuur waargenomen tot aan elk punt in de tijd.
+
+## Gerelateerde functies
+
+- [CumulativeMin](cumulativemin) - Berekent het cumulatieve minimum
+- [MovingMax](movingmax) - Berekent het voortschrijdende maximum met een venster
+- [Max](../aggregate/max) - Retourneert het totale maximum

@@ -1,0 +1,42 @@
+---
+title: "Zn"
+---
+
+
+Retourneert niet-null-waarden, of 0 (nul) in plaats van null-waarden.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+Zn([waarde_kolom])
+```
+
+**Retourneert:** `NumberColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde_kolom` | `getal\|kolom` | ✓ Ja | De waarde of kolom die wordt geëvalueerd. Null-waarden worden geconverteerd naar 0. |
+
+**Toegestane kolomtypen:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Zn([Omzet])
+```
+Retourneert omzetwaarden zoals ze zijn, maar converteert null-waarden naar 0.
+
+
+## Gerelateerde functies
+
+- [Coalesce](coalesce) - Flexibelere null-afhandeling
+- [IsNull](isnull) - Controleren op null-waarden

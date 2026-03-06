@@ -1,0 +1,45 @@
+---
+title: "Log"
+---
+
+
+Retourneert de logaritme van een getal met een opgegeven grondtal
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Log([getal_kolom], [grondtal])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal waarvan de logaritme wordt berekend |
+| `grondtal` | `getal of kolom` | ✓ Ja | Het grondtal van de logaritme |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `grondtal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Log(100, 10)
+```
+Logaritme van 100 met grondtal 10
+**Resultaat:** `2`
+
+```
+Log([Waarde], 2)
+```
+Logaritme van elke waarde met grondtal 2

@@ -1,0 +1,36 @@
+---
+title: "Sum"
+---
+
+
+Retourneert de som van alle waarden in de opgegeven kolom
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+Sum([kolom])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de som wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Sum([Bedrag])
+```
+Retourneert het totaal van alle bedragen

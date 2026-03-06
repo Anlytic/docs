@@ -1,0 +1,41 @@
+---
+title: "PercentOfTotal"
+---
+
+
+Retourneert het percentage van het totaal voor de aggregatie-expressie of kolom. Equivalent aan aggregate / Subtotal(aggregate, mode, parameters).
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+PercentOfTotal([aggregatie_of_kolom], |modus|, |parameters|)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `aggregatie_of_kolom` | `any` | ✓ Ja | De aggregatiefunctie (bijv. Sum([Omzet])) of kolom waarop percentageberekeningen worden gebaseerd. Als een kolom wordt opgegeven, wordt deze direct gebruikt. |
+| `modus` | `text` | ✗ Nee | Percentagemodus ('grand_total', 'column', enz.). |
+| `parameters` | `any` | ✗ Nee | Aanvullende parameters voor subtotaal indien beschikbaar (zoals partitie-/groepkolom). |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+PercentOfTotal(Sum([Omzet]), "column", [Categorie])
+```
+Retourneert het percentage van de totale omzet gegroepeerd per Categorie.
+
+```
+PercentOfTotal([Omzet], "column", [Regio])
+```
+Retourneert het percentage van het totaal voor de kolom [Omzet] per Regio.

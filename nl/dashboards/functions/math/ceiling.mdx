@@ -1,0 +1,48 @@
+---
+title: "Ceiling"
+---
+
+
+Rondt het getal naar boven af naar het dichtstbijzijnde veelvoud van gelijke of hogere waarde
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Ceiling([getal], [factor])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal dat wordt afgerond |
+| `factor` | `getal` | ✗ Nee | Het veelvoud waarnaar het getal wordt afgerond. Kan niet 0 zijn. Standaard is 1 |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Ceiling([Kosten])
+```
+Retourneert de bovengrens voor elke rij in de kolom Kosten
+
+```
+Ceiling(3.2)
+```
+Retourneert 4
+**Resultaat:** `4`
+
+```
+Ceiling([Kosten], 0.5)
+```
+Retourneert de bovengrens met een factor van 0,5 voor elke rij in de kolom Kosten

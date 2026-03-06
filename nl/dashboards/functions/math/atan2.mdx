@@ -1,0 +1,45 @@
+---
+title: "Atan2"
+---
+
+
+Berekent de arctangens van de opgegeven coördinaten
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Atan2([y], [x])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `y` | `getal of kolom` | ✓ Ja | De y-coördinaat van het punt |
+| `x` | `getal of kolom` | ✓ Ja | De x-coördinaat van het punt |
+
+**Toegestane kolomtypen voor `y`:** INT, FLOAT, DECIMAL
+
+**Toegestane kolomtypen voor `x`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Atan2([Y Coördinaat], [X Coördinaat])
+```
+Berekent de arctangens voor elk paar coördinaten
+
+```
+Atan2(0, 1)
+```
+Retourneert de arctangens van coördinaten (0, 1)
+**Resultaat:** `0`

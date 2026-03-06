@@ -1,0 +1,58 @@
+---
+title: "DateDiff"
+---
+
+
+Berekent het tijdsverschil tussen twee datums.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DateDiff("eenheid", [start], [eind])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `eenheid` | `text` | ✓ Ja | De eenheid om het verschil in te meten. |
+| `start` | `kolom\|datumtijd` | ✓ Ja | De startdatum (gebruik Date() om te converteren indien nodig). |
+| `eind` | `kolom\|datumtijd` | ✓ Ja | De einddatum (gebruik Date() om te converteren indien nodig). |
+
+**Toegestane waarden voor `eenheid`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`, `millisecond`
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 3
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+DateDiff("day", [Factuurdatum], Today())
+```
+Dagen tussen de kolom Factuurdatum en de huidige UTC-datum.
+
+```
+DateDiff("year", [Factuurdatum], Date("2018-01-01"))
+```
+Jaren tussen Factuurdatum en 2018-01-01.
+**Resultaat:** `8`
+
+```
+DateDiff("hour", [Ticketdatum], Now())
+```
+Uren tussen Ticketdatum en de huidige UTC-tijd.
+**Resultaat:** `103`
+
+## Gerelateerde functies
+
+- [DateAdd](dateadd) - Tijd optellen bij of aftrekken van een datum
+- [Today](today) - Huidige datum ophalen
+- [Now](now) - Huidige datum en tijd ophalen

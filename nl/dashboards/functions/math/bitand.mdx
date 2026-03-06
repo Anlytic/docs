@@ -1,0 +1,45 @@
+---
+title: "BitAnd"
+---
+
+
+Berekent de bitsgewijze AND van twee getallen
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+BitAnd([getal1], [getal2])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal1` | `geheel getal of kolom` | ✓ Ja | Het eerste getal voor de bitsgewijze AND-bewerking |
+| `getal2` | `geheel getal of kolom` | ✓ Ja | Het tweede getal voor de bitsgewijze AND-bewerking |
+
+**Toegestane kolomtypen voor `getal1`:** INT
+
+**Toegestane kolomtypen voor `getal2`:** INT
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+BitAnd(5, 3)
+```
+Retourneert de bitsgewijze AND van 5 en 3
+**Resultaat:** `1`
+
+```
+BitAnd([Waarde1], [Waarde2])
+```
+Retourneert de bitsgewijze AND van waarden in twee kolommen

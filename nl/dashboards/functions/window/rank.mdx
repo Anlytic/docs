@@ -1,0 +1,48 @@
+---
+title: "Rank"
+---
+
+
+Wijst een rang toe aan elke rij binnen een partitie op basis van de waarden in de opgegeven kolom. Bij gelijke waarden wordt dezelfde rang toegewezen en wordt de volgende rang overgeslagen, waardoor er gaten in de volgorde ontstaan.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+Rank([kolom])
+```
+
+**Retourneert:** `Integer`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarop de rangschikking wordt gebaseerd |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Rank([Omzet])
+```
+Retourneert de rang van elke rij op basis van omzetwaarden. Als twee rijen gelijk zijn op rang 2, krijgen beide rang 2 en de volgende rij krijgt rang 4.
+
+```
+Rank([Score])
+```
+Rangschikt rijen op scorewaarden. Gelijke scores krijgen dezelfde rang, met daaropvolgende rangen die gaten vertonen.
+**Resultaat:** `1, 2, 2, 4, 5, 6, ...`
+
+## Gerelateerde functies
+
+- [DenseRank](denserank) - Wijst rang toe zonder gaten
+- [PercentRank](percentrank) - Berekent relatieve rang als percentage
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe
+- [CumeDist](cumedist) - Berekent cumulatieve verdeling
+- [Ntile](ntile) - Verdeelt rijen in groepen

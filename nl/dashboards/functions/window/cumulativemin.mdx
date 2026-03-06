@@ -1,0 +1,47 @@
+---
+title: "CumulativeMin"
+---
+
+
+Berekent de cumulatieve minimumwaarde vanaf de eerste rij tot de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+CumulativeMin([kolom])
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het cumulatieve minimum wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+CumulativeMin([Omzet])
+```
+Retourneert de laagste omzetwaarde gezien vanaf de eerste rij tot de huidige rij.
+
+```
+CumulativeMin([Temperatuur])
+```
+Volgt de laagste temperatuur waargenomen tot elk punt in de tijd.
+
+## Gerelateerde functies
+
+- [CumulativeMax](cumulativemax) - Berekent het cumulatieve maximum
+- [MovingMin](movingmin) - Berekent het voortschrijdend minimum met een venster
+- [Min](../aggregate/min) - Retourneert het totale minimum

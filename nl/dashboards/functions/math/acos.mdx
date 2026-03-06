@@ -1,0 +1,48 @@
+---
+title: "Acos"
+---
+
+
+Berekent de arccosinus van de opgegeven hoek
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Acos([waarde])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `getal of kolom` | ✓ Ja | De waarde waarvan de arccosinus wordt berekend |
+
+**Toegestane kolomtypen voor `waarde`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Acos([Cosinus Waarde])
+```
+Berekent de arccosinus voor elke waarde in de kolom Cosinus Waarde
+
+```
+Acos(0.5)
+```
+Retourneert de arccosinus van 0.5
+**Resultaat:** `1.0471975511965979`
+
+```
+Acos(1)
+```
+Retourneert de arccosinus van 1
+**Resultaat:** `0`

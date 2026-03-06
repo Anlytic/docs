@@ -1,0 +1,49 @@
+---
+title: "If"
+---
+
+
+Retourneert Waarde 1 voor elke rij waar de eerste voorwaarde wordt vervuld. Als er meer dan één voorwaarde is opgegeven, worden daaropvolgende voorwaarden geëvalueerd en worden de bijbehorende waarden geretourneerd. Als alle voorwaarden Onwaar zijn, wordt de Else-waarde toegepast.
+
+**Categorie:** `logical`
+
+**Syntax:**
+```
+If(voorwaarde1, waarde1, [voorwaarde2], [waarde2], ..., [else])
+```
+
+**Retourneert:** `AnyColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `voorwaarde 1` | `logical` | ✓ Ja | Logische voorwaarde die een resultaat retourneert dat Waar of Onwaar is. |
+| `waarde 1` | `any` | ✓ Ja | De waarde die wordt geretourneerd als de voorgaande voorwaarde Waar is. |
+| `aanvullende voorwaarden en waarden` | `variabel` | ✗ Nee | Meerdere If/Then-paren kunnen in één functie worden opgenomen. Elke opgegeven voorwaarde moet een bijbehorende waarde hebben. |
+| `else` | `any` | ✗ Nee | De waarde die wordt geretourneerd als geen enkele voorwaarde Waar is. Indien niet opgegeven, wordt standaard een Null-resultaat geretourneerd. |
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: Onbeperkt
+
+## Voorbeelden
+
+```
+If([grootte] < 3, "klein", [grootte] < 6, "middelgroot", "groot")
+```
+Wijs "klein" toe aan groottes kleiner dan 3, "middelgroot" aan groottes kleiner dan 6, en "groot" aan alle overige groottes.
+
+```
+If([omzet] - [kosten] > 0, "winst", "verlies")
+```
+Categoriseer een record als winst of verlies op basis van omzet en kosten.
+
+
+## Gerelateerde functies
+
+- [Switch](switch) - Beter geschikt voor het vergelijken met specifieke waarden
+- [Between](between) - Controleer of een waarde binnen een bereik valt
+- [In](in) - Controleer of een waarde overeenkomt met een waarde in een lijst

@@ -2,109 +2,15 @@
 title: "Building workbooks"
 ---
 
-# Building Workbooks
 
 A workbook is where you prepare your dataset, apply transformations, and build visualizations using Graphbuilder.  
-This chapter provides a complete end-to-end workflow from connecting your data source, preparing your catalog, and shaping your dataset inside the workbook.
+This chapter walks you through creating a workbook, adding data, and shaping your dataset for analysis.
 
-## 1. Connect Your Data Source
+Before building a workbook, make sure you have already [connected a data source](../data/connectors/create), [added metadata](../data/meta/create), [defined relationships](../data/relationships/create), and [created a catalog](../data/catalogs/create).
 
-Before building a workbook, you must first bring data into Anlytic, either by connecting a database or uploading a file.
+## 1. Create a Workbook
 
-### 1.1 Create a New Data Connection 
-
-1. Click the **workspace name** at the top of the left sidebar → select **Settings**.  
-2. In the left sidebar, click **Databases**.  
-3. Click **New connection**.  
-4. Select your cloud data warehouse → click **Save and continue**.  
-5. Enter the required connection credentials.  
-6. Click **Save and continue** to finalize.  
-
-### 1.2 Uploading a File as a Data Source
-
-Anlytic supports **CSV**, **JSON**, and **Parquet** file uploads.
-
-1. Go to **Sources** under the **Data** section.  
-2. Drag and drop your file into the upload area, or click **Select File**.  
-3. After upload, review the **Configuration table** of detected fields.
-
-#### Configure the file import
-
-- Choose **New table** or **Existing table**  
-- Select the target **Database**  
-- Provide a **table name** (for new tables)
-
-Review each column:
-
-- Data type (Integer, Text, Boolean, Date, etc.)  
-- Default value  
-- Nullable / Not nullable  
-- Primary key  
-- Delete column (trash icon)
-
-Click **Import to Anlytic** to finish.  
-A confirmation message will indicate success or display errors.
-Your connection is now established and ready for metadata, relationships, and catalog configuration.
-
-You can refer to more detailed information in the [Add a Data Source](../data/connectors/create) section.  
-
-## 2. Add Metadata
-
-Metadata provides clarity and meaning to tables and columns.
-
-To add metadata:
-
-1. Select a table from the left panel.  
-2. Add a **verbose name**.  
-3. Add a **table description**.  
-4. Select a column.  
-5. Add a **verbose column name**.  
-6. Add a **column description**.  
-7. Click **Save and continue**.
-
-Metadata appears across catalogs, workbooks, and visualizations.  
-
-You can refer to more detailed information in the [Add Metadata](../data/meta/create) section. 
-
-## 3. Create Data Relationships
-
-Relationships define how tables join together in the workbook.
-
-1. Select a table in connection point **A** → choose a column.  
-2. Select a table in connection point **B** → choose a column.  
-3. Click **Form Relation**.  
-4. Use the **focus icon** to visualize the relationship.  
-5. Click **Save & continue**.
-
-Multiple relationships can be created across your schema.  
-
-You can refer to more detailed information in the [Define Relationships](../data/relationships/create) section. 
-
-## 4. Create a Catalog
-
-A catalog organizes your data model for analysis and workbook usage.
-
-### Catalog Interface Overview
-
-- **Left panel** → tables, metrics, and columns  
-- **Right panel** → catalog hierarchy and folders  
-
-### Steps
-
-1. Click **Add catalog** → rename using the **edit (pen) icon**.  
-2. Drag entire tables into the catalog.  
-3. To add specific fields, expand a table → drag **individual columns**.  
-4. Use folders to organize:
-   - Add folders  
-   - Create nested folders  
-   - Rearrange via drag & drop  
-5. Click **Deploy** to save your catalog structure.  
-
-You can refer to more detailed information in the [Create a Catalog](../data/catalogs/create) section. 
-
-## 5. Create a Workbook
-
-### 5.1 Opening a Workbook
+### 1.1 Opening a Workbook
 
 A workbook opens automatically when creating a visualization.
 
@@ -118,7 +24,7 @@ A workbook opens automatically when creating a visualization.
 
 A new workbook is created or an existing one is reused.  
 
-### 5.2 Adding Data to the Workbook
+### 1.2 Adding Data to the Workbook
 
 1. The left panel displays your **catalog**.  
 2. Select a table.  
@@ -128,11 +34,11 @@ A new workbook is created or an existing one is reused.
 6. Joins are handled automatically based on catalog-defined relationships.
 
 
-## 6. Managing Workbook Data
+## 2. Managing Workbook Data
 
 The workbook provides tools for preparing and transforming your dataset.
 
-### 6.1 Managing Multiple Sheets
+### 2.1 Managing Multiple Sheets
 
 Workbooks can contain multiple datasheets, allowing you to organize, transform, or separate datasets within the same workbook.  
 Multiple sheets can also be used to support multiple charts in the same dashboard. Each chart can reference a different sheet depending on the data it needs.
@@ -144,7 +50,7 @@ Multiple sheets can also be used to support multiple charts in the same dashboar
 
 ![alt text](/Resources/add%20multiple%20sheet.gif)
 
-### 6.2 Renaming Column Header
+### 2.2 Renaming Column Header
 
 1. Click a column header.  
 2. Select **Rename column**.  
@@ -154,7 +60,7 @@ Useful for business-friendly labels.
 
 ![alt text](/Resources/rename%20header.gif)
 
-### 6.3 Applying Filters
+### 2.3 Applying Filters
 
 Filters limit your dataset to specific conditions.
 
@@ -170,7 +76,7 @@ Filters update the datasheet instantly and apply to visualizations.
 
 ![alt text](/Resources/workbook%20filter.gif)
 
-### 6.4 Grouping Data
+### 2.4 Grouping Data
 
 Grouping organizes rows into summary buckets.
 
@@ -183,7 +89,7 @@ Common uses: Heatmaps, Bar charts,  Pivot tables,...
 
 ![alt text](/Resources/groupby.gif)
 
-### 6.5 Aggregation 
+### 2.5 Aggregation 
 
 Aggregation reduces detailed rows into summarized values.
 
@@ -194,7 +100,7 @@ Results appear instantly.
 
 ![alt text](/Resources/aggregate.gif)
 
-### 6.6 Support Functions in Workbook
+### 2.6 Support Functions in Workbook
 
 Workbooks support formulas for advanced data transformations.
 

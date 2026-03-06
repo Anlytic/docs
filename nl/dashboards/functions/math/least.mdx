@@ -1,0 +1,50 @@
+---
+title: "Least"
+---
+
+
+Retourneert de kleinste waarde uit de invoerwaarden
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Least([invoer1], [invoer2], ...)
+```
+
+**Retourneert:** `Any`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `invoer1` | `getal of datum of tekenreeks of kolom` | ✓ Ja | De data of kolom met data die wordt geëvalueerd. Invoer kan bestaan uit getallen, datums of tekenreeksen |
+| `invoeren` | `getal of datum of tekenreeks of kolom` | ✗ Nee | Aanvullende invoeren om te vergelijken. Alle aanvullende invoeren moeten overeenkomen met het type van de eerste invoer |
+
+**Toegestane kolomtypen voor `invoer1`:** INT, FLOAT, DECIMAL, DATE, DATETIME, VARCHAR, TEXT
+
+**Toegestane kolomtypen voor `invoeren`:** INT, FLOAT, DECIMAL, DATE, DATETIME, VARCHAR, TEXT
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 10
+
+## Voorbeelden
+
+```
+Least([Prijs1], [Prijs2], [Prijs3])
+```
+Retourneert de laagste prijs uit drie kolommen
+
+```
+Least(10, 20, 5, 15)
+```
+Retourneert 5
+**Resultaat:** `5`
+
+```
+Least([Factuurdatum], Date("2020-01-01"))
+```
+Retourneert de vroegste datum

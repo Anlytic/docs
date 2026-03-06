@@ -1,0 +1,35 @@
+---
+title: "ListAgg"
+---
+
+
+Voegt waarden samen tot een tekenreeks met scheidingsteken
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+ListAgg([kolom], scheidingsteken)
+```
+
+**Retourneert:** `String`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waarvan de waarden worden samengevoegd |
+| `scheidingsteken` | `text` | ✗ Nee | Scheidingsteken tussen waarden. Standaard is ',' |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+ListAgg([Categorie], "; ")
+```
+Voegt categorieën samen met een puntkomma als scheidingsteken

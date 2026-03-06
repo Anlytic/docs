@@ -1,0 +1,42 @@
+---
+title: "Left"
+---
+
+
+Retourneert een substring die begint aan het begin van een opgegeven tekenreekskolom.
+
+**Categorie:** `text`
+
+**Syntax:**
+```
+Left([tekenreeks_kolom], aantal)
+```
+
+**Retourneert:** `StringColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `tekenreeks_kolom` | `kolom` | ✓ Ja | De tekenreekskolom waaruit een linker substring wordt geretourneerd. |
+| `aantal` | `getal` | ✓ Ja | De gewenste lengte van de geretourneerde substring. Een negatief getal verwijdert tekens vanaf het einde. |
+
+**Toegestane kolomtypen:** STRING, TEXT
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+Left([Adres], 5)
+```
+Retourneert de eerste 5 tekens van elk adres.
+
+## Gerelateerde functies
+
+- [Right](right) - Extraheren vanaf het einde van een tekenreeks
+- [Upper](upper) - Geëxtraheerde tekst naar hoofdletters converteren

@@ -1,0 +1,47 @@
+---
+title: "IsOdd"
+---
+
+
+Retourneert Waar als het gehele getal oneven is, Onwaar als het even is.
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+IsOdd([getal_kolom])
+```
+
+**Retourneert:** `BooleanColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `waarde` | `geheel getal\|kolom` | ✓ Ja | Het getal of de kolom met getallen om te testen. |
+
+**Toegestane kolomtypen:** INT
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+IsOdd(2)
+```
+Test of 2 oneven is.
+**Resultaat:** `false`
+
+```
+IsOdd(3)
+```
+Test of 3 oneven is.
+**Resultaat:** `true`
+
+## Gerelateerde functies
+
+- [IsEven](iseven) - Testen of een getal even is

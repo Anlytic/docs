@@ -1,0 +1,42 @@
+---
+title: "Second"
+---
+
+
+Retourneert een geheel getal dat het secondecomponent van een opgegeven datum en tijd vertegenwoordigt.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+Second([datum_kolom])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum of kolom met datumwaarden waaruit het secondecomponent wordt geëxtraheerd. |
+
+**Toegestane kolomtypen:** DATETIME
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Second(Date("2007-08-14 07:11:05"))
+```
+Extraheert de seconde uit de opgegeven datum en tijd.
+**Resultaat:** `5`
+
+```
+Second([Datum])
+```
+Retourneert het secondecomponent voor elke waarde in de kolom [Datum].

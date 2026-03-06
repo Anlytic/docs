@@ -1,0 +1,48 @@
+---
+title: "Abs"
+---
+
+
+Retourneert de absolute, niet-negatieve waarde van een getal
+
+**Categorie:** `math`
+
+**Syntax:**
+```
+Abs([getal])
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `getal` | `getal of kolom` | ✓ Ja | Het getal of de kolom met getallen dat wordt geëvalueerd |
+
+**Toegestane kolomtypen voor `getal`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Abs([Afgelegde Afstand])
+```
+Converteert alle negatieve waarden in de kolom Afgelegde Afstand naar positieve waarden
+
+```
+Abs(-5)
+```
+Retourneert de absolute waarde van -5
+**Resultaat:** `5`
+
+```
+Abs(3.14)
+```
+Retourneert de absolute waarde van 3.14
+**Resultaat:** `3.14`

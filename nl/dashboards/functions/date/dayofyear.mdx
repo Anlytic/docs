@@ -1,0 +1,56 @@
+---
+title: "DayOfYear"
+---
+
+
+Converteert een datum naar het dagnummer van het jaar, van 1 (1 jan) tot 365 (31 dec). Houdt rekening met schrikkeljaren.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+DayOfYear([datum], |tijdzone|)
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `date` | `kolom\|datetime` | ✓ Ja | De datum of kolom met datumwaarden om te evalueren. |
+| `tijdzone` | `text` | ✗ Nee | Optionele IANA-tijdzonenaam (bijv. "Europe/Amsterdam"). |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Voorbeelden
+
+```
+DayOfYear(Date("2023-01-01"))
+```
+Converteert 1 jan 2023 naar het dagnummer van het jaar.
+**Resultaat:** `1`
+
+```
+DayOfYear(Date("2023-12-31"))
+```
+Converteert 31 dec 2023 naar het dagnummer van het jaar.
+**Resultaat:** `365`
+
+```
+DayOfYear(Date("2024-12-31"))
+```
+Converteert 31 dec 2024 (schrikkeljaar) naar het dagnummer van het jaar.
+**Resultaat:** `366`
+
+```
+DayOfYear(Date("2023-01-03 02:00:00Z"), "Europe/Amsterdam")
+```
+Converteert 3 jan 2023 02:00:00Z naar het dagnummer van het jaar in Amsterdam.
+**Resultaat:** `2`

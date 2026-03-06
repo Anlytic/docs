@@ -1,0 +1,36 @@
+---
+title: "Quarter"
+---
+
+
+Retourneert een geheel getal dat het kwartaalcomponent in een opgegeven datetime-waarde vertegenwoordigt.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+Quarter([datum_kolom])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum waaruit het kwartaal wordt geëxtraheerd. |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Quarter([Besteldatum])
+```
+Retourneert het kwartaal (1-4) uit de datum.

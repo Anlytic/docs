@@ -1,0 +1,55 @@
+---
+title: "MovingStdDev"
+---
+
+
+Berekent de voortschrijdende standaardafwijking van waarden binnen een opgegeven venster van rijen ten opzichte van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+MovingStdDev([kolom], venster_start, venster_eind)
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan de voortschrijdende
+óór de huidige rij dat in het venster wordt opgenomen (negatieve waarde) |
+| `venster_eind` | ✗ Nee | `geheel getal` | Het aantal rijen na de huidige rij dat in het venster wordt opgenomen (positieve waarde). Standaard 0. |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Voorbeelden
+
+```
+MovingStdDev([Omzet], -6, 0)
+```
+Retourneert de standaardafwijking van de omzet in een voortschrijdend venster van 7 dagen (huidige rij en 6 voorgaande rijen).
+
+```
+MovingStdDev([Responstijd], -29, 0)
+```
+Berekent een 30-daags voortschrijdende standaardafwijking van responstijden, handig voor het volgen van variabiliteit in de loop van de tijd.
+
+```
+MovingStdDev([Aandeelrendementen], -19, 0)
+```
+Berekent een 20-daagse voortschrijdende volatiliteit (standaardafwijking) voor aandeelrendementen.
+
+## Gerelateerde functies
+
+- [CumulativeStdDev](cumulativestddev) - Berekent de cumulatieve standaardafwijking vanaf de eerste rij
+- [MovingVariance](movingvariance) - Berekent de voortschrijdende variantie met een venster
+- [StDev](../aggregate/stdev) - Retourneert de totale standaardafwijking
+- [MovingAvg](movingavg) - Berekent het voortschrijdend gemiddelde met een venster

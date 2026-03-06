@@ -1,0 +1,35 @@
+---
+title: "CountIf"
+---
+
+
+Telt rijen die voldoen aan de opgegeven voorwaarde(n)
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+CountIf(voorwaarde 1, [voorwaarde 2], ...)
+```
+
+**Retourneert:** `Number`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|-------------|
+| `voorwaarde 1` | `logical` | ✓ Ja | Logische expressie die per rij wordt geëvalueerd |
+| `aanvullende voorwaarden` | `variabel` | ✗ Nee | Aanvullende voorwaarden die standaard met AND worden gecombineerd |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: Geen
+
+## Voorbeelden
+
+```
+CountIf([Sales] > 1000)
+```
+Telt rijen waar Sales groter is dan 1000

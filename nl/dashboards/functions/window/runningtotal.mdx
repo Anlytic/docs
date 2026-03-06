@@ -1,0 +1,53 @@
+---
+title: "RunningTotal"
+---
+
+
+Berekent het lopende totaal (cumulatieve som) van waarden vanaf de eerste rij tot en met de huidige rij binnen een partitie.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+RunningTotal([kolom])
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het lopende totaal wordt berekend |
+
+**Toegestane kolomtypen voor `kolom`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+RunningTotal([Omzet])
+```
+Retourneert het lopende totaal van de omzet vanaf de eerste rij tot en met de huidige rij.
+
+```
+RunningTotal([Inkomsten])
+```
+Berekent het lopende totaal van de inkomsten, handig voor het bijhouden van jaar-tot-datum of maand-tot-datum totalen.
+
+```
+RunningTotal([Orderbedrag])
+```
+Volgt cumulatieve orderbedragen in de tijd en toont hoe het totaal groeit met elke order.
+
+## Gerelateerde functies
+
+- [CumulativeSum](cumulativesum) - Berekent de cumulatieve som (vergelijkbare functionaliteit)
+- [RunningCount](runningcount) - Berekent het lopende aantal
+- [MovingSum](movingsum) - Berekent de voortschrijdende som met een venster
+- [Sum](../aggregate/sum) - Retourneert de totale som

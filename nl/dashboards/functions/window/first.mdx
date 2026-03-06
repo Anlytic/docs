@@ -1,0 +1,51 @@
+---
+title: "First"
+---
+
+
+Retourneert de eerste waarde in de huidige partitie of het venster, ongeacht de positie van de huidige rij.
+
+**Categorie:** `window`
+
+**Syntax:**
+```
+First([kolom])
+```
+
+**Retourneert:** `Zelfde als invoertype`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De kolom waaruit de eerste waarde wordt opgehaald |
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+First([Omzet])
+```
+Retourneert de omzetwaarde van de eerste rij in de partitie.
+
+```
+First([Openingsprijs])
+```
+Retourneert de openingsprijs van de eerste dag in de partitie, handig om huidige waarden te vergelijken met beginwaarden.
+
+```
+First([Klantnaam])
+```
+Retourneert de eerste klantnaam in de geordende partitie.
+
+## Gerelateerde functies
+
+- [Last](last) - Retourneert de laatste waarde in de partitie
+- [Lag](lag) - Retourneert de waarde van een vorige rij
+- [Lead](lead) - Retourneert de waarde van een volgende rij
+- [RowNumber](rownumber) - Wijst opeenvolgende rijnummers toe

@@ -1,0 +1,36 @@
+---
+title: "Avg"
+---
+
+
+Geeft het gemiddelde van alle waarden in de opgegeven kolom terug
+
+**Categorie:** `aggregate`
+
+**Syntax:**
+```
+Avg([kolom])
+```
+
+**Retourneert:** `Float`
+
+**Contextfiltering:** ✗ Nee
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `kolom` | `kolom` | ✓ Ja | De numerieke kolom waarvan het gemiddelde wordt berekend |
+
+**Toegestane kolomtypes voor `kolom`:** INT, FLOAT, DECIMAL
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Avg([Verkoop])
+```
+Geeft het gemiddelde van alle verkoopwaarden terug

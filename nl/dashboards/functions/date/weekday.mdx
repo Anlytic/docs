@@ -1,0 +1,36 @@
+---
+title: "Weekday"
+---
+
+
+Retourneert een geheel getal dat de dag van de week in een opgegeven datetime-waarde vertegenwoordigt.
+
+**Categorie:** `date`
+
+**Syntax:**
+```
+Weekday([datum_kolom])
+```
+
+**Retourneert:** `IntColumn`
+
+**Contextfiltering:** ✓ Ja
+
+## Parameters
+
+| Naam | Type | Vereist | Beschrijving |
+|------|------|---------|--------------|
+| `datum_kolom` | `kolom\|datetime` | ✓ Ja | De datum waaruit de weekdag wordt geëxtraheerd. |
+
+**Toegestane kolomtypen:** DATETIME, DATE
+
+## Validatie
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Voorbeelden
+
+```
+Weekday([Besteldatum])
+```
+Retourneert de dag van de week (1=zondag, 7=zaterdag).
