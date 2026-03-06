@@ -1,0 +1,37 @@
+---
+title: "Weekday"
+---
+
+# Weekday
+
+Returns an integer representing the day of the week in a specified datetime value.
+
+**Category:** `date`
+
+**Syntax:**
+```
+Weekday([date_column])
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date to extract weekday from. |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Weekday([OrderDate])
+```
+Returns day of week (1=Sunday, 7=Saturday).

@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Anlytic",
   "colors": {
     "primary": "#16A34A",
     "light": "#07C983",
@@ -11,58 +11,312 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Getting started",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Overview",
             "pages": [
               "index",
-              "quickstart",
-              "development"
+              "quickstart/overview"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Setup guide",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "quickstart/initial-setup",
+              "quickstart/user-management",
+              "quickstart/connect-data-source",
+              "quickstart/team-configuration",
+              "quickstart/first-dashboard"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "Authentication",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "User roles",
             "pages": [
-              "api-reference/introduction"
+              "auth/overview",
+              "auth/system-roles",
+              "auth/workspace-roles",
+              "auth/team-roles"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Data",
+        "groups": [
+          {
+            "group": "Connectors",
+            "pages": [
+              "data/connectors/overview",
+              "data/connectors/create",
+              "data/connectors/errors"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Catalogs",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "data/catalogs/overview",
+              "data/catalogs/create",
+              "data/catalogs/edit",
+              "data/catalogs/multi-catalog"
+            ]
+          },
+          {
+            "group": "Metadata",
+            "pages": [
+              "data/meta/overview",
+              "data/meta/create",
+              "data/meta/edit"
+            ]
+          },
+          {
+            "group": "Relationships",
+            "pages": [
+              "data/relationships/overview",
+              "data/relationships/create",
+              "data/relationships/edit"
+            ]
+          },
+          {
+            "group": "Calculations",
+            "pages": [
+              "data/calculations/overview",
+              "data/calculations/create",
+              "data/calculations/edit"
+            ]
+          },
+          {
+            "group": "Filters",
+            "pages": [
+              "data/filters/create",
+              "data/filters/dashboard-filters",
+              "data/filters/edit",
+              "data/filters/delete"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Dashboards",
+        "groups": [
+          {
+            "group": "Dashboards",
+            "pages": [
+              "dashboards/overview",
+              "dashboards/workbook",
+              "dashboards/organize"
+            ]
+          },
+          {
+            "group": "Charts",
+            "pages": [
+              "dashboards/charts/overview",
+              "dashboards/charts/point",
+              "dashboards/charts/heatmap",
+              "dashboards/charts/icicle",
+              "dashboards/charts/headline",
+              "dashboards/charts/piechart",
+              "dashboards/charts/pivottable",
+              "dashboards/charts/datatable",
+              "dashboards/charts/geomap"
+            ]
+          },
+          {
+            "group": "Functions",
+            "pages": [
+              "dashboards/functions/overview",
+              "dashboards/functions/function-index"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Function reference",
+        "groups": [
+          {
+            "group": "Aggregate",
+            "pages": [
+              "dashboards/functions/aggregate/array_agg",
+              "dashboards/functions/aggregate/array_agg_distinct",
+              "dashboards/functions/aggregate/avg",
+              "dashboards/functions/aggregate/avgif",
+              "dashboards/functions/aggregate/corr",
+              "dashboards/functions/aggregate/count",
+              "dashboards/functions/aggregate/countdistinct",
+              "dashboards/functions/aggregate/countdistinctif",
+              "dashboards/functions/aggregate/countif",
+              "dashboards/functions/aggregate/grandtotal",
+              "dashboards/functions/aggregate/listagg",
+              "dashboards/functions/aggregate/listagg_distinct",
+              "dashboards/functions/aggregate/max",
+              "dashboards/functions/aggregate/maxif",
+              "dashboards/functions/aggregate/median",
+              "dashboards/functions/aggregate/min",
+              "dashboards/functions/aggregate/minif",
+              "dashboards/functions/aggregate/mode",
+              "dashboards/functions/aggregate/percentile",
+              "dashboards/functions/aggregate/percentilecont",
+              "dashboards/functions/aggregate/percentiledisc",
+              "dashboards/functions/aggregate/percentoftotal",
+              "dashboards/functions/aggregate/regressionintercept",
+              "dashboards/functions/aggregate/regressionr2",
+              "dashboards/functions/aggregate/regressionslope",
+              "dashboards/functions/aggregate/stdev",
+              "dashboards/functions/aggregate/stdevp",
+              "dashboards/functions/aggregate/subtotal",
+              "dashboards/functions/aggregate/sum",
+              "dashboards/functions/aggregate/sumif",
+              "dashboards/functions/aggregate/sumproduct",
+              "dashboards/functions/aggregate/variance",
+              "dashboards/functions/aggregate/variancep"
+            ]
+          },
+          {
+            "group": "Date",
+            "pages": [
+              "dashboards/functions/date/converttimezone",
+              "dashboards/functions/date/dateadd",
+              "dashboards/functions/date/datediff",
+              "dashboards/functions/date/dateformat",
+              "dashboards/functions/date/datefromunix",
+              "dashboards/functions/date/dateparse",
+              "dashboards/functions/date/datepart",
+              "dashboards/functions/date/datetrunc",
+              "dashboards/functions/date/day",
+              "dashboards/functions/date/dayofyear",
+              "dashboards/functions/date/endofmonth",
+              "dashboards/functions/date/hour",
+              "dashboards/functions/date/indaterange",
+              "dashboards/functions/date/inpriordaterange",
+              "dashboards/functions/date/lastday",
+              "dashboards/functions/date/makedate",
+              "dashboards/functions/date/minute",
+              "dashboards/functions/date/month",
+              "dashboards/functions/date/monthname",
+              "dashboards/functions/date/now",
+              "dashboards/functions/date/quarter",
+              "dashboards/functions/date/second",
+              "dashboards/functions/date/today",
+              "dashboards/functions/date/weekday",
+              "dashboards/functions/date/weekdayname",
+              "dashboards/functions/date/year"
+            ]
+          },
+          {
+            "group": "Logical",
+            "pages": [
+              "dashboards/functions/logical/between",
+              "dashboards/functions/logical/choose",
+              "dashboards/functions/logical/coalesce",
+              "dashboards/functions/logical/if",
+              "dashboards/functions/logical/in",
+              "dashboards/functions/logical/isnotnull",
+              "dashboards/functions/logical/isnull",
+              "dashboards/functions/logical/switch",
+              "dashboards/functions/logical/zn"
+            ]
+          },
+          {
+            "group": "Math",
+            "pages": [
+              "dashboards/functions/math/abs",
+              "dashboards/functions/math/acos",
+              "dashboards/functions/math/asin",
+              "dashboards/functions/math/atan",
+              "dashboards/functions/math/atan2",
+              "dashboards/functions/math/binfixed",
+              "dashboards/functions/math/binrange",
+              "dashboards/functions/math/bitand",
+              "dashboards/functions/math/bitor",
+              "dashboards/functions/math/ceiling",
+              "dashboards/functions/math/cos",
+              "dashboards/functions/math/cot",
+              "dashboards/functions/math/degrees",
+              "dashboards/functions/math/distanceglobe",
+              "dashboards/functions/math/distanceplane",
+              "dashboards/functions/math/div",
+              "dashboards/functions/math/exp",
+              "dashboards/functions/math/floor",
+              "dashboards/functions/math/greatest",
+              "dashboards/functions/math/int",
+              "dashboards/functions/math/iseven",
+              "dashboards/functions/math/isodd",
+              "dashboards/functions/math/least",
+              "dashboards/functions/math/ln",
+              "dashboards/functions/math/log",
+              "dashboards/functions/math/mod",
+              "dashboards/functions/math/mround",
+              "dashboards/functions/math/pi",
+              "dashboards/functions/math/power",
+              "dashboards/functions/math/radians",
+              "dashboards/functions/math/round",
+              "dashboards/functions/math/rounddown",
+              "dashboards/functions/math/roundup",
+              "dashboards/functions/math/rowavg",
+              "dashboards/functions/math/sign",
+              "dashboards/functions/math/sin",
+              "dashboards/functions/math/sqrt",
+              "dashboards/functions/math/tan",
+              "dashboards/functions/math/trunc"
+            ]
+          },
+          {
+            "group": "Text",
+            "pages": [
+              "dashboards/functions/text/contains",
+              "dashboards/functions/text/left",
+              "dashboards/functions/text/lower",
+              "dashboards/functions/text/right",
+              "dashboards/functions/text/upper"
+            ]
+          },
+          {
+            "group": "Type",
+            "pages": [
+              "dashboards/functions/type/date",
+              "dashboards/functions/type/json",
+              "dashboards/functions/type/logical",
+              "dashboards/functions/type/number",
+              "dashboards/functions/type/text"
+            ]
+          },
+          {
+            "group": "Window",
+            "pages": [
+              "dashboards/functions/window/cumedist",
+              "dashboards/functions/window/cumulativeavg",
+              "dashboards/functions/window/cumulativecorr",
+              "dashboards/functions/window/cumulativecount",
+              "dashboards/functions/window/cumulativemax",
+              "dashboards/functions/window/cumulativemin",
+              "dashboards/functions/window/cumulativestddev",
+              "dashboards/functions/window/cumulativesum",
+              "dashboards/functions/window/cumulativevariance",
+              "dashboards/functions/window/denserank",
+              "dashboards/functions/window/first",
+              "dashboards/functions/window/lag",
+              "dashboards/functions/window/last",
+              "dashboards/functions/window/lead",
+              "dashboards/functions/window/movingavg",
+              "dashboards/functions/window/movingcorr",
+              "dashboards/functions/window/movingcount",
+              "dashboards/functions/window/movingmax",
+              "dashboards/functions/window/movingmin",
+              "dashboards/functions/window/movingstddev",
+              "dashboards/functions/window/movingsum",
+              "dashboards/functions/window/movingvariance",
+              "dashboards/functions/window/ntile",
+              "dashboards/functions/window/percentrank",
+              "dashboards/functions/window/rank",
+              "dashboards/functions/window/rownum",
+              "dashboards/functions/window/rownumber",
+              "dashboards/functions/window/runningcount",
+              "dashboards/functions/window/runningtotal"
             ]
           }
         ]
@@ -71,14 +325,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Support",
+          "href": "https://anlytic.com/contact",
+          "icon": "envelope"
         }
       ]
     }
@@ -91,32 +340,16 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://anlytic.com/contact"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Go to app",
+      "href": "https://app.anlytic.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "socials": {}
   }
 }

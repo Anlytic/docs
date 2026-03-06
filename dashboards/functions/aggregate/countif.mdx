@@ -1,0 +1,37 @@
+---
+title: "Countif"
+---
+
+# CountIf
+
+Counts rows matching the specified condition(s)
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+CountIf(condition 1, [condition 2], ...)
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `condition 1` | `logical` | ✓ Yes | Logical expression evaluated per row |
+| `additional conditions` | `variadic` | ✗ No | Additional conditions combined with AND by default |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: None
+
+## Examples
+
+```
+CountIf([Sales] > 1000)
+```
+Counts rows where Sales is greater than 1000
+

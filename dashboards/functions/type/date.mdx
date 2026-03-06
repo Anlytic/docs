@@ -1,0 +1,38 @@
+---
+title: "Date"
+---
+
+# Date
+
+Converts a text or number value to the date data type in ISO date time format
+
+**Category:** `conversion`
+
+**Syntax:**
+```
+Date(value)
+```
+
+**Returns:** `DateTime`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `text or number or column` | ✓ Yes | The value or column containing values to convert to date data values in ISO date time format |
+
+**Allowed Column Types for `value`:** STRING, TEXT, INT, DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Date([Invoice Date])
+```
+Converts the Invoice Date column to date data type
+

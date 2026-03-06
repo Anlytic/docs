@@ -1,0 +1,49 @@
+---
+title: "Denserank"
+---
+
+# DenseRank
+
+Assigns a rank to each row within a partition based on the values in the specified column. When there are ties, the same rank is assigned but no gaps appear in the ranking sequence.
+
+**Category:** `window`
+
+**Syntax:**
+```
+DenseRank([column])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to rank by |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+DenseRank([Sales])
+```
+Returns the dense rank of each row based on sales values. If two rows tie for rank 2, both get rank 2, and the next row gets rank 3 (no gaps).
+
+```
+DenseRank([Score])
+```
+Ranks rows by score values. Tied scores receive the same rank, with subsequent ranks continuing sequentially without gaps.
+**Result:** `1, 2, 2, 3, 4, 5, ...`
+
+## Related Functions
+
+- [Rank](rank) - Assigns rank with gaps
+- [PercentRank](percentrank) - Calculates relative rank as percentage
+- [RowNumber](rownumber) - Assigns sequential row numbers
+- [CumeDist](cumedist) - Calculates cumulative distribution
+- [Ntile](ntile) - Divides rows into groups

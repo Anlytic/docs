@@ -1,0 +1,52 @@
+---
+title: "Runningcount"
+---
+
+# RunningCount
+
+Calculates the running count of values from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+RunningCount([column])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to count values for |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+RunningCount([Order_ID])
+```
+Returns the running count of orders from the first row to the current row.
+
+```
+RunningCount([Customer_ID])
+```
+Calculates running count of customers, useful for tracking cumulative customer interactions over time.
+
+```
+RunningCount([Transaction_ID])
+```
+Tracks cumulative transaction count, showing how the count grows with each transaction.
+
+## Related Functions
+
+- [CumulativeCount](cumulativecount) - Calculates cumulative count (similar functionality)
+- [RunningTotal](runningtotal) - Calculates running total
+- [MovingCount](movingcount) - Calculates moving count with a window
+- [Count](../aggregate/count) - Returns the overall count

@@ -1,0 +1,49 @@
+---
+title: "Cumulativevariance"
+---
+
+# CumulativeVariance
+
+Calculates the cumulative variance of values from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeVariance([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate cumulative variance for |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumulativeVariance([Sales])
+```
+Returns the running variance of sales from the first row to the current row.
+
+```
+CumulativeVariance([Response_Time])
+```
+Calculates cumulative variance of response times, useful for tracking data dispersion over time.
+
+## Related Functions
+
+- [CumulativeStdDev](cumulativestddev) - Calculates cumulative standard deviation
+- [MovingVariance](movingvariance) - Calculates moving variance with a window
+- [Variance](../aggregate/variance) - Returns the overall variance
+- [CumulativeAvg](cumulativeavg) - Calculates cumulative average

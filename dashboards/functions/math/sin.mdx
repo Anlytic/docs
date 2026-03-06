@@ -1,0 +1,44 @@
+---
+title: "Sin"
+---
+
+# Sin
+
+Computes the sine of the given angle
+
+**Category:** `math`
+
+**Syntax:**
+```
+Sin([value])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The angle (in radians) whose sine will be calculated |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Sin([Angle])
+```
+Calculates the sine for each angle value in the Angle column
+
+```
+Sin(0)
+```
+Returns the sine of 0 radians
+**Result:** `0`
+

@@ -1,0 +1,38 @@
+---
+title: "Text"
+---
+
+# Text
+
+Converts values to text strings
+
+**Category:** `conversion`
+
+**Syntax:**
+```
+Text(input)
+```
+
+**Returns:** `TextColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `input` | `text or date or number or column` | ✓ Yes | The text, date, or number data that must be converted to text |
+
+**Allowed Column Types for `input`:** STRING, TEXT, INT, FLOAT, DECIMAL, DATETIME, DATE, BOOLEAN
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Text([Number Column])
+```
+Converts number values to text
+

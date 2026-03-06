@@ -1,0 +1,48 @@
+---
+title: "Iseven"
+---
+
+# IsEven
+
+Returns True if the integer is even, False if it is odd.
+
+**Category:** `math`
+
+**Syntax:**
+```
+IsEven([number_column])
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `integer\|column` | ✓ Yes | The number or column of numbers to test. |
+
+**Allowed Column Types:** INT
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+IsEven(2)
+```
+Tests whether 2 is even.
+**Result:** `true`
+
+```
+IsEven(3)
+```
+Tests whether 3 is even.
+**Result:** `false`
+
+## Related Functions
+
+- [IsOdd](isodd) - Test if a number is odd

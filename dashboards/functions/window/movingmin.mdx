@@ -1,0 +1,55 @@
+---
+title: "Movingmin"
+---
+
+# MovingMin
+
+Calculates the moving minimum value within a specified window of rows relative to the current row.
+
+**Category:** `window`
+
+**Syntax:**
+```
+MovingMin([column], window_start, window_end)
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate moving minimum for |
+| `window_start` | `integer` | ✓ Yes | The number of rows before the current row to include in the window (negative value) |
+| `window_end` | ✗ No | `integer` | The number of rows after the current row to include in the window (positive value). Defaults to 0. |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Examples
+
+```
+MovingMin([Sales], -6, 0)
+```
+Returns the lowest sales value in a 7-day rolling window (current row and 6 previous rows).
+
+```
+MovingMin([Temperature], -13, 0)
+```
+Calculates a 14-day moving minimum temperature, useful for tracking lowest temperatures over time.
+
+```
+MovingMin([Stock_Price], -4, 4)
+```
+Calculates a centered 9-day moving minimum (4 days before, current day, 4 days after).
+
+## Related Functions
+
+- [CumulativeMin](cumulativemin) - Calculates cumulative minimum from the first row
+- [MovingMax](movingmax) - Calculates moving maximum with a window
+- [Min](../aggregate/min) - Returns the overall minimum

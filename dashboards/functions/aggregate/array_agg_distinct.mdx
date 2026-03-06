@@ -1,0 +1,37 @@
+---
+title: "Array_agg_distinct"
+---
+
+# ArrayAggDistinct
+
+Returns an array containing distinct, non-null values in a column or group. Optionally supports sorting direction.
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+ArrayAggDistinct([column], |direction|)
+```
+
+**Returns:** `ArrayColumn`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column containing values to join. |
+| `direction` | `text` | ✗ No | Sorting direction. "asc" for ascending or "desc" for descending. Defaults to ascending. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+ArrayAggDistinct([Product Type], "asc")
+```
+Returns distinct Product Type values ordered ascending as an array.
+

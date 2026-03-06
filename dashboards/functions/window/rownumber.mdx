@@ -1,0 +1,52 @@
+---
+title: "Rownumber"
+---
+
+# RowNumber
+
+Assigns a unique sequential number to each row within a partition, starting from 1.
+
+**Category:** `window`
+
+**Syntax:**
+```
+RowNumber()
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+This function takes no parameters. The row numbering is determined by the ORDER BY clause in the window specification.
+
+## Validation
+- Minimum parameters: 0
+- Maximum parameters: 0
+
+## Examples
+
+```
+RowNumber()
+```
+Returns a sequential number for each row, starting from 1, regardless of duplicate values.
+
+```
+RowNumber()
+```
+When ordered by sales descending, assigns 1 to the highest sales, 2 to the next, etc. Unlike Rank, each row gets a unique number even if sales values are the same.
+**Result:** `1, 2, 3, 4, 5, ...`
+
+```
+RowNumber()
+```
+Useful for pagination, limiting results, or creating unique identifiers within a partition.
+
+## Related Functions
+
+- [Rank](rank) - Assigns rank with gaps
+- [DenseRank](denserank) - Assigns rank without gaps
+- [PercentRank](percentrank) - Calculates relative rank as percentage
+- [Ntile](ntile) - Divides rows into groups
+- [RowNum](rownum) - Alternative row numbering function

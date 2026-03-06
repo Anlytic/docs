@@ -1,0 +1,47 @@
+---
+title: "Datepart"
+---
+
+# DatePart
+
+Extracts the specified date part from a date value.
+
+**Category:** `date`
+
+**Syntax:**
+```
+DatePart("precision", [date], |timezone|)
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `precision` | `text` | ✓ Yes | The date part to extract. |
+| `date` | `column\|datetime` | ✓ Yes | Date or column of dates from which to extract the date part. |
+| `timezone` | `text` | ✗ No | Optional IANA time zone name (e.g., "America/Los_Angeles"). Defaults to UTC. |
+
+**Allowed Values for `precision`:** `year`, `quarter`, `month`, `week`, `day`, `weekday`, `day_of_year`, `hour`, `minute`, `second`, `millisecond`, `epoch`
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Examples
+
+```
+DatePart("year", [Invoice Date])
+```
+Extracts the year from each value in the invoice date column.
+
+```
+DatePart("week", Date("2007-01-10 10:00:00"))
+```
+Returns the week number for the given date (weeks start on Sunday by default).
+**Result:** `2`

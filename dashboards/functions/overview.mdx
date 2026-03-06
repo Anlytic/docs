@@ -1,0 +1,182 @@
+---
+title: "Functions overview"
+---
+
+# Functions Overview
+
+Functions provide powerful formula capabilities for transforming and analyzing your data in real-time. Similar to Excel formulas, functions allow you to create calculated columns that perform operations on your table data.
+
+## Accessing Functions
+
+Functions are available within **Data Tables** in your dashboards. To access functions:
+
+1. Navigate to **Dashboard** → **Team**
+2. Create a new **Data Table** or open an existing one
+3. The **Function Input** bar appears at the top of the table view
+
+You can use functions in any data table, whether you're:
+- Creating a new data table
+- Opening an existing data table
+- Viewing a table from a saved dashboard
+
+
+## What are Functions?
+
+Functions are expressions that you can use to:
+
+- **Transform date/time values** - Extract components, calculate differences, add/subtract time periods
+- **Manipulate text** - Change case, extract substrings, search text
+- **Perform calculations** - Round numbers, calculate square roots, check number properties
+- **Apply conditional logic** - Create if-then rules, handle null values, check ranges
+
+
+## Function Categories
+
+### [Date Functions](date-functions)
+Functions for working with dates and times:
+
+- Extract date parts (Year, Month, Day, Hour, Minute, Second)
+- Calculate differences (DateDiff)
+- Add or subtract time (DateAdd)
+- Truncate dates (DateTrunc)
+- Check date ranges (InDateRange, InPriorDateRange)
+- Convert timezones (ConvertTimezone)
+
+**Examples:**
+```
+=Year([Order Date])
+=DateDiff("day", [Start Date], [End Date])
+=DateAdd("month", 1, Today())
+```
+
+### [Text Functions](text-functions)
+Functions for text manipulation:
+
+- Change case (Upper, Lower)
+- Extract substrings (Left, Right)
+- Search text (Contains)
+
+**Examples:**
+```
+=Upper([Status])
+=Left([Product Code], 5)
+=Contains([Description], "urgent")
+```
+
+### [Math Functions](math-functions)
+Functions for mathematical operations:
+
+- Round numbers (Int)
+- Calculate square roots (Sqrt)
+- Check number properties (IsEven, IsOdd, Sign)
+
+**Examples:**
+```
+=Int([Price])
+=Sqrt([Area])
+=Sign([Balance])
+```
+
+### [Logical Functions](logical-functions)
+Functions for conditional logic:
+
+- Conditional branching (If, Switch, Choose)
+- Null handling (IsNull, IsNotNull, Coalesce, Zn)
+- Range checking (Between, In)
+
+**Examples:**
+```
+=If([Score] > 90, "A", "B")
+=Coalesce([Value], 0)
+=Between([Date], StartDate, EndDate)
+```
+
+## Basic Syntax
+
+All formulas start with an equals sign (`=`):
+
+```
+=FunctionName(parameter1, parameter2, ...)
+```
+
+### Column References
+
+Reference columns by wrapping the column name in square brackets:
+
+```
+=[Column Name]
+```
+
+### Example Formula
+
+```
+=DateDiff("day", [Order Date], Today())
+```
+
+This formula:
+1. Calls the `DateDiff` function
+2. Uses `"day"` as the time unit
+3. References the `[Order Date]` column
+4. Uses `Today()` function for the current date
+5. Returns the number of days between the order date and today
+
+## Using the Function Input
+
+![Function Input Example](/Resources/function-input.png)
+
+The Function Input appears at the top of your table view and provides:
+
+- **Autocomplete** - Type `/` to see function suggestions
+- **Column Palette** - Type `[` to select columns visually
+- **Parameter Hints** - Hover over functions to see parameter requirements
+- **Real-time Validation** - Errors are highlighted as you type
+- **Syntax Highlighting** - Different colors for functions, columns, and values
+
+### Creating a Formula
+
+1. Click in the Function Input bar
+2. Type `=` to start a formula
+3. Type a function name (suggestions will appear)
+4. Fill in parameters using column references or values
+5. Press **Enter** or click **✓** to submit
+
+## Common Patterns
+
+### Calculate Time Differences
+
+```
+=DateDiff("day", [Created At], Today())
+=DateDiff("hour", [Start Time], [End Time])
+```
+
+### Conditional Logic
+
+```
+=If([Revenue] > 10000, "High", "Low")
+=Switch([Status], 1, "Active", 2, "Inactive", "Unknown")
+```
+
+### Handle Null Values
+
+```
+=Coalesce([Optional Field], "No value")
+=If(IsNull([Value]), 0, [Value])
+```
+
+### Text Transformations
+
+```
+=Upper([Status])
+=Left([Product Code], 3)
+```
+
+## Next Steps
+
+- **[Function Index](function-index)** - Browse all available functions organized by category
+
+Explore the function categories:
+
+- **[Date Functions](date-functions)** - Complete reference for date and time functions
+- **[Text Functions](text-functions)** - Complete reference for text manipulation functions
+- **[Math Functions](math-functions)** - Complete reference for mathematical functions
+- **[Logical Functions](logical-functions)** - Complete reference for conditional logic functions

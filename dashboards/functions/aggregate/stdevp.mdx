@@ -1,0 +1,38 @@
+---
+title: "Stdevp"
+---
+
+# StDevP
+
+Returns the population standard deviation of values in the specified column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+StDevP([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate population standard deviation |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+StDevP([Revenue])
+```
+Returns the population standard deviation of revenue
+

@@ -1,0 +1,56 @@
+---
+title: "Movingsum"
+---
+
+# MovingSum
+
+Calculates the moving sum of values within a specified window of rows relative to the current row.
+
+**Category:** `window`
+
+**Syntax:**
+```
+MovingSum([column], window_start, window_end)
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate moving sum for |
+| `window_start` | `integer` | ✓ Yes | The number of rows before the current row to include in the window (negative value) |
+| `window_end` | ✗ No | `integer` | The number of rows after the current row to include in the window (positive value). Defaults to 0. |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Examples
+
+```
+MovingSum([Sales], -6, 0)
+```
+Returns the total sales in a 7-day rolling window (current row and 6 previous rows).
+
+```
+MovingSum([Revenue], -29, 0)
+```
+Calculates a 30-day moving sum of revenue, useful for tracking rolling monthly totals.
+
+```
+MovingSum([Orders], -2, 2)
+```
+Calculates a centered 5-day moving sum (2 days before, current day, 2 days after).
+
+## Related Functions
+
+- [CumulativeSum](cumulativesum) - Calculates cumulative sum from the first row
+- [MovingAvg](movingavg) - Calculates moving average with a window
+- [Sum](../aggregate/sum) - Returns the overall sum
+- [RunningTotal](runningtotal) - Calculates running total

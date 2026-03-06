@@ -1,0 +1,49 @@
+---
+title: "Between"
+---
+
+# Between
+
+Checks whether a value lies within a given range. The function is inclusive, so it includes the beginning and end values of the range.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+Between([value_column], lower_bound, upper_bound)
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number\|date\|datetime\|column` | ✓ Yes | The input value or column containing the values to check. |
+| `lower bound` | `number\|date\|datetime` | ✓ Yes | The lower bound of the range to check. |
+| `upper bound` | `number\|date\|datetime` | ✓ Yes | The upper bound of the range to check. |
+
+**Allowed Column Types:** INT, FLOAT, DECIMAL, DATE, DATETIME
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: 3
+
+## Examples
+
+```
+Between([Invoice Date], MakeDate(2015, 1, 1), MakeDate(2020, 1, 1))
+```
+Returns True if a date value is between January 1, 2015 and January 1, 2020.
+
+```
+Between([Sale Date], DateAdd("day", -7, Now()), Now())
+```
+Returns True if a sale happened in the last 7 days.
+
+## Related Functions
+
+- [In](in) - Check if value matches specific values
+- [If](if) - Apply logic based on conditions

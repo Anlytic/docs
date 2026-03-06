@@ -1,0 +1,49 @@
+---
+title: "Rowavg"
+---
+
+# RowAvg
+
+Calculates the average value of a list of numbers
+
+**Category:** `math`
+
+**Syntax:**
+```
+RowAvg([number1], [number2], ...)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `numbers` | `number or column` | ✓ Yes | Numbers to calculate the average of |
+
+**Allowed Column Types for `numbers`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 10
+
+## Examples
+
+```
+RowAvg([Sales], [Marketing], [Support])
+```
+Calculates the average of Sales, Marketing, and Support columns for each row
+
+```
+RowAvg(10, 20, 30)
+```
+Returns 20
+**Result:** `20`
+
+```
+RowAvg([Q1], [Q2], [Q3], [Q4])
+```
+Calculates the average of four quarterly values for each row
+

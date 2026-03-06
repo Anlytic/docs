@@ -1,0 +1,51 @@
+---
+title: "Trunc"
+---
+
+# Trunc
+
+Truncates the input value to the specified number of digits or decimal places
+
+**Category:** `math`
+
+**Syntax:**
+```
+Trunc([number], [digits])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number to be truncated |
+| `digits` | `number` | ✗ No | The number of decimal places to which to round. Defaults to 0 |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Trunc([Cost], 3)
+```
+Truncates the value in each row of the Cost column to 3 decimal places
+
+```
+Trunc(5.2463, 2)
+```
+Returns 5.24
+**Result:** `5.24`
+
+```
+Trunc(5.678)
+```
+Returns 5
+**Result:** `5`
+

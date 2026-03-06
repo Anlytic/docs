@@ -1,0 +1,41 @@
+---
+title: "Regressionslope"
+---
+
+# RegressionSlope
+
+Slope of the linear regression line (y on x)
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+RegressionSlope([y], [x])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `y` | `column` | ✓ Yes |  |
+| `x` | `column` | ✓ Yes |  |
+
+**Allowed Column Types for `y`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `x`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+RegressionSlope([Y], [X])
+```
+Regression slope
+

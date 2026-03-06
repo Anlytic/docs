@@ -1,0 +1,44 @@
+---
+title: "Radians"
+---
+
+# Radians
+
+Converts degrees to radians
+
+**Category:** `math`
+
+**Syntax:**
+```
+Radians([number_column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The angle in degrees to convert to radians |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Radians(180)
+```
+Converts 180 degrees to radians
+**Result:** `3.14159`
+
+```
+Radians([Angle])
+```
+Converts each angle from degrees to radians
+

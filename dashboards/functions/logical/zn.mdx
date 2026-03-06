@@ -1,0 +1,43 @@
+---
+title: "Zn"
+---
+
+# Zn
+
+Returns non-Null values, or 0 (zero) instead of Null values.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+Zn([value_column])
+```
+
+**Returns:** `NumberColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value_column` | `number\|column` | ✓ Yes | The value or column to evaluate. Null values are converted to 0. |
+
+**Allowed Column Types:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Zn([Sales])
+```
+Returns sales values as-is, but converts Null values to 0.
+
+
+## Related Functions
+
+- [Coalesce](coalesce) - More flexible null handling
+- [IsNull](isnull) - Check for null values

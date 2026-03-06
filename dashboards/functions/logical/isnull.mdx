@@ -1,0 +1,40 @@
+---
+title: "Isnull"
+---
+
+# IsNull
+
+Returns True if the argument contains missing data values, and False if the argument is not Null. Often applied to a column of data to test for Null values.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+IsNull(argument)
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `argument` | `column\|any` | ✓ Yes | Any argument can be provided. The function can analyze one argument at a time. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+IsNull([Sales])
+```
+Returns False for rows where sales data exists and True for rows where there is no data.
+
+```
+IsNull([prm-date-range].start) and IsNull([prm-date-range].end)
+```
+Returns True when no start and end date is provided in a Date Range parameter.

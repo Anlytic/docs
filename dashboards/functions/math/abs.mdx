@@ -1,0 +1,50 @@
+---
+title: "Abs"
+---
+
+# Abs
+
+Returns the absolute, non-negative value of a number
+
+**Category:** `math`
+
+**Syntax:**
+```
+Abs([number])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number or column of numbers that is being evaluated |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Abs([Distance Covered])
+```
+Converts all negative values in Distance Covered column to positive values
+
+```
+Abs(-5)
+```
+Returns the absolute value of -5
+**Result:** `5`
+
+```
+Abs(3.14)
+```
+Returns the absolute value of 3.14
+**Result:** `3.14`
+

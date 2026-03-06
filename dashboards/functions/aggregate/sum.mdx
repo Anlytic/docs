@@ -1,0 +1,38 @@
+---
+title: "Sum"
+---
+
+# Sum
+
+Returns the sum of all values in the specified column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Sum([column])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to sum |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Sum([Amount])
+```
+Returns the total of all amounts
+

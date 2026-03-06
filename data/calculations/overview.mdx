@@ -1,0 +1,184 @@
+---
+title: "Metrics and calculated columns"
+---
+
+# Metrics and Calculated Columns
+
+Anlytic provides a robust and flexible system for analysts to create and manage both metrics and calculated columns, enhancing their data exploration and visualization capabilities. Here we explain how these features work, the mechanisms behind them, and how SQL queries are generated to support these functionalities.
+
+## What Are Metrics and Calculated Columns?
+
+### Metrics
+
+Metrics are pre-defined, aggregate computations that summarize or analyze your data to provide insights at a glance. They are particularly useful for performing complex calculations such as averages, sums, counts, and more, directly within your charts and dashboards. Metrics can be thought of as custom calculations that apply over a specified set of data, often involving aggregate functions. Metrics are specific to SQL and must adhere to SQL standards, so metrics have to be SQL-compliant with the Query Engine of the data source.
+
+### Calculated Columns
+
+Calculated columns are a powerful feature for refining and transforming raw data into a more meaningful format for analysis. The primary goal is to enhance the usability of the data by creating new data points derived from existing ones, tailored to your needs.
+
+#### Key Concepts of Calculated Columns
+
+Calculated columns are used for:
+
+- **Data Transformation**: Converting data into different formats that are more suitable for analysis.
+- **Data Validation**: Correcting and ensuring the accuracy of data.
+- **Data Enrichment**: Adding additional information to the data to make it more informative.
+
+## Difference Between Metrics and Calculated Columns
+
+**Metrics**:
+
+- Involve aggregate functions (e.g., SUM, AVG, COUNT).
+- Operate on a dataset to produce summarized results.
+- Useful for creating KPIs and other performance indicators.
+- _Example_: Calculating the average sales per month.
+  <br></br>
+
+  **Calculated Columns**:
+
+- Do not involve aggregate functions.
+- Operate on row-level data to create new data points.
+- Useful for transforming data and creating new dimensions.
+- _Example_: Combining first name and last name to create a full name column.
+
+## Why Use Metrics and Calculated Columns?
+
+### Benefits of Metrics
+
+- **Consistent Calculations**: Define metrics once and reuse them across different reports and dashboards, ensuring consistency in your data analysis.
+- **Simplified Reporting**: Aggregate complex data into meaningful summaries that are easy to interpret and present.
+- **Enhanced Insights**: Identify trends and patterns in your data by applying advanced calculations.
+
+### Benefits of Calculated Columns
+
+- **Data Transformation**: Create new data points that better represent your analytical needs.
+- **Flexibility**: Customize your data on the fly without needing to alter the original dataset.
+- **Enhanced Analysis**: Enrich your data with additional dimensions, making your analysis more comprehensive.
+
+## Query Generation and Examples
+
+When you define metrics and calculated columns in the Anlytic application, the backend generates SQL queries to fetch and compute the required data. Here’s a detailed overview of how this process works and some examples to illustrate.
+
+### Query Construction Process
+
+1. **User Input**: You define metrics and calculated columns through the dashboard interface.
+2. **Query Construction**: The Anlytic application constructs SQL queries based on your definitions, handling various SQL components such as `SELECT`, `JOIN`, `WHERE`, `GROUP BY`, and `ORDER BY` clauses.
+3. **Execution**: Constructed queries are sent to the database for execution.
+4. **Results**: Results are fetched and displayed in your charts and dashboards.
+
+### Detailed Query Construction Mechanism
+
+- **Select Clauses**: Metrics and calculated columns are added to the `SELECT` clause of the SQL query.
+- **Join Clauses**: If your metrics or calculated columns involve multiple tables, necessary `JOIN` clauses are automatically added.
+- **Where Clauses**: Filters and conditions are included in the `WHERE` clause.
+- **Group By and Order By Clauses**: Aggregations and ordering are managed through `GROUP BY` and `ORDER BY` clauses to ensure the data is correctly computed and displayed.
+
+## Different Ways to Use Metrics and Calculated Columns
+
+### In Dashboards
+
+Metrics and calculated columns can be used to create dynamic and insightful dashboards. For example, you can use metrics to display key performance indicators (KPIs) and use calculated columns to enrich the data with additional dimensions.
+
+### In Reports
+
+Incorporate metrics and calculated columns into your reports to provide more detailed and meaningful analysis. Metrics can summarize data for quick insights, while calculated columns can provide deeper context and new perspectives.
+
+### In Data Exploration
+
+Use metrics and calculated columns during data exploration to quickly derive new insights and test hypotheses. They allow you to manipulate and analyze data on the fly without needing to alter the underlying dataset.
+
+### Example SQL Query
+
+#### Combining Metric and Calculated Column
+
+Here’s an example of a SQL query that could be generated by our application, which combines a metric and a calculated column:
+
+```sql
+SELECT
+  company.size + 10 AS adjusted_company_size,
+  SUM(sales.amount) OVER (
+    ORDER BY sales.date
+    ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+  ) AS moving_average
+FROM
+  company
+JOIN
+  sales ON company.id = sales.company_id
+WHERE
+  company.region = 'North'
+ORDER BY
+  company.date
+```
+
+This query demonstrates how a calculated column (`adjusted_company_size`) and a metric (`moving_average`) are used together in a SQL query to fetch and display the required data.
+
+The metric `moving_average` is directly calculated in the **SELECT** statement. The SQL expression used for this metric is:
+
+```sql
+SUM(sales.amount) OVER (
+  ORDER BY sales.date
+  ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+)
+```
+
+This expression performs a window function that sums the `amount` values from the beginning of the dataset up to the current row, ordered by `sales.date`. The result is a running total that resets with each new row, effectively creating a moving average.
+
+The calculated column `adjusted_company_size` is also created in the **SELECT** statement. The SQL expression used for this calculated column is:
+
+```sql
+company.size + 10
+```
+
+This expression adds 10 to the `size` column in the `company` table, creating a new column called `adjusted_company_size`. This transformation can be useful for normalizing or adjusting data values based on specific business rules or requirements.
+
+### Naming of Metrics and Calculated Columns
+
+When defining metrics or calculated columns, you do not need to provide an **AS** statement to name the resulting column. Our application automatically handles the naming during the query generation process, using the name specified by the user for the metric or calculated column.
+
+### More Examples
+
+#### Metrics
+
+#### Example 1: Customer Retention Rate
+
+```sql
+SUM(CASE WHEN customers.is_retained = 1 THEN 1 ELSE 0 END) / COUNT(customers.id)
+```
+
+This metric calculates the customer retention rate by dividing the number of retained customers by the total number of customers.
+
+#### Example 2: Monthly Revenue Growth
+
+```sql
+(SUM(sales.current_month) - SUM(sales.previous_month)) / SUM(sales.previous_month)
+```
+
+This metric calculates the monthly revenue growth by comparing the sales of the current month to the sales of the previous month.
+<br></br>
+
+#### Calculated Columns
+
+#### Example 1: Adjusted Salary
+
+```sql
+employee.salary * 1.1
+```
+
+This calculated column increases the `salary` column by 10% in the `employee` table.
+
+#### Example 2: Age Group
+
+```sql
+CASE
+  WHEN customer.age < 18 THEN 'Under 18'
+  WHEN customer.age BETWEEN 18 AND 34 THEN '18-34'
+  WHEN customer.age BETWEEN 35 AND 54 THEN '35-54'
+  ELSE '55+'
+END
+```
+
+This calculated column categorizes customers into different age groups based on the `age` column in the `customer` table.
+
+## Conclusion
+
+By understanding how metrics and calculated columns work in our application, you can leverage these features to perform more powerful and flexible data analysis. Whether you need to create complex aggregations or simple derived columns, our system provides the tools you need to get the most out of your data. Metrics provide a way to summarize and analyze large datasets effectively, while calculated columns offer flexibility in transforming and enriching your data. Together, they empower you to build comprehensive and insightful data visualizations and reports.

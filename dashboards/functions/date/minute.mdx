@@ -1,0 +1,44 @@
+---
+title: "Minute"
+---
+
+# Minute
+
+Returns an integer representing the minute component of a specified date and time.
+
+**Category:** `date`
+
+**Syntax:**
+```
+Minute([date_column], |timezone|)
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date or column containing date values from which the minute component is extracted. |
+| `timezone` | `text` | ✗ No | The IANA time zone (e.g., "America/Los_Angeles") to convert the date before extracting the minute. If omitted, evaluated in UTC. |
+
+**Allowed Column Types:** DATETIME
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Minute(Date("2007-08-14 07:11:00"))
+```
+Extracts the minute from the specified date and time.
+**Result:** `11`
+
+```
+Minute([Date])
+```
+Returns the minute component for each value in the [Date] column.

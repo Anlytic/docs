@@ -1,0 +1,41 @@
+---
+title: "Grandtotal"
+---
+
+# GrandTotal
+
+Returns the grand total for the given aggregate expression or column. Equivalent to Subtotal(aggregate, "grand_total").
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+GrandTotal([aggregate_or_column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `aggregate_or_column` | `any` | ✓ Yes | The aggregate function (e.g., Sum([Amount])) or column to calculate the grand total. If a column is provided, it will be used directly. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+GrandTotal(Sum([Amount]))
+```
+Return the sum of [Amount] across the whole dataset.
+
+```
+GrandTotal([Count])
+```
+Return the grand total of [Count] column.
+

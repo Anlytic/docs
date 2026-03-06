@@ -1,0 +1,54 @@
+---
+title: "Int"
+---
+
+# Int
+
+Rounds the input number down to the largest integer of equal or lesser value.
+
+**Category:** `math`
+
+**Syntax:**
+```
+Int([number_column])
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number\|column` | ✓ Yes | The number to be rounded down. |
+
+**Allowed Column Types:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Int(3.6)
+```
+Rounds down to largest integer.
+**Result:** `3`
+
+```
+Int(-3.2)
+```
+Rounds down negative number.
+**Result:** `-4`
+
+```
+Int([Cost])
+```
+Returns the Int for each row in the input column.
+
+## Related Functions
+
+- [Sqrt](sqrt) - Calculate square root of a number
+- [Sign](sign) - Determine if a number is positive, negative, or zero

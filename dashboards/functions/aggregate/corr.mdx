@@ -1,0 +1,41 @@
+---
+title: "Corr"
+---
+
+# Corr
+
+Pearson correlation coefficient between two columns
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Corr([x], [y])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `x` | `column` | ✓ Yes |  |
+| `y` | `column` | ✓ Yes |  |
+
+**Allowed Column Types for `x`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `y`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Corr([X], [Y])
+```
+Correlation between X and Y
+

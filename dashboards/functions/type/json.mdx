@@ -1,0 +1,38 @@
+---
+title: "Json"
+---
+
+# Json
+
+Converts a value to JSON
+
+**Category:** `conversion`
+
+**Syntax:**
+```
+Json(input)
+```
+
+**Returns:** `TextColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `input` | `text or column` | ✓ Yes | The data to convert to JSON |
+
+**Allowed Column Types for `input`:** STRING, TEXT, VARIANT
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Json([Data Column])
+```
+Converts data to JSON format
+

@@ -1,0 +1,44 @@
+---
+title: "Tan"
+---
+
+# Tan
+
+Computes the tangent of the given angle
+
+**Category:** `math`
+
+**Syntax:**
+```
+Tan([value])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The angle (in radians) whose tangent will be calculated |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Tan([Angle])
+```
+Calculates the tangent for each angle value in the Angle column
+
+```
+Tan(0)
+```
+Returns the tangent of 0 radians
+**Result:** `0`
+

@@ -1,0 +1,43 @@
+---
+title: "Left"
+---
+
+# Left
+
+Returns a substring that begins at the start of a given string column values.
+
+**Category:** `text`
+
+**Syntax:**
+```
+Left([string_column], number)
+```
+
+**Returns:** `StringColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `string_column` | `column` | ✓ Yes | The string column from which a left substring will be returned. |
+| `number` | `number` | ✓ Yes | The desired length of the returned substring. A negative number removes characters from the end. |
+
+**Allowed Column Types:** STRING, TEXT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Left([Address], 5)
+```
+Returns first 5 characters of each address.
+
+## Related Functions
+
+- [Right](right) - Extract from end of string
+- [Upper](upper) - Convert extracted text to uppercase

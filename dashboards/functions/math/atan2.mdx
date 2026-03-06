@@ -1,0 +1,47 @@
+---
+title: "Atan2"
+---
+
+# Atan2
+
+Computes the arctangent of the given coordinates
+
+**Category:** `math`
+
+**Syntax:**
+```
+Atan2([y], [x])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `y` | `number or column` | ✓ Yes | The y coordinate of the point |
+| `x` | `number or column` | ✓ Yes | The x coordinate of the point |
+
+**Allowed Column Types for `y`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `x`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Atan2([Y Coordinate], [X Coordinate])
+```
+Calculates the arctangent for each pair of coordinates
+
+```
+Atan2(0, 1)
+```
+Returns the arctangent of coordinates (0, 1)
+**Result:** `0`
+

@@ -1,0 +1,37 @@
+---
+title: "Listagg"
+---
+
+# ListAgg
+
+Concatenates values into a delimited string
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+ListAgg([column], delimiter)
+```
+
+**Returns:** `String`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column whose values are concatenated |
+| `delimiter` | `text` | ✗ No | Delimiter string between values. Defaults to ',' |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+ListAgg([Category], "; ")
+```
+Joins categories with semicolon delimiter
+

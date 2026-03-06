@@ -1,0 +1,46 @@
+---
+title: "Binfixed"
+---
+
+# BinFixed
+
+Computes the bin for a value among the specified number of identically sized bins within the given bounds
+
+**Category:** `math`
+
+**Syntax:**
+```
+BinFixed([value], [min], [max], [bins])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The value for which the bin is computed |
+| `min` | `number` | ✓ Yes | The lower bound. If the value is less than min, the bin will be 0 |
+| `max` | `number` | ✓ Yes | If the value is greater than or equal to max, the bin will be bins + 1 |
+| `bins` | `number` | ✓ Yes | The number of bins within the interval. Bins are numbered 1 through bins |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 4
+- Maximum parameters: 4
+
+## Examples
+
+```
+BinFixed([Days Since Signup], 0, 90, 3)
+```
+Places all numbers less than 0 in bin 0, all numbers 90 or greater in bin 4, and all numbers between 0 and 90 are assigned one of 3 equally sized bins
+
+```
+BinFixed(25, 0, 100, 5)
+```
+Returns the bin number for value 25 among 5 bins between 0 and 100
+

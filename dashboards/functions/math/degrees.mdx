@@ -1,0 +1,44 @@
+---
+title: "Degrees"
+---
+
+# Degrees
+
+Converts the angle measurement from radians to degrees
+
+**Category:** `math`
+
+**Syntax:**
+```
+Degrees([number_column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The angle in radians to convert to degrees |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Degrees(3.14159)
+```
+Converts π radians to degrees
+**Result:** `180`
+
+```
+Degrees([Angle])
+```
+Converts each angle from radians to degrees
+

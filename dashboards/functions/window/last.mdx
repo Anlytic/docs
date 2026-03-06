@@ -1,0 +1,52 @@
+---
+title: "Last"
+---
+
+# Last
+
+Returns the last value in the current partition or window, regardless of the current row's position.
+
+**Category:** `window`
+
+**Syntax:**
+```
+Last([column])
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to retrieve the last value from |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Last([Sales])
+```
+Returns the sales value from the last row in the partition.
+
+```
+Last([Closing_Price])
+```
+Returns the closing price from the last day in the partition, useful for comparing current values to final values.
+
+```
+Last([Customer_Name])
+```
+Returns the last customer name in the ordered partition.
+
+## Related Functions
+
+- [First](first) - Returns first value in partition
+- [Lag](lag) - Returns value from previous row
+- [Lead](lead) - Returns value from following row
+- [RowNumber](rownumber) - Assigns sequential row numbers

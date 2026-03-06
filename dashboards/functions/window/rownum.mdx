@@ -1,0 +1,51 @@
+---
+title: "Rownum"
+---
+
+# RowNum
+
+Assigns sequential numbers to rows within a partition, starting from 1.
+
+**Category:** `window`
+
+**Syntax:**
+```
+RowNum()
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+This function takes no parameters. The row numbering is determined by the ORDER BY clause in the window specification.
+
+## Validation
+- Minimum parameters: 0
+- Maximum parameters: 0
+
+## Examples
+
+```
+RowNum()
+```
+Returns a sequential number for each row within the partition, starting from 1.
+
+```
+RowNum()
+```
+When used with an ORDER BY clause, assigns sequential numbers based on the specified ordering.
+**Result:** `1, 2, 3, 4, 5, ...`
+
+```
+RowNum()
+```
+Useful for adding row identifiers, pagination, or creating sequential numbering within groups.
+
+## Related Functions
+
+- [RowNumber](rownumber) - Assigns sequential row numbers (similar functionality)
+- [Rank](rank) - Assigns rank with gaps
+- [DenseRank](denserank) - Assigns rank without gaps
+- [CumulativeCount](cumulativecount) - Calculates cumulative count

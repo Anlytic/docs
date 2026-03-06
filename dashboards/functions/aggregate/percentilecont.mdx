@@ -1,0 +1,37 @@
+---
+title: "Percentilecont"
+---
+
+# PercentileCont
+
+Returns the continuous kth percentile value for a column or group. Percentile must be a number between 0 and 1.
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+PercentileCont([column], percentile)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column on which to calculate the percentile. |
+| `percentile` | `number` | ✓ Yes | A number, 0 < percentile < 1, indicating the target continuous percentile. |
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+PercentileCont([Score], 0.7)
+```
+Returns the 70th continuous percentile in Score.
+

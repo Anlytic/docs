@@ -1,0 +1,37 @@
+---
+title: "Countdistinctif"
+---
+
+# CountDistinctIf
+
+Counts distinct values in a column only for rows matching the condition
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+CountDistinctIf([column], condition)
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to count distinct values from when condition is True |
+| `condition` | `logical` | ✓ Yes | Logical expression evaluated per row |
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+CountDistinctIf([UserID], [IsActive] = TRUE)
+```
+Counts distinct active users
+

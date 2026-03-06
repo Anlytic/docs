@@ -1,0 +1,49 @@
+---
+title: "Cumulativestddev"
+---
+
+# CumulativeStdDev
+
+Calculates the cumulative standard deviation of values from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeStdDev([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate cumulative standard deviation for |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumulativeStdDev([Sales])
+```
+Returns the running standard deviation of sales from the first row to the current row.
+
+```
+CumulativeStdDev([Response_Time])
+```
+Calculates cumulative standard deviation of response times, useful for tracking variability over time.
+
+## Related Functions
+
+- [CumulativeVariance](cumulativevariance) - Calculates cumulative variance
+- [MovingStdDev](movingstddev) - Calculates moving standard deviation with a window
+- [StDev](../aggregate/stdev) - Returns the overall standard deviation
+- [CumulativeAvg](cumulativeavg) - Calculates cumulative average

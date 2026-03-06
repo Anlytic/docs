@@ -1,0 +1,43 @@
+---
+title: "Right"
+---
+
+# Right
+
+Returns a substring from the end of a string column values. The last n characters where n is the number argument.
+
+**Category:** `text`
+
+**Syntax:**
+```
+Right([text_column], number)
+```
+
+**Returns:** `StringColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `text_column` | `column` | ✓ Yes | The string column from which a right substring will be returned. |
+| `number` | `number` | ✓ Yes | The desired length of the returned substring. |
+
+**Allowed Column Types:** STRING, TEXT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Right([Phone], 4)
+```
+Returns last 4 digits of each phone number.
+
+## Related Functions
+
+- [Left](left) - Extract from start of string
+- [Contains](contains) - Search for patterns in strings

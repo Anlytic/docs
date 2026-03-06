@@ -1,0 +1,51 @@
+---
+title: "Cumulativecorr"
+---
+
+# CumulativeCorr
+
+Calculates the cumulative correlation coefficient between two columns from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeCorr([column1], [column2])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column1` | `column` | ✓ Yes | The first numeric column for correlation calculation |
+| `column2` | `column` | ✓ Yes | The second numeric column for correlation calculation |
+
+**Allowed Column Types for `column1`:** INT, FLOAT, DECIMAL, NUMBER
+
+**Allowed Column Types for `column2`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+CumulativeCorr([Sales], [Marketing_Spend])
+```
+Returns the running correlation between sales and marketing spend from the first row to the current row.
+
+```
+CumulativeCorr([Temperature], [Ice_Cream_Sales])
+```
+Calculates cumulative correlation to track how the relationship between temperature and ice cream sales evolves over time.
+
+## Related Functions
+
+- [Corr](../aggregate/corr) - Calculates overall correlation
+- [MovingCorr](movingcorr) - Calculates moving correlation with a window
+- [CumulativeAvg](cumulativeavg) - Calculates cumulative average

@@ -1,0 +1,36 @@
+---
+title: "Array_agg"
+---
+
+# ArrayAgg
+
+Returns an array of all non-null values in the specified column, preserving the input order.
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+ArrayAgg([column])
+```
+
+**Returns:** `ArrayColumn`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column whose values are aggregated into an array. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+ArrayAgg([Score])
+```
+Returns an array of all Score values.
+

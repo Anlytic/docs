@@ -1,0 +1,38 @@
+---
+title: "Median"
+---
+
+# Median
+
+Returns the median value in the specified column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Median([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to find the median |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Median([Age])
+```
+Returns the median age
+

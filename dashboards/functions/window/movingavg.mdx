@@ -1,0 +1,55 @@
+---
+title: "Movingavg"
+---
+
+# MovingAvg
+
+Calculates the moving average of values within a specified window of rows relative to the current row.
+
+**Category:** `window`
+
+**Syntax:**
+```
+MovingAvg([column], window_start, window_end)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate moving average for |
+| `window_start` | `integer` | ✓ Yes | The number of rows before the current row to include in the window (negative value) |
+| `window_end` | ✗ No | `integer` | The number of rows after the current row to include in the window (positive value). Defaults to 0. |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Examples
+
+```
+MovingAvg([Sales], -2, 0)
+```
+Returns the 3-day moving average (current row and 2 previous rows).
+
+```
+MovingAvg([Temperature], -6, 0)
+```
+Calculates a 7-day moving average of temperature, useful for smoothing out daily fluctuations.
+
+```
+MovingAvg([Stock_Price], -4, 4)
+```
+Calculates a centered 9-day moving average (4 days before, current day, 4 days after).
+
+## Related Functions
+
+- [CumulativeAvg](cumulativeavg) - Calculates cumulative average from the first row
+- [MovingSum](movingsum) - Calculates moving sum with a window
+- [Avg](../aggregate/avg) - Returns the overall average

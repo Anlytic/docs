@@ -1,0 +1,44 @@
+---
+title: "Datefromunix"
+---
+
+# DateFromUnix
+
+Converts a Unix timestamp to a Date data type.
+
+**Category:** `date`
+
+**Syntax:**
+```
+DateFromUnix([number])
+```
+
+**Returns:** `DateTimeColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number\|column` | ✓ Yes | A number or column of numbers representing a Unix timestamp (seconds or milliseconds). |
+
+**Allowed Column Types:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+DateFromUnix(0)
+```
+Epoch start.
+**Result:** `1970-01-01 00:00:00`
+
+```
+DateFromUnix(1503724894)
+```
+Converts seconds since epoch.
+**Result:** `2017-08-26 05:21:34`

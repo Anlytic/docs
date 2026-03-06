@@ -1,0 +1,54 @@
+---
+title: "Movingcount"
+---
+
+# MovingCount
+
+Calculates the moving count of values within a specified window of rows relative to the current row.
+
+**Category:** `window`
+
+**Syntax:**
+```
+MovingCount([column], window_start, window_end)
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to count values for |
+| `window_start` | `integer` | ✓ Yes | The number of rows before the current row to include in the window (negative value) |
+| `window_end` | ✗ No | `integer` | The number of rows after the current row to include in the window (positive value). Defaults to 0. |
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Examples
+
+```
+MovingCount([Order_ID], -6, 0)
+```
+Returns the count of orders in a 7-day rolling window (current row and 6 previous rows).
+
+```
+MovingCount([Customer_ID], -29, 0)
+```
+Calculates a 30-day moving count of customers, useful for tracking customer activity over time.
+
+```
+MovingCount([Transaction_ID], -2, 2)
+```
+Calculates a centered 5-row moving count (2 rows before, current row, 2 rows after).
+
+## Related Functions
+
+- [CumulativeCount](cumulativecount) - Calculates cumulative count from the first row
+- [MovingSum](movingsum) - Calculates moving sum with a window
+- [Count](../aggregate/count) - Returns the overall count
+- [RunningCount](runningcount) - Calculates running count

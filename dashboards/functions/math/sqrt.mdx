@@ -1,0 +1,54 @@
+---
+title: "Sqrt"
+---
+
+# Sqrt
+
+Compute the positive square root of a positive number.
+
+**Category:** `math`
+
+**Syntax:**
+```
+Sqrt([number_column])
+```
+
+**Returns:** `FloatColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number\|column` | ✓ Yes | The number or column of numbers to compute the square root of. |
+
+**Allowed Column Types:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Sqrt(9)
+```
+Square root of 9.
+**Result:** `3`
+
+```
+Sqrt(16)
+```
+Square root of 16.
+**Result:** `4`
+
+```
+Sqrt([Value])
+```
+Square root for each value in the column.
+
+## Related Functions
+
+- [Sign](sign) - Determine if a number is positive, negative, or zero
+- [Int](int) - Round down to nearest integer

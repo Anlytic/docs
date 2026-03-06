@@ -1,0 +1,44 @@
+---
+title: "Dateformat"
+---
+
+# DateFormat
+
+Evaluates a date value and extracts datetime components in the specified format
+
+**Category:** `date`
+
+**Syntax:**
+```
+DateFormat([date_column], "format")
+```
+
+**Returns:** `String`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column or datetime` | ✓ Yes | The date or column of date values to format |
+| `format` | `text` | ✓ Yes | The datetime format string, using date format specifier (e.g. %Y, %m, %d, %H, etc.) |
+
+**Allowed Column Types for `date_column`:** DATE, DATETIME
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+DateFormat([OrderDate], "%Y-%m-%d")
+```
+Formats date as YYYY-MM-DD
+
+```
+DateFormat(Date("2023-07-15"), "%B %d, %Y")
+```
+Formats literal date to e.g. July 15, 2023
+

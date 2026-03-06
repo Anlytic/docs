@@ -1,0 +1,50 @@
+---
+title: "Ceiling"
+---
+
+# Ceiling
+
+Rounds the number up to the closest multiple of equal or greater value
+
+**Category:** `math`
+
+**Syntax:**
+```
+Ceiling([number], [factor])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number to be rounded |
+| `factor` | `number` | ✗ No | The multiple to which the number will be rounded. Cannot be 0. Default is 1 |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Ceiling([Cost])
+```
+Returns the ceiling for each row in the Cost column
+
+```
+Ceiling(3.2)
+```
+Returns 4
+**Result:** `4`
+
+```
+Ceiling([Cost], 0.5)
+```
+Returns the ceiling at a factor of 0.5 for each row in the Cost column
+

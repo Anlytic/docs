@@ -1,0 +1,54 @@
+---
+title: "Runningtotal"
+---
+
+# RunningTotal
+
+Calculates the running total (cumulative sum) of values from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+RunningTotal([column])
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate running total for |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+RunningTotal([Sales])
+```
+Returns the running total of sales from the first row to the current row.
+
+```
+RunningTotal([Revenue])
+```
+Calculates running total revenue, useful for tracking year-to-date or month-to-date totals.
+
+```
+RunningTotal([Order_Amount])
+```
+Tracks cumulative order amounts over time, showing how the total grows with each order.
+
+## Related Functions
+
+- [CumulativeSum](cumulativesum) - Calculates cumulative sum (similar functionality)
+- [RunningCount](runningcount) - Calculates running count
+- [MovingSum](movingsum) - Calculates moving sum with a window
+- [Sum](../aggregate/sum) - Returns the overall sum

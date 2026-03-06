@@ -1,0 +1,53 @@
+---
+title: "Mod"
+---
+
+# Mod
+
+Computes the remainder of a division operation, dividing the first value by the second value
+
+**Category:** `math`
+
+**Syntax:**
+```
+Mod([x], [y])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `x` | `number or column` | ✓ Yes | The dividend; the value that is divided |
+| `y` | `number or column` | ✓ Yes | The divisor; the value that is divided by. Non-zero |
+
+**Allowed Column Types for `x`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `y`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Mod([X], [Y])
+```
+Returns the modulus for each pair of values in X and Y columns
+
+```
+Mod(19, 5)
+```
+19 divided by 5 has the modulus of 4
+**Result:** `4`
+
+```
+Mod(2, 3)
+```
+2 divided by 3 has the modulus of 2
+**Result:** `2`
+

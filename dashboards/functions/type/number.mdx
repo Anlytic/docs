@@ -1,0 +1,44 @@
+---
+title: "Number"
+---
+
+# Number
+
+Converts the input value into a number type. If the input isn't numerical, the function returns Null
+
+**Category:** `conversion`
+
+**Syntax:**
+```
+Number(input)
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `input` | `text or date or number or column` | ✓ Yes | The text, date, or number to convert to number |
+
+**Allowed Column Types for `input`:** STRING, TEXT, INT, FLOAT, DECIMAL, DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Number("15.25")
+```
+Returns 15.25
+**Result:** `15.25`
+
+```
+Number([Text Column])
+```
+Converts text values to numbers
+

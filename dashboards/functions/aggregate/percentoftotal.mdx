@@ -1,0 +1,43 @@
+---
+title: "Percentoftotal"
+---
+
+# PercentOfTotal
+
+Returns the percent of total for the aggregate expression or column. Equivalent to aggregate / Subtotal(aggregate, mode, parameters).
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+PercentOfTotal([aggregate_or_column], |mode|, |parameters|)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `aggregate_or_column` | `any` | ✓ Yes | The aggregate function (e.g., Sum([Sales])) or column to base percent calculations on. If a column is provided, it will be used directly. |
+| `mode` | `text` | ✗ No | Percent mode ('grand_total', 'column', etc.). |
+| `parameters` | `any` | ✗ No | Additional parameters for subtotal if available (such as partition/group column). |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 3
+
+## Examples
+
+```
+PercentOfTotal(Sum([Sales]), "column", [Category])
+```
+Returns percent of total sales grouped by Category.
+
+```
+PercentOfTotal([Revenue], "column", [Region])
+```
+Returns percent of total for [Revenue] column by Region.
+

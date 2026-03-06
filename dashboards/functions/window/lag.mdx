@@ -1,0 +1,53 @@
+---
+title: "Lag"
+---
+
+# Lag
+
+Returns the value from a previous row at a specified offset before the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+Lag([column], offset)
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to retrieve the previous value from |
+| `offset` | `integer` | ✗ No | The number of rows before the current row to retrieve the value from. Defaults to 1. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Lag([Sales])
+```
+Returns the sales value from the previous row (1 row back).
+
+```
+Lag([Price], 3)
+```
+Returns the price value from 3 rows before the current row.
+
+```
+Lag([Revenue], 7)
+```
+Returns the revenue from 7 days ago, useful for week-over-week comparisons.
+
+## Related Functions
+
+- [Lead](lead) - Returns value from following row
+- [First](first) - Returns first value in partition
+- [Last](last) - Returns last value in partition
+- [RowNumber](rownumber) - Assigns sequential row numbers

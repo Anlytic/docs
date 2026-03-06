@@ -1,0 +1,42 @@
+---
+title: "Lower"
+---
+
+# Lower
+
+Converts a given string to lowercase.
+
+**Category:** `text`
+
+**Syntax:**
+```
+Lower([text_column])
+```
+
+**Returns:** `StringColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `text_column` | `column` | ✓ Yes | A text column. |
+
+**Allowed Column Types:** STRING, TEXT
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Lower([Name])
+```
+Converts each name in the column to lowercase.
+
+## Related Functions
+
+- [Upper](upper) - Convert to uppercase
+- [Contains](contains) - Use with Lower for case-insensitive searches

@@ -1,0 +1,44 @@
+---
+title: "Atan"
+---
+
+# Atan
+
+Computes the arctangent of the given angle
+
+**Category:** `math`
+
+**Syntax:**
+```
+Atan([value])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The value whose arctangent will be calculated |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Atan([Tangent Value])
+```
+Calculates the arctangent for each value in the Tangent Value column
+
+```
+Atan(0)
+```
+Returns the arctangent of 0
+**Result:** `0`
+

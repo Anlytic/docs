@@ -1,0 +1,50 @@
+---
+title: "Acos"
+---
+
+# Acos
+
+Computes the arccosine of the given angle
+
+**Category:** `math`
+
+**Syntax:**
+```
+Acos([value])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The value whose arccosine will be calculated |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Acos([Cosine Value])
+```
+Calculates the arccosine for each value in the Cosine Value column
+
+```
+Acos(0.5)
+```
+Returns the arccosine of 0.5
+**Result:** `1.0471975511965979`
+
+```
+Acos(1)
+```
+Returns the arccosine of 1
+**Result:** `0`
+

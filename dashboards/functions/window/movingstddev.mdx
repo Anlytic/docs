@@ -1,0 +1,56 @@
+---
+title: "Movingstddev"
+---
+
+# MovingStdDev
+
+Calculates the moving standard deviation of values within a specified window of rows relative to the current row.
+
+**Category:** `window`
+
+**Syntax:**
+```
+MovingStdDev([column], window_start, window_end)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate moving standard deviation for |
+| `window_start` | `integer` | ✓ Yes | The number of rows before the current row to include in the window (negative value) |
+| `window_end` | ✗ No | `integer` | The number of rows after the current row to include in the window (positive value). Defaults to 0. |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Examples
+
+```
+MovingStdDev([Sales], -6, 0)
+```
+Returns the standard deviation of sales in a 7-day rolling window (current row and 6 previous rows).
+
+```
+MovingStdDev([Response_Time], -29, 0)
+```
+Calculates a 30-day moving standard deviation of response times, useful for tracking variability over time.
+
+```
+MovingStdDev([Stock_Returns], -19, 0)
+```
+Calculates a 20-day rolling volatility (standard deviation) for stock returns.
+
+## Related Functions
+
+- [CumulativeStdDev](cumulativestddev) - Calculates cumulative standard deviation from the first row
+- [MovingVariance](movingvariance) - Calculates moving variance with a window
+- [StDev](../aggregate/stdev) - Returns the overall standard deviation
+- [MovingAvg](movingavg) - Calculates moving average with a window

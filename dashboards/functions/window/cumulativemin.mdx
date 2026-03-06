@@ -1,0 +1,48 @@
+---
+title: "Cumulativemin"
+---
+
+# CumulativeMin
+
+Calculates the cumulative minimum value from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeMin([column])
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate cumulative minimum for |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumulativeMin([Sales])
+```
+Returns the lowest sales value seen from the first row to the current row.
+
+```
+CumulativeMin([Temperature])
+```
+Tracks the lowest temperature observed up to each point in time.
+
+## Related Functions
+
+- [CumulativeMax](cumulativemax) - Calculates cumulative maximum
+- [MovingMin](movingmin) - Calculates moving minimum with a window
+- [Min](../aggregate/min) - Returns the overall minimum

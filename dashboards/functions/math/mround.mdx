@@ -1,0 +1,62 @@
+---
+title: "Mround"
+---
+
+# MRound
+
+Rounds the number down to the closest multiple of the specified number
+
+**Category:** `math`
+
+**Syntax:**
+```
+MRound([number], multiple)
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number to be rounded |
+| `multiple` | `number` | ✗ No | The multiple to round the number to |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+MRound([Number])
+```
+Rounds the Number column by a factor of 1 because no argument is passed. This is equivalent to the result of the factor of (-1).
+
+```
+MRound([Cost], 5)
+```
+Rounds each value in the Cost column to the nearest multiple of 5
+
+```
+MRound(23, 5)
+```
+Returns 25
+**Result:** `25`
+
+```
+MRound(27, 5)
+```
+Returns 25
+**Result:** `25`
+
+```
+MRound(23, -5)
+```
+Returns 25 (negative factor sign is ignored)
+**Result:** `25`
+

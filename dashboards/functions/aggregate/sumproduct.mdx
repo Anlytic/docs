@@ -1,0 +1,41 @@
+---
+title: "Sumproduct"
+---
+
+# SumProduct
+
+Multiplies corresponding values from multiple columns and returns their sum
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+SumProduct([column1], [column2])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column1` | `column` | ✓ Yes | The first numeric column to multiply |
+| `column2` | `column` | ✓ Yes | The second numeric column to multiply |
+
+**Allowed Column Types for `column1`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `column2`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+SumProduct([Quantity], [Price])
+```
+Sum of (Quantity * Price) for all rows
+

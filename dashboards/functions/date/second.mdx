@@ -1,0 +1,43 @@
+---
+title: "Second"
+---
+
+# Second
+
+Returns an integer representing the second component of a specified date and time.
+
+**Category:** `date`
+
+**Syntax:**
+```
+Second([date_column])
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date or column containing date values from which the second component is extracted. |
+
+**Allowed Column Types:** DATETIME
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Second(Date("2007-08-14 07:11:05"))
+```
+Extracts the second from the specified date and time.
+**Result:** `5`
+
+```
+Second([Date])
+```
+Returns the second component for each value in the [Date] column.

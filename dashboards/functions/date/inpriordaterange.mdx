@@ -1,0 +1,55 @@
+---
+title: "Inpriordaterange"
+---
+
+# InPriorDateRange
+
+Determines if a date is within a specified date range in a previous time period.
+
+**Category:** `date`
+
+**Syntax:**
+```
+InPriorDateRange([date_column], "range_period", "prior_period", |offset|, |today|)
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date column` | `column\|datetime` | ✓ Yes | The date to be evaluated. |
+| `range period` | `text` | ✓ Yes | The period for the date range. |
+| `prior period` | `text` | ✓ Yes | The period used to offset the range period. |
+| `offset` | `number` | ✗ No | Number of prior periods to offset by. Defaults to 1. |
+| `today` | `column\|datetime` | ✗ No | Override value for Today when calculating relative to current date. |
+
+**Allowed Values for `range period`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Allowed Values for `prior period`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: 5
+
+## Examples
+
+```
+InPriorDateRange([Date], "hour", "day")
+```
+Returns True for all dates in the current hour of the day in the previous day.
+
+```
+InPriorDateRange([Date], "month", "year")
+```
+Returns True for all dates in this month last year.
+
+```
+InPriorDateRange([Date], "month", "year", 2)
+```
+Returns True for all dates in this month two years ago.

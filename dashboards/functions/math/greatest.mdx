@@ -1,0 +1,52 @@
+---
+title: "Greatest"
+---
+
+# Greatest
+
+Returns the largest value amongst the inputs
+
+**Category:** `math`
+
+**Syntax:**
+```
+Greatest([input1], [input2], ...)
+```
+
+**Returns:** `Any`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `input1` | `number or date or string or column` | ✓ Yes | The data or column of data to be evaluated. Input can be numbers, dates, or strings |
+| `inputs` | `number or date or string or column` | ✗ No | Additional inputs to compare. All additional inputs must match the type of the first input |
+
+**Allowed Column Types for `input1`:** INT, FLOAT, DECIMAL, DATE, DATETIME, VARCHAR, TEXT
+
+**Allowed Column Types for `inputs`:** INT, FLOAT, DECIMAL, DATE, DATETIME, VARCHAR, TEXT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 10
+
+## Examples
+
+```
+Greatest([Profit 2020], [Profit 2021], [Profit 2022])
+```
+Returns the profit from the year with the greatest profit
+
+```
+Greatest(10, 20, 5, 15)
+```
+Returns 20
+**Result:** `20`
+
+```
+Greatest([Invoice Date], Date("2020-01-01"))
+```
+Returns the more recent date
+

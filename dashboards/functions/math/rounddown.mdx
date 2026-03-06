@@ -1,0 +1,50 @@
+---
+title: "Rounddown"
+---
+
+# RoundDown
+
+Rounds a number down to the specified number of digits
+
+**Category:** `math`
+
+**Syntax:**
+```
+RoundDown([number], [digits])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number to be rounded |
+| `digits` | `number` | ✗ No | The number of decimal places to which to round. If not provided, defaults to 0 |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+RoundDown([Cost], 2)
+```
+Rounds the value for each row in the Cost column down by 2 digits
+
+```
+RoundDown(3.141, 2)
+```
+Returns 3.14
+**Result:** `3.14`
+
+```
+RoundDown([Cost], -2)
+```
+Rounds the input number down and replaces its last 2 digits with 0s
+

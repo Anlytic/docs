@@ -1,0 +1,53 @@
+---
+title: "Lead"
+---
+
+# Lead
+
+Returns the value from a following row at a specified offset after the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+Lead([column], offset)
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to retrieve the next value from |
+| `offset` | `integer` | ✗ No | The number of rows after the current row to retrieve the value from. Defaults to 1. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Lead([Sales])
+```
+Returns the sales value from the next row (1 row ahead).
+
+```
+Lead([Price], 3)
+```
+Returns the price value from 3 rows after the current row.
+
+```
+Lead([Revenue], 7)
+```
+Returns the revenue from 7 days ahead, useful for forward-looking comparisons.
+
+## Related Functions
+
+- [Lag](lag) - Returns value from previous row
+- [First](first) - Returns first value in partition
+- [Last](last) - Returns last value in partition
+- [RowNumber](rownumber) - Assigns sequential row numbers

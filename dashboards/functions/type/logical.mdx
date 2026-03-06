@@ -1,0 +1,51 @@
+---
+title: "Logical"
+---
+
+# Logical
+
+Converts the input value into a Boolean type, with a logical value of either True or False
+
+**Category:** `conversion`
+
+**Syntax:**
+```
+Logical(input)
+```
+
+**Returns:** `Boolean`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `input` | `text or number or column` | ✓ Yes | The input that you would like to be interpreted as a logical operator. Input can be of text or number type |
+
+**Allowed Column Types for `input`:** STRING, TEXT, INT, FLOAT, DECIMAL, BOOLEAN
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Logical(0)
+```
+Returns False
+**Result:** `False`
+
+```
+Logical(1)
+```
+Returns True
+**Result:** `True`
+
+```
+Logical("True")
+```
+Returns True
+**Result:** `True`
+

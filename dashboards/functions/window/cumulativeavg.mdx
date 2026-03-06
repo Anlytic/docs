@@ -1,0 +1,48 @@
+---
+title: "Cumulativeavg"
+---
+
+# CumulativeAvg
+
+Calculates the cumulative average of values from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeAvg([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate cumulative average for |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumulativeAvg([Sales])
+```
+Returns the running average of sales from the first row to the current row.
+
+```
+CumulativeAvg([Revenue])
+```
+Calculates cumulative average revenue, useful for tracking average performance over time.
+
+## Related Functions
+
+- [CumulativeSum](cumulativesum) - Calculates cumulative sum
+- [MovingAvg](movingavg) - Calculates moving average with a window
+- [Avg](../aggregate/avg) - Returns the overall average

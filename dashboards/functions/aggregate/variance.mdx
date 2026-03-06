@@ -1,0 +1,38 @@
+---
+title: "Variance"
+---
+
+# Variance
+
+Returns the sample variance of values in the specified column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Variance([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate variance |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Variance([Score])
+```
+Returns the sample variance of scores
+

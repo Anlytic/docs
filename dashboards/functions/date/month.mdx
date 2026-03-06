@@ -1,0 +1,37 @@
+---
+title: "Month"
+---
+
+# Month
+
+Returns an integer representing the month component in a specified datetime value.
+
+**Category:** `date`
+
+**Syntax:**
+```
+Month([date_column])
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date to extract month from. |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Month([OrderDate])
+```
+Returns month (1-12) from date.

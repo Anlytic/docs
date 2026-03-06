@@ -1,0 +1,37 @@
+---
+title: "Weekdayname"
+---
+
+# WeekdayName
+
+Returns the name of the day of the week in a specified datetime value.
+
+**Category:** `date`
+
+**Syntax:**
+```
+WeekdayName([date_column])
+```
+
+**Returns:** `StringColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date to extract weekday name from. |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+WeekdayName([OrderDate])
+```
+Returns weekday name (e.g., 'Monday').

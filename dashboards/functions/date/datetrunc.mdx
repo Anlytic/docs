@@ -1,0 +1,40 @@
+---
+title: "Datetrunc"
+---
+
+# DateTrunc
+
+Truncates the date to the specified date part.
+
+**Category:** `date`
+
+**Syntax:**
+```
+DateTrunc("part", [date_column])
+```
+
+**Returns:** `DateTimeColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `part` | `text` | ✓ Yes | The part to truncate to (year, month, day, etc.). |
+| `date_column` | `column\|datetime` | ✓ Yes | The date to truncate. |
+
+**Allowed Values for `part`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+DateTrunc("month", [OrderDate])
+```
+Truncates to first day of month.

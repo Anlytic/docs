@@ -1,0 +1,50 @@
+---
+title: "Floor"
+---
+
+# Floor
+
+Rounds the number down to the closest multiple of equal or lesser value
+
+**Category:** `math`
+
+**Syntax:**
+```
+Floor([number], [factor])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number or column of numbers to apply the function |
+| `factor` | `number` | ✗ No | The multiple to apply to the Floor function. Cannot be 0. Default is 1 |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Floor([Cost])
+```
+Returns the floor for each row in the Cost column
+
+```
+Floor(3.6)
+```
+Returns 3
+**Result:** `3`
+
+```
+Floor([Cost], 0.5)
+```
+Returns the floor at a factor of 0.5 for each row in the Cost column
+

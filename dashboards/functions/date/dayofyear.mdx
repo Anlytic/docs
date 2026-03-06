@@ -1,0 +1,57 @@
+---
+title: "Dayofyear"
+---
+
+# DayOfYear
+
+Converts a date to the number day of the year, from 1 (Jan 1) to 365 (Dec 31). Accounts for leap years.
+
+**Category:** `date`
+
+**Syntax:**
+```
+DayOfYear([date], |timezone|)
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date` | `column\|datetime` | ✓ Yes | The date or column of date values to evaluate. |
+| `timezone` | `text` | ✗ No | Optional IANA time zone name (e.g., "Europe/Amsterdam"). |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+DayOfYear(Date("2023-01-01"))
+```
+Converts Jan 1, 2023 to the number day of the year.
+**Result:** `1`
+
+```
+DayOfYear(Date("2023-12-31"))
+```
+Converts Dec 31, 2023 to the number day of the year.
+**Result:** `365`
+
+```
+DayOfYear(Date("2024-12-31"))
+```
+Converts Dec 31, 2024 (leap year) to the number day of the year.
+**Result:** `366`
+
+```
+DayOfYear(Date("2023-01-03 02:00:00Z"), "Europe/Amsterdam")
+```
+Converts Jan 3, 2023 02:00:00Z to the number day of the year in New York.
+**Result:** `2`

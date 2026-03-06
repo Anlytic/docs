@@ -1,0 +1,53 @@
+---
+title: "Distanceplane"
+---
+
+# DistancePlane
+
+Calculates the distance between two points on a plane
+
+**Category:** `math`
+
+**Syntax:**
+```
+DistancePlane([x1], [y1], [x2], [y2])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `x1` | `number or column` | ✓ Yes | The x coordinate of the first point |
+| `y1` | `number or column` | ✓ Yes | The y coordinate of the first point |
+| `x2` | `number or column` | ✓ Yes | The x coordinate of the second point |
+| `y2` | `number or column` | ✓ Yes | The y coordinate of the second point |
+
+**Allowed Column Types for `x1`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `y1`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `x2`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `y2`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 4
+- Maximum parameters: 4
+
+## Examples
+
+```
+DistancePlane(0, 0, 3, 4)
+```
+Calculates distance between points (0,0) and (3,4)
+**Result:** `5`
+
+```
+DistancePlane([X1], [Y1], [X2], [Y2])
+```
+Calculates distance between two points for each row
+

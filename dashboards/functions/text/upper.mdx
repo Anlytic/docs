@@ -1,0 +1,42 @@
+---
+title: "Upper"
+---
+
+# Upper
+
+Converts a given string to uppercase.
+
+**Category:** `text`
+
+**Syntax:**
+```
+Upper([text_column])
+```
+
+**Returns:** `StringColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `text_column` | `column` | ✓ Yes | A text column. |
+
+**Allowed Column Types:** STRING, TEXT
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Upper([Status])
+```
+Converts each status in the column to uppercase.
+
+## Related Functions
+
+- [Lower](lower) - Convert to lowercase
+- [Contains](contains) - Use with Upper for case-insensitive searches

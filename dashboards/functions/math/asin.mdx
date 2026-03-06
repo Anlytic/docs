@@ -1,0 +1,50 @@
+---
+title: "Asin"
+---
+
+# Asin
+
+Computes the arcsine of the given angle
+
+**Category:** `math`
+
+**Syntax:**
+```
+Asin([value])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The value whose arcsine will be calculated |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Asin([Sine Value])
+```
+Calculates the arcsine for each value in the Sine Value column
+
+```
+Asin(0.5)
+```
+Returns the arcsine of 0.5
+**Result:** `0.5235987755982989`
+
+```
+Asin(1)
+```
+Returns the arcsine of 1
+**Result:** `1.5707963267948966`
+

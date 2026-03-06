@@ -1,0 +1,52 @@
+---
+title: "Least"
+---
+
+# Least
+
+Returns the smallest value amongst the inputs
+
+**Category:** `math`
+
+**Syntax:**
+```
+Least([input1], [input2], ...)
+```
+
+**Returns:** `Any`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `input1` | `number or date or string or column` | ✓ Yes | The data or column of data to be evaluated. Input can be numbers, dates, or strings |
+| `inputs` | `number or date or string or column` | ✗ No | Additional inputs to compare. All additional inputs must match the type of the first input |
+
+**Allowed Column Types for `input1`:** INT, FLOAT, DECIMAL, DATE, DATETIME, VARCHAR, TEXT
+
+**Allowed Column Types for `inputs`:** INT, FLOAT, DECIMAL, DATE, DATETIME, VARCHAR, TEXT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 10
+
+## Examples
+
+```
+Least([Price1], [Price2], [Price3])
+```
+Returns the smallest price among three columns
+
+```
+Least(10, 20, 5, 15)
+```
+Returns 5
+**Result:** `5`
+
+```
+Least([Invoice Date], Date("2020-01-01"))
+```
+Returns the earlier date
+

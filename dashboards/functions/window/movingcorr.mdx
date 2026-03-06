@@ -1,0 +1,58 @@
+---
+title: "Movingcorr"
+---
+
+# MovingCorr
+
+Calculates the moving correlation coefficient between two columns within a specified window of rows relative to the current row.
+
+**Category:** `window`
+
+**Syntax:**
+```
+MovingCorr([column1], [column2], window_start, window_end)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column1` | `column` | ✓ Yes | The first numeric column for correlation calculation |
+| `column2` | `column` | ✓ Yes | The second numeric column for correlation calculation |
+| `window_start` | `integer` | ✓ Yes | The number of rows before the current row to include in the window (negative value) |
+| `window_end` | ✗ No | `integer` | The number of rows after the current row to include in the window (positive value). Defaults to 0. |
+
+**Allowed Column Types for `column1`:** INT, FLOAT, DECIMAL, NUMBER
+
+**Allowed Column Types for `column2`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: 4
+
+## Examples
+
+```
+MovingCorr([Sales], [Marketing_Spend], -6, 0)
+```
+Returns the 7-day moving correlation between sales and marketing spend (current row and 6 previous rows).
+
+```
+MovingCorr([Temperature], [Ice_Cream_Sales], -29, 0)
+```
+Calculates a 30-day moving correlation between temperature and ice cream sales, useful for tracking how the relationship changes over time.
+
+```
+MovingCorr([Stock_A], [Stock_B], -19, 0)
+```
+Calculates a 20-day rolling correlation between two stocks for analyzing their relationship.
+
+## Related Functions
+
+- [CumulativeCorr](cumulativecorr) - Calculates cumulative correlation from the first row
+- [Corr](../aggregate/corr) - Returns the overall correlation
+- [MovingAvg](movingavg) - Calculates moving average with a window

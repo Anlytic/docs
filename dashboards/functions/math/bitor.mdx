@@ -1,0 +1,47 @@
+---
+title: "Bitor"
+---
+
+# BitOr
+
+Calculates the bitwise OR of two numbers
+
+**Category:** `math`
+
+**Syntax:**
+```
+BitOr([number1], [number2])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number1` | `integer or column` | ✓ Yes | The first number for the bitwise OR operation |
+| `number2` | `integer or column` | ✓ Yes | The second number for the bitwise OR operation |
+
+**Allowed Column Types for `number1`:** INT
+
+**Allowed Column Types for `number2`:** INT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+BitOr(5, 3)
+```
+Returns the bitwise OR of 5 and 3
+**Result:** `7`
+
+```
+BitOr([Value1], [Value2])
+```
+Returns the bitwise OR of values in two columns
+

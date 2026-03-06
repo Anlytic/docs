@@ -1,0 +1,51 @@
+---
+title: "Round"
+---
+
+# Round
+
+Rounds a number to the specified number of digits
+
+**Category:** `math`
+
+**Syntax:**
+```
+Round([number], [digits])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | Number to be rounded |
+| `digits` | `number` | ✗ No | Number of decimal places to round the number. If not provided, defaults to 0 |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Round([Cost])
+```
+Rounds each value in the Cost column to the nearest whole number
+
+```
+Round(3.1, 2)
+```
+Returns 3.1
+**Result:** `3.1`
+
+```
+Round(1234, -2)
+```
+Returns 1200
+**Result:** `1200`
+

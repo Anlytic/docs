@@ -1,0 +1,40 @@
+---
+title: "Listagg_distinct"
+---
+
+# ListAggDistinct
+
+Concatenates distinct values into a delimited string
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+ListAggDistinct([column], delimiter, direction)
+```
+
+**Returns:** `String`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column whose distinct values are concatenated |
+| `delimiter` | `text` | ✗ No | Delimiter string between values. Defaults to ',' |
+| `direction` | `text` | ✗ No | Sort direction: 'asc' or 'desc'. Defaults to 'asc' |
+
+**Allowed Values for `direction`:** `asc`, `desc`
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 3
+
+## Examples
+
+```
+ListAggDistinct([Category])
+```
+Joins unique categories with comma delimiter
+

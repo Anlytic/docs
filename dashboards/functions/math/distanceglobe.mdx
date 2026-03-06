@@ -1,0 +1,53 @@
+---
+title: "Distanceglobe"
+---
+
+# DistanceGlobe
+
+Calculates the distance between two points on the globe, in kilometers
+
+**Category:** `math`
+
+**Syntax:**
+```
+DistanceGlobe([lat1], [lon1], [lat2], [lon2])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `lat1` | `number or column` | ✓ Yes | The latitude of the first point |
+| `lon1` | `number or column` | ✓ Yes | The longitude of the first point |
+| `lat2` | `number or column` | ✓ Yes | The latitude of the second point |
+| `lon2` | `number or column` | ✓ Yes | The longitude of the second point |
+
+**Allowed Column Types for `lat1`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `lon1`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `lat2`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `lon2`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 4
+- Maximum parameters: 4
+
+## Examples
+
+```
+DistanceGlobe(40.7128, -74.0060, 34.0522, -118.2437)
+```
+Calculates distance between New York and Los Angeles
+**Result:** `3944.0`
+
+```
+DistanceGlobe([StartLat], [StartLon], [EndLat], [EndLon])
+```
+Calculates distance between start and end points for each row
+

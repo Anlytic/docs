@@ -1,0 +1,38 @@
+---
+title: "Avg"
+---
+
+# Avg
+
+Returns the average of all values in the specified column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Avg([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to average |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Avg([Sales])
+```
+Returns the average of all sales values
+

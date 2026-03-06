@@ -1,0 +1,35 @@
+---
+title: "Isnotnull"
+---
+
+# IsNotNull
+
+Returns True if the argument is not Null (contains data), and False if the argument contains missing data values.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+IsNotNull(argument)
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `argument` | `column\|any` | ✓ Yes | Any argument can be provided. The function can analyze one argument at a time. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+IsNotNull([Sales])
+```
+Returns True for rows where sales data exists and False for rows where there is no data.

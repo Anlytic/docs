@@ -1,0 +1,47 @@
+---
+title: "Bitand"
+---
+
+# BitAnd
+
+Calculates the bitwise AND of two numbers
+
+**Category:** `math`
+
+**Syntax:**
+```
+BitAnd([number1], [number2])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number1` | `integer or column` | ✓ Yes | The first number for the bitwise AND operation |
+| `number2` | `integer or column` | ✓ Yes | The second number for the bitwise AND operation |
+
+**Allowed Column Types for `number1`:** INT
+
+**Allowed Column Types for `number2`:** INT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+BitAnd(5, 3)
+```
+Returns the bitwise AND of 5 and 3
+**Result:** `1`
+
+```
+BitAnd([Value1], [Value2])
+```
+Returns the bitwise AND of values in two columns
+

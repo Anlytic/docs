@@ -1,0 +1,47 @@
+---
+title: "Cumulativecount"
+---
+
+# CumulativeCount
+
+Calculates the cumulative count of values from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeCount([column])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to count values for |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumulativeCount([Order_ID])
+```
+Returns the running count of orders from the first row to the current row.
+
+```
+CumulativeCount([Customer_ID])
+```
+Calculates cumulative count of customers, useful for tracking total customer interactions over time.
+
+## Related Functions
+
+- [CumulativeSum](cumulativesum) - Calculates cumulative sum
+- [MovingCount](movingcount) - Calculates moving count with a window
+- [Count](../aggregate/count) - Returns the overall count
+- [RunningCount](runningcount) - Calculates running count

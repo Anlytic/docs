@@ -1,0 +1,37 @@
+---
+title: "Monthname"
+---
+
+# MonthName
+
+Returns the name of the month component from a specified datetime value.
+
+**Category:** `date`
+
+**Syntax:**
+```
+MonthName([date_column])
+```
+
+**Returns:** `StringColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date to extract month name from. |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+MonthName([OrderDate])
+```
+Returns month name (e.g., 'January').

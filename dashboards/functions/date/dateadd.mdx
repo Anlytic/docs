@@ -1,0 +1,52 @@
+---
+title: "Dateadd"
+---
+
+# DateAdd
+
+Adds a specified amount of time to a date.
+
+**Category:** `date`
+
+**Syntax:**
+```
+DateAdd("unit", amount, [date])
+```
+
+**Returns:** `DateTimeColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `unit` | `text` | ✓ Yes | The unit of time to add. |
+| `amount` | `number` | ✓ Yes | The number of units to add. Decimal values are rounded to the nearest integer. |
+| `date` | `column\|datetime` | ✓ Yes | The date value or column of date values to which time is added. |
+
+**Allowed Values for `unit`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: 3
+
+## Examples
+
+```
+DateAdd("minute", 60, Date("1999-12-31 23:00:00"))
+```
+Adds 60 minutes to the specified date.
+**Result:** `2000-01-01 00:00:00`
+
+```
+DateAdd("day", 7, [Date])
+```
+Adds seven days to every date in the Date column.
+
+```
+DateAdd("year", -1, [Date])
+```
+Subtracts one year from every date in the Date column.

@@ -1,0 +1,50 @@
+---
+title: "Dateparse"
+---
+
+# DateParse
+
+Parses a text string representing a date in the specified format and returns the equivalent ISO datetime value
+
+**Category:** `date`
+
+**Syntax:**
+```
+DateParse([text_column], "format")
+```
+
+**Returns:** `String`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `text_column` | `column or text` | ✓ Yes | The text string or column of text strings to parse |
+| `format` | `text` | ✓ Yes | The datetime format of the text string using format specifiers (e.g., %Y, %m, %d, %H, %M, %S, %B, %b, etc.) |
+
+**Allowed Column Types for `text_column`:** STRING, TEXT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+DateParse("03-Sep-2020:03:05:13", "%d-%b-%Y:%H:%M:%S")
+```
+Parses the text string and returns the equivalent ISO datetime value
+**Result:** `2020-09-03 03:05:13`
+
+```
+DateParse([Text Date], "%d/%b/%Y:%H:%M:%S")
+```
+Parses text strings in the Text Date column using the specified format
+
+```
+DateParse([Text Date], "%d/%b/%Y")
+```
+Parses text strings in the Text Date column using date format only
+

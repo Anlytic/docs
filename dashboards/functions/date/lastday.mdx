@@ -1,0 +1,45 @@
+---
+title: "Lastday"
+---
+
+# LastDay
+
+Evaluates a specified date component in a date value and returns the last date and time in that component as a timestamp.
+
+**Category:** `date`
+
+**Syntax:**
+```
+LastDay([date], "precision")
+```
+
+**Returns:** `DateTimeColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date` | `column\|datetime` | ✓ Yes | The date or column of date values from which the date component is extracted. |
+| `precision` | `text` | ✓ Yes | The date component to evaluate for its last date and time. |
+
+**Allowed Values for `precision`:** `year`, `quarter`, `month`, `week`
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+LastDay([Invoice Date], "month")
+```
+Extracts the month component and returns the last date and time for that month.
+
+```
+LastDay(Date("2020-01-10 10:34:29"), "year")
+```
+Returns the last date and time for the year of the given date.

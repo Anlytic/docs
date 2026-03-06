@@ -1,0 +1,48 @@
+---
+title: "Cumulativemax"
+---
+
+# CumulativeMax
+
+Calculates the cumulative maximum value from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeMax([column])
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate cumulative maximum for |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumulativeMax([Sales])
+```
+Returns the highest sales value seen from the first row to the current row.
+
+```
+CumulativeMax([Temperature])
+```
+Tracks the peak temperature observed up to each point in time.
+
+## Related Functions
+
+- [CumulativeMin](cumulativemin) - Calculates cumulative minimum
+- [MovingMax](movingmax) - Calculates moving maximum with a window
+- [Max](../aggregate/max) - Returns the overall maximum

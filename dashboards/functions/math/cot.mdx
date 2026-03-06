@@ -1,0 +1,44 @@
+---
+title: "Cot"
+---
+
+# Cot
+
+Computes the cotangent of the given angle
+
+**Category:** `math`
+
+**Syntax:**
+```
+Cot([value])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The angle (in radians) whose cotangent will be calculated |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Cot([Angle])
+```
+Calculates the cotangent for each angle value in the Angle column
+
+```
+Cot(1.5708)
+```
+Returns the cotangent of π/2 radians
+**Result:** `0`
+

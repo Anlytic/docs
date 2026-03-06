@@ -1,0 +1,54 @@
+---
+title: "Sign"
+---
+
+# Sign
+
+Returns the sign of a number: -1 if negative, 1 if positive, 0 if zero.
+
+**Category:** `math`
+
+**Syntax:**
+```
+Sign([number_column])
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number\|column` | ✓ Yes | The number or column of numbers to return the sign of. |
+
+**Allowed Column Types:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Sign(-3)
+```
+Returns -1 for negative numbers.
+**Result:** `-1`
+
+```
+Sign(3745)
+```
+Returns 1 for positive numbers.
+**Result:** `1`
+
+```
+Sign(0)
+```
+Returns 0 for zero.
+**Result:** `0`
+
+## Related Functions
+
+- [Int](int) - Round down to nearest integer

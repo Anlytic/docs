@@ -1,0 +1,54 @@
+---
+title: "Power"
+---
+
+# Power
+
+Raises a number to the specified power
+
+**Category:** `math`
+
+**Syntax:**
+```
+Power(number, power)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number or column of numbers to raise to the specified power |
+| `power` | `number or column` | ✓ Yes | The exponent to raise the number to |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `power`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Power(2, 0)
+```
+Returns 1
+**Result:** `1`
+
+```
+Power(2, 3)
+```
+Returns 8
+**Result:** `8`
+
+```
+Power(2, -1)
+```
+Returns 0.5
+**Result:** `0.5`
+

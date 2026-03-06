@@ -1,0 +1,44 @@
+---
+title: "Ln"
+---
+
+# Ln
+
+Returns the natural logarithm (base e) of a number
+
+**Category:** `math`
+
+**Syntax:**
+```
+Ln([number_column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number to compute the natural logarithm of |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Ln(2.71828)
+```
+Natural logarithm of e
+**Result:** `1`
+
+```
+Ln([Value])
+```
+Natural logarithm for each value in the column
+

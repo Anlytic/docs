@@ -1,0 +1,50 @@
+---
+title: "If"
+---
+
+# If
+
+Returns Value 1 for every row where the first condition is met. If more than one condition is supplied, subsequent conditions are evaluated and return their corresponding values. If all conditions are False, then the Else value is applied.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+If(condition1, value1, [condition2], [value2], ..., [else])
+```
+
+**Returns:** `AnyColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `condition 1` | `logical` | ✓ Yes | Logical condition that returns a result that is either True or False. |
+| `value 1` | `any` | ✓ Yes | The value to be returned if its preceding condition is True. |
+| `additional conditions and values` | `variadic` | ✗ No | Several If/Then pairs can be listed in a single function. Every supplied condition must have a corresponding value. |
+| `else` | `any` | ✗ No | The value to be returned if no conditionals evaluate to True. If not specified, a Null result is returned by default. |
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: Unlimited
+
+## Examples
+
+```
+If([size] < 3, "small", [size] < 6, "medium", "large")
+```
+Assign "small" to sizes less than 3, "medium" to sizes less than 6, and "large" to all other sizes.
+
+```
+If([revenue] - [cost] > 0, "profit", "loss")
+```
+Categorize a record as a profit or a loss based on revenue and cost.
+
+
+## Related Functions
+
+- [Switch](switch) - Better for matching specific values
+- [Between](between) - Check if value is in a range
+- [In](in) - Check if value matches any in a list

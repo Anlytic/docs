@@ -1,0 +1,53 @@
+---
+title: "Ntile"
+---
+
+# Ntile
+
+Divides rows in a partition into a specified number of approximately equal groups, assigning a bucket number to each row.
+
+**Category:** `window`
+
+**Syntax:**
+```
+Ntile(num_buckets)
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `num_buckets` | `integer` | ✓ Yes | The number of groups to divide the rows into |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Ntile(4)
+```
+Divides rows into 4 quartiles, returning values 1, 2, 3, or 4 for each row.
+
+```
+Ntile(10)
+```
+Divides rows into 10 deciles, useful for creating percentile groups (top 10%, next 10%, etc.).
+
+```
+Ntile(3)
+```
+Divides rows into 3 tertiles, returning values 1, 2, or 3. If there are 100 rows, groups will have 34, 33, and 33 rows respectively.
+
+## Related Functions
+
+- [Rank](rank) - Assigns rank with gaps
+- [DenseRank](denserank) - Assigns rank without gaps
+- [PercentRank](percentrank) - Calculates relative rank as percentage
+- [RowNumber](rownumber) - Assigns sequential row numbers
+- [CumeDist](cumedist) - Calculates cumulative distribution

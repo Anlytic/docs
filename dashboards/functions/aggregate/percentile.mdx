@@ -1,0 +1,39 @@
+---
+title: "Percentile"
+---
+
+# Percentile
+
+Returns the specified percentile value in the column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Percentile([column], percentile)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate percentile |
+| `percentile` | `number` | ✓ Yes | The percentile to calculate (0-1) |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Percentile([Score], 0.95)
+```
+Returns the 95th percentile score
+

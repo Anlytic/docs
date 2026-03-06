@@ -1,0 +1,39 @@
+---
+title: "Percentiledisc"
+---
+
+# PercentileDisc
+
+Returns the discrete kth percentile value of a column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+PercentileDisc([column], k)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to search |
+| `k` | `number` | ✓ Yes | Percent between 0 and 1 |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+PercentileDisc([Score], 0.7)
+```
+Returns the discrete 70th percentile
+

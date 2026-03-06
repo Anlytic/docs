@@ -1,0 +1,38 @@
+---
+title: "Variancep"
+---
+
+# VarianceP
+
+Returns the population variance of values in the specified column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+VarianceP([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate population variance |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+VarianceP([Score])
+```
+Returns the population variance of scores
+

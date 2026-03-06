@@ -1,0 +1,38 @@
+---
+title: "Choose"
+---
+
+# Choose
+
+Given a specified index number, returns the matching value from a list.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+Choose([index_column], value1, value2, ...)
+```
+
+**Returns:** `AnyColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `index` | `column\|integer` | ✓ Yes | The 1-based index position of the value to return. |
+| `value1` | `any` | ✓ Yes | The first value in the list. |
+| `additional values` | `variadic` | ✗ No | Additional values in the list. |
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: Unlimited
+
+## Examples
+
+```
+Choose(2, "First", "Second", "Third")
+```
+Returns the second value from the list.
+**Result:** `Second`

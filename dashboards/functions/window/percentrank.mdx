@@ -1,0 +1,49 @@
+---
+title: "Percentrank"
+---
+
+# PercentRank
+
+Calculates the relative rank of each row within a partition as a percentage, ranging from 0 to 1.
+
+**Category:** `window`
+
+**Syntax:**
+```
+PercentRank([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to calculate percent rank for |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+PercentRank([Sales])
+```
+Returns the relative rank of each sales value as a percentage. The lowest sales gets 0.0, the highest gets 1.0, and middle values are distributed proportionally.
+
+```
+PercentRank([Score])
+```
+Calculates the percentile rank for each score. A result of 0.75 means the score is higher than 75% of other scores.
+**Result:** Values range from `0.0` to `1.0`
+
+## Related Functions
+
+- [Rank](rank) - Assigns rank with gaps
+- [DenseRank](denserank) - Assigns rank without gaps
+- [CumeDist](cumedist) - Calculates cumulative distribution
+- [RowNumber](rownumber) - Assigns sequential row numbers
+- [Ntile](ntile) - Divides rows into groups

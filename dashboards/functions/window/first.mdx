@@ -1,0 +1,52 @@
+---
+title: "First"
+---
+
+# First
+
+Returns the first value in the current partition or window, regardless of the current row's position.
+
+**Category:** `window`
+
+**Syntax:**
+```
+First([column])
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to retrieve the first value from |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+First([Sales])
+```
+Returns the sales value from the first row in the partition.
+
+```
+First([Opening_Price])
+```
+Returns the opening price from the first day in the partition, useful for comparing current values to initial values.
+
+```
+First([Customer_Name])
+```
+Returns the first customer name in the ordered partition.
+
+## Related Functions
+
+- [Last](last) - Returns last value in partition
+- [Lag](lag) - Returns value from previous row
+- [Lead](lead) - Returns value from following row
+- [RowNumber](rownumber) - Assigns sequential row numbers

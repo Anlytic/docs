@@ -1,0 +1,49 @@
+---
+title: "Cumedist"
+---
+
+# CumeDist
+
+Calculates the cumulative distribution of a value within a partition, representing the relative position of each row based on the specified column's values.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumeDist([column])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to calculate cumulative distribution for |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumeDist([Sales])
+```
+Returns the cumulative distribution of sales values. If 80% of rows have sales values less than or equal to the current row's sales, this returns 0.8.
+
+```
+CumeDist([Score])
+```
+Calculates what fraction of all scores are less than or equal to each row's score. A result of 0.95 means the row is in the 95th percentile.
+**Result:** `varies` (values between 0.0 and 1.0)
+
+## Related Functions
+
+- [PercentRank](percentrank) - Calculates relative rank as percentage
+- [Rank](rank) - Assigns rank with gaps
+- [DenseRank](denserank) - Assigns rank without gaps
+- [RowNumber](rownumber) - Assigns sequential row numbers
+- [Ntile](ntile) - Divides rows into groups

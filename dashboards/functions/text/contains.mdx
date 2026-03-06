@@ -1,0 +1,43 @@
+---
+title: "Contains"
+---
+
+# Contains
+
+Searches for specified substring(s) in a text value (case-sensitive). Returns True if found, False otherwise.
+
+**Category:** `text`
+
+**Syntax:**
+```
+Contains([string_column], "substring", |substring2|, ...)
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `string_column` | `column` | ✓ Yes | A column to search for text values. |
+| `substring` | `text` | ✓ Yes | Substring to search for in the text value. Up to 5 substrings can be provided. |
+
+**Allowed Column Types:** STRING, TEXT
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 6
+
+## Examples
+
+```
+Contains([Product Name], "Digital Camera")
+```
+Searches for substring in each product name.
+
+## Related Functions
+
+- [Upper](upper) - Convert to uppercase for standardization
+- [Lower](lower) - Convert to lowercase for case-insensitive operations

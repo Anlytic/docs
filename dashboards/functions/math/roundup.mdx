@@ -1,0 +1,50 @@
+---
+title: "Roundup"
+---
+
+# RoundUp
+
+Rounds a number up to the specified number of digits
+
+**Category:** `math`
+
+**Syntax:**
+```
+RoundUp([number], [digits])
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number to be rounded |
+| `digits` | `number` | ✗ No | The number of decimal places to which to round. If not provided, defaults to 0 |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+RoundUp([Cost], 2)
+```
+Rounds the value for each row in the Cost column up by 2 digits
+
+```
+RoundUp(3.141, 2)
+```
+Returns 3.15
+**Result:** `3.15`
+
+```
+RoundUp([Cost], -2)
+```
+Rounds the input number up and replaces its last 2 digits with 0s
+

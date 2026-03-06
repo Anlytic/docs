@@ -1,0 +1,40 @@
+---
+title: "Sumif"
+---
+
+# SumIf
+
+Sums values in a column only for rows matching the condition
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+SumIf([column], condition 1, [condition 2], ...)
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to sum when condition is True |
+| `condition 1` | `logical` | ✓ Yes | Logical expression evaluated per row |
+| `additional conditions` | `variadic` | ✗ No | Additional conditions combined with AND by default |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: None
+
+## Examples
+
+```
+SumIf([Sales], [Region] = "North")
+```
+Sums Sales where Region is North
+

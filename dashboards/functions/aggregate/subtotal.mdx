@@ -1,0 +1,43 @@
+---
+title: "Subtotal"
+---
+
+# Subtotal
+
+Returns the subtotal for an aggregate expression or column using the specified mode and, optionally, partition/group columns.
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Subtotal([aggregate_or_column], mode, |partition_by_column|)
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `aggregate_or_column` | `any` | ✓ Yes | The aggregate function (e.g., Sum([Amount])) or column to subtotal. If a column is provided, it will be used directly. |
+| `mode` | `text` | ✓ Yes | Subtotal mode ('grand_total', 'column', 'row', etc.). |
+| `partition_by_column` | `column` | ✗ No | Partition/group column for subtotal (required for some modes). |
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 3
+
+## Examples
+
+```
+Subtotal(Avg([Price]), "column", [ProductType])
+```
+Returns subtotal average price for each Product Type column.
+
+```
+Subtotal([Revenue], "column", [Region])
+```
+Returns subtotal of [Revenue] column for each Region.
+

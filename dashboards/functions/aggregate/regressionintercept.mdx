@@ -1,0 +1,41 @@
+---
+title: "Regressionintercept"
+---
+
+# RegressionIntercept
+
+Y-intercept of the linear regression line (y on x)
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+RegressionIntercept([y], [x])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `y` | `column` | ✓ Yes |  |
+| `x` | `column` | ✓ Yes |  |
+
+**Allowed Column Types for `y`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `x`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+RegressionIntercept([Y], [X])
+```
+Regression intercept
+

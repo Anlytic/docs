@@ -1,0 +1,39 @@
+---
+title: "Minif"
+---
+
+# MinIf
+
+Returns the minimum value in a column only for rows matching the condition
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+MinIf([column], condition)
+```
+
+**Returns:** `Number`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to find minimum value from when condition is True |
+| `condition` | `logical` | ✓ Yes | Logical expression evaluated per row |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, DATE, DATETIME
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+MinIf([Sales], [Region] = "North")
+```
+Minimum Sales where Region is North
+

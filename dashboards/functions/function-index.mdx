@@ -1,0 +1,356 @@
+---
+title: "Function index"
+---
+
+# Function Index
+
+Functions provide powerful formula capabilities for transforming and analyzing your data in real-time. This reference contains all available functions organized by category.
+
+
+
+## Date Functions
+
+Functions for working with dates and times, including extraction, calculation, and manipulation of temporal data.
+
+**[ConvertTimezone](date/converttimezone)** Converts datetime values to a specified time zone.
+
+**[DateAdd](date/dateadd)** Adds a specified amount of time to a date.
+
+**[DateDiff](date/datediff)** Calculates the time difference between two dates.
+
+**[DateFromUnix](date/datefromunix)** Converts a Unix timestamp to a Date data type.
+
+**[DatePart](date/datepart)** Extracts the specified date part from a date value.
+
+**[DateTrunc](date/datetrunc)** Truncates the date to the specified date part.
+
+**[Day](date/day)** Returns the day of the month of a date value as a number.
+
+**[DayOfYear](date/dayofyear)** Converts a date to the number day of the year, from 1 (Jan 1) to 365 (Dec 31). Accounts for leap years.
+
+**[EndOfMonth](date/endofmonth)** Returns the last day of the month of a Date value.
+
+**[Hour](date/hour)** Returns the hour component of the given Date as a number.
+
+**[InDateRange](date/indaterange)** Determines if a date is within a specified date range.
+
+**[InPriorDateRange](date/inpriordaterange)** Determines if a date is within a specified date range in a previous time period.
+
+**[LastDay](date/lastday)** Evaluates a specified date component in a date value and returns the last date and time in that component as a timestamp.
+
+**[MakeDate](date/makedate)** Evaluates specified year, month, day (and optional hour, minute, second) components and returns a datetime value in ISO format.
+
+**[Minute](date/minute)** Returns an integer representing the minute component of a specified date and time.
+
+**[Month](date/month)** Returns an integer representing the month component in a specified datetime value.
+
+**[MonthName](date/monthname)** Returns the name of the month component from a specified datetime value.
+
+**[Now](date/now)** Returns the current date and time using your organization's account timezone.
+
+**[Quarter](date/quarter)** Returns an integer representing the quarter component in a specified datetime value.
+
+**[Second](date/second)** Returns an integer representing the second component of a specified date and time.
+
+**[Today](date/today)** Returns the current date in ISO format using the Account Time Zone.
+
+**[Weekday](date/weekday)** Returns an integer representing the day of the week in a specified datetime value.
+
+**[WeekdayName](date/weekdayname)** Returns the name of the day of the week in a specified datetime value.
+
+**[Year](date/year)** Returns an integer representing the year component in a specified datetime value.
+
+**[DateFormat](date/dateformat)** Formats a date value as a string according to a specified format pattern.
+
+**[DateParse](date/dateparse)** Parses a string representation of a date into a Date data type.
+
+---
+
+## Logical Functions
+
+Functions for conditional logic, null handling, and comparison operations.
+
+**[Between](logical/between)** Checks whether a value lies within a given range. The function is inclusive, so it includes the beginning and end values of the range.
+
+**[Choose](logical/choose)** Given a specified index number, returns the matching value from a list.
+
+**[Coalesce](logical/coalesce)** Returns the value of the first argument that is not Null. Often applied to columns to check for Null values and assign placeholder values in replacement of Nulls.
+
+**[If](logical/if)** Returns Value 1 for every row where the first condition is met. If more than one condition is supplied, subsequent conditions are evaluated and return their corresponding values. If all conditions are False, then the Else value is applied.
+
+**[In](logical/in)** Tests if a value matches any candidate value in a subsequent list of candidate values. Returns True if the value matches any of the subsequent candidate values, False if no values are matched.
+
+**[IsNotNull](logical/isnotnull)** Returns True if the argument is not Null (contains data), and False if the argument contains missing data values.
+
+**[IsNull](logical/isnull)** Returns True if the argument contains missing data values, and False if the argument is not Null. Often applied to a column of data to test for Null values.
+
+**[Switch](logical/switch)** Returns the result corresponding to the first matching value. If the case argument evaluates to True, then the corresponding result is returned, otherwise the else argument is returned.
+
+**[Zn](logical/zn)** Returns non-Null values, or 0 (zero) instead of Null values.
+
+---
+
+## Math Functions
+
+Functions for mathematical operations and calculations on numeric data.
+
+**[Int](math/int)** Rounds the input number down to the largest integer of equal or lesser value.
+
+**[IsEven](math/iseven)** Returns True if the integer is even, False if it is odd.
+
+**[IsOdd](math/isodd)** Returns True if the integer is odd, False if it is even.
+
+**[Sign](math/sign)** Returns the sign of a number: -1 if negative, 1 if positive, 0 if zero.
+
+**[Sqrt](math/sqrt)** Compute the positive square root of a positive number.
+
+**[Abs](math/abs)** Returns the absolute value of a number.
+
+**[Acos](math/acos)** Returns the arc cosine (inverse cosine) of a number in radians.
+
+**[Asin](math/asin)** Returns the arc sine (inverse sine) of a number in radians.
+
+**[Atan](math/atan)** Returns the arc tangent (inverse tangent) of a number in radians.
+
+**[Atan2](math/atan2)** Returns the arc tangent of the quotient of its arguments in radians.
+
+**[Tan](math/tan)** Returns the tangent of an angle specified in radians.
+
+**[Sin](math/sin)** Returns the sine of an angle specified in radians.
+
+**[Cos](math/cos)** Returns the cosine of an angle specified in radians.
+
+**[Ceiling](math/ceiling)** Rounds a number up to the nearest integer.
+
+**[Floor](math/floor)** Rounds a number down to the nearest integer.
+
+**[Round](math/round)** Rounds a number to a specified number of decimal places.
+
+**[RoundUp](math/roundup)** Rounds a number up to a specified number of decimal places.
+
+**[RoundDown](math/rounddown)** Rounds a number down to a specified number of decimal places.
+
+**[Trunc](math/trunc)** Truncates a number to a specified number of decimal places.
+
+**[Mod](math/mod)** Returns the remainder after dividing one number by another.
+
+**[Div](math/div)** Performs integer division and returns the quotient.
+
+**[Pi](math/pi)** Returns the value of pi (π) to 15 decimal places.
+
+**[Power](math/power)** Raises a number to a specified power.
+
+**[Ln](math/ln)** Returns the natural logarithm of a number.
+
+**[Log](math/log)** Returns the logarithm of a number to a specified base.
+
+**[Radians](math/radians)** Converts degrees to radians.
+
+**[Degrees](math/degrees)** Converts radians to degrees.
+
+**[Cot](math/cot)** Returns the cotangent of an angle specified in radians.
+
+**[Exp](math/exp)** Returns e raised to the power of a given number.
+
+**[MRound](math/mround)** Rounds a number to the nearest multiple of a specified value.
+
+**[Least](math/least)** Returns the smallest value from a list of arguments.
+
+**[Greatest](math/greatest)** Returns the largest value from a list of arguments.
+
+**[BinFixed](math/binfixed)** Creates fixed-width bins for numeric values.
+
+**[BinRange](math/binrange)** Creates custom range-based bins for numeric values.
+
+**[RowAvg](math/rowavg)** Calculates the average of values across multiple columns in a row.
+
+**[BitAnd](math/bitand)** Performs a bitwise AND operation on two integers.
+
+**[BitOr](math/bitor)** Performs a bitwise OR operation on two integers.
+
+**[DistanceGlobe](math/distanceglobe)** Calculates the distance between two geographic coordinates on a sphere (Earth).
+
+**[DistancePlane](math/distanceplane)** Calculates the Euclidean distance between two points on a 2D plane.
+
+---
+
+## Text Functions
+
+Functions for text manipulation and formatting, including case conversion, substring extraction, and string operations.
+
+**[Contains](text/contains)** Searches for specified substring(s) in a text value (case-sensitive). Returns True if found, False otherwise.
+
+**[Left](text/left)** Returns a substring that begins at the start of a given string column values.
+
+**[Lower](text/lower)** Converts a given string to lowercase.
+
+**[Right](text/right)** Returns a substring from the end of a string column values. The last n characters where n is the number argument.
+
+**[Upper](text/upper)** Converts a given string to uppercase.
+
+---
+
+## Aggregate Functions
+
+Functions that perform calculations across multiple rows of data, such as sums, averages, and counts.
+
+**[Avg](aggregate/avg)** Calculates the average (mean) of values in a column.
+
+**[Count](aggregate/count)** Counts the number of rows in a dataset.
+
+**[CountDistinct](aggregate/countdistinct)** Counts the number of unique values in a column.
+
+**[Max](aggregate/max)** Returns the maximum value in a column.
+
+**[Median](aggregate/median)** Calculates the median (middle value) of values in a column.
+
+**[Min](aggregate/min)** Returns the minimum value in a column.
+
+**[Mode](aggregate/mode)** Returns the most frequently occurring value in a column.
+
+**[Percentile](aggregate/percentile)** Calculates the value at a specified percentile in a column.
+
+**[Stdev](aggregate/stdev)** Calculates the sample standard deviation of values in a column.
+
+**[StdevP](aggregate/stdevp)** Calculates the population standard deviation of values in a column.
+
+**[Sum](aggregate/sum)** Calculates the sum of values in a column.
+
+**[Variance](aggregate/variance)** Calculates the sample variance of values in a column.
+
+**[VarianceP](aggregate/variancep)** Calculates the population variance of values in a column.
+
+**[GrandTotal](aggregate/grandtotal)** Calculates the grand total across all data.
+
+**[SubTotal](aggregate/subtotal)** Calculates subtotals within grouped data.
+
+**[PercentOfTotal](aggregate/percentoftotal)** Calculates the percentage of a value relative to the total.
+
+**[Array_Agg](aggregate/array_agg)** Aggregates values from multiple rows into an array.
+
+**[Array_Agg_Distinct](aggregate/array_agg_distinct)** Aggregates distinct values from multiple rows into an array.
+
+**[Corr](aggregate/corr)** Calculates the correlation coefficient between two columns.
+
+**[RegressionIntercept](aggregate/regressionintercept)** Calculates the y-intercept of the linear regression line.
+
+**[RegressionR2](aggregate/regressionr2)** Calculates the R-squared value of the linear regression.
+
+**[RegressionSlope](aggregate/regressionslope)** Calculates the slope of the linear regression line.
+
+**[PercentileDisc](aggregate/percentiledisc)** Returns a discrete percentile value from the dataset.
+
+**[PercentileCont](aggregate/percentilecont)** Returns a continuous (interpolated) percentile value.
+
+**[ListAgg](aggregate/listagg)** Concatenates string values from multiple rows into a single delimited string.
+
+**[ListAgg_Distinct](aggregate/listagg_distinct)** Concatenates distinct string values from multiple rows into a single delimited string.
+
+**[SumIf](aggregate/sumif)** Calculates the sum of values that meet a specified condition.
+
+**[CountIf](aggregate/countif)** Counts the number of rows that meet a specified condition.
+
+**[AvgIf](aggregate/avgif)** Calculates the average of values that meet a specified condition.
+
+**[CountDistinctIf](aggregate/countdistinctif)** Counts the number of unique values that meet a specified condition.
+
+**[MaxIf](aggregate/maxif)** Returns the maximum value that meets a specified condition.
+
+**[MinIf](aggregate/minif)** Returns the minimum value that meets a specified condition.
+
+**[SumProduct](aggregate/sumproduct)** Multiplies corresponding values and returns the sum of products.
+
+---
+
+## Type Functions
+
+Functions that convert values between different data types.
+
+**[Date](type/date)** Converts a value to a Date data type.
+
+**[Number](type/number)** Converts a value to a numeric data type.
+
+**[Text](type/text)** Converts a value to a text/string data type.
+
+**[Logical](type/logical)** Converts a value to a boolean (True/False) data type.
+
+**[Json](type/json)** Converts a value to JSON format.
+
+---
+
+## Window Functions
+
+Functions that perform calculations across a set of rows related to the current row, without collapsing the result set. Essential for analytics tasks such as running totals, moving averages, rankings, and row comparisons.
+
+### Cumulative Functions
+
+**[CumulativeAvg](window/cumulativeavg)** Calculates the cumulative average from the first row to the current row.
+
+**[CumulativeCorr](window/cumulativecorr)** Calculates the cumulative correlation between two columns from the first row to the current row.
+
+**[CumulativeCount](window/cumulativecount)** Calculates the cumulative count from the first row to the current row.
+
+**[CumeDist](window/cumedist)** Calculates the cumulative distribution of a value within a partition.
+
+**[CumulativeMax](window/cumulativemax)** Calculates the cumulative maximum from the first row to the current row.
+
+**[CumulativeMin](window/cumulativemin)** Calculates the cumulative minimum from the first row to the current row.
+
+**[CumulativeStdDev](window/cumulativestddev)** Calculates the cumulative standard deviation from the first row to the current row.
+
+**[CumulativeSum](window/cumulativesum)** Calculates the cumulative sum from the first row to the current row.
+
+**[CumulativeVariance](window/cumulativevariance)** Calculates the cumulative variance from the first row to the current row.
+
+### Moving Window Functions
+
+**[MovingAvg](window/movingavg)** Calculates the moving average within a specified window of rows.
+
+**[MovingCorr](window/movingcorr)** Calculates the moving correlation between two columns within a specified window.
+
+**[MovingCount](window/movingcount)** Calculates the moving count within a specified window of rows.
+
+**[MovingMax](window/movingmax)** Calculates the moving maximum within a specified window of rows.
+
+**[MovingMin](window/movingmin)** Calculates the moving minimum within a specified window of rows.
+
+**[MovingStdDev](window/movingstddev)** Calculates the moving standard deviation within a specified window of rows.
+
+**[MovingSum](window/movingsum)** Calculates the moving sum within a specified window of rows.
+
+**[MovingVariance](window/movingvariance)** Calculates the moving variance within a specified window of rows.
+
+### Row Position Functions
+
+**[Lag](window/lag)** Returns the value from a previous row at a specified offset.
+
+**[Lead](window/lead)** Returns the value from a following row at a specified offset.
+
+**[First](window/first)** Returns the first value in the current partition or window.
+
+**[Last](window/last)** Returns the last value in the current partition or window.
+
+### Ranking Functions
+
+**[Rank](window/rank)** Assigns a rank to each row within a partition, with gaps when there are ties.
+
+**[DenseRank](window/denserank)** Assigns a rank to each row within a partition, without gaps when there are ties.
+
+**[PercentRank](window/percentrank)** Calculates the relative rank of each row as a percentage (0 to 1).
+
+**[Ntile](window/ntile)** Divides rows into a specified number of approximately equal groups.
+
+**[RowNumber](window/rownumber)** Assigns a unique sequential number to each row within a partition.
+
+### Running Total Functions
+
+**[RunningTotal](window/runningtotal)** Calculates the running total (cumulative sum) from the first row to the current row.
+
+**[RunningCount](window/runningcount)** Calculates the running count from the first row to the current row.
+
+**[RowNum](window/rownum)** Assigns sequential numbers to rows within a partition.
+
+---
+
+
+

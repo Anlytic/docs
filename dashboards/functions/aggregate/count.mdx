@@ -1,0 +1,36 @@
+---
+title: "Count"
+---
+
+# Count
+
+Returns the number of rows in the specified column, excluding null values
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+Count([column])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to count non-null values |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Count([OrderID])
+```
+Returns the number of non-null order IDs
+

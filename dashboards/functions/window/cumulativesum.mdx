@@ -1,0 +1,49 @@
+---
+title: "Cumulativesum"
+---
+
+# CumulativeSum
+
+Calculates the cumulative sum of values from the first row up to the current row within a partition.
+
+**Category:** `window`
+
+**Syntax:**
+```
+CumulativeSum([column])
+```
+
+**Returns:** `Same as input type`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The numeric column to calculate cumulative sum for |
+
+**Allowed Column Types for `column`:** INT, FLOAT, DECIMAL, NUMBER
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CumulativeSum([Sales])
+```
+Returns the running total of sales from the first row to the current row.
+
+```
+CumulativeSum([Revenue])
+```
+Calculates cumulative revenue, useful for tracking year-to-date totals or running totals over time.
+
+## Related Functions
+
+- [CumulativeAvg](cumulativeavg) - Calculates cumulative average
+- [MovingSum](movingsum) - Calculates moving sum with a window
+- [Sum](../aggregate/sum) - Returns the overall sum
+- [RunningTotal](runningtotal) - Calculates running total

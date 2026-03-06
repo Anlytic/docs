@@ -1,0 +1,37 @@
+---
+title: "Year"
+---
+
+# Year
+
+Returns an integer representing the year component in a specified datetime value.
+
+**Category:** `date`
+
+**Syntax:**
+```
+Year([date_column])
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date to extract year from. |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Year([OrderDate])
+```
+Returns year from date.

@@ -1,0 +1,61 @@
+---
+title: "Indaterange"
+---
+
+# InDateRange
+
+Determines if a date is within a specified date range.
+
+**Category:** `date`
+
+**Syntax:**
+```
+InDateRange([date_column], "direction", "period", |length|, |offset|, |today|)
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date column` | `column\|datetime` | ✓ Yes | The date to be evaluated. |
+| `direction` | `text` | ✓ Yes | Direction to apply the date range offset. |
+| `period` | `text` | ✓ Yes | Size of the date window. |
+| `length` | `number` | ✗ No | Number of periods to include in the range. Defaults to 1. |
+| `offset` | `number` | ✗ No | Number of periods to offset the start of the range. Defaults to 0. |
+| `today` | `column\|datetime` | ✗ No | Override value for Today when calculating relative to current date. |
+
+**Allowed Values for `direction`:** `last`, `next`, `current`, `to_date`
+
+**Allowed Values for `period`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: 6
+
+## Examples
+
+```
+InDateRange([Date], "current", "month")
+```
+Returns True for all dates in the current month.
+
+```
+InDateRange([Date], "last", "week", 3)
+```
+Returns True for all dates in the last three weeks.
+
+```
+InDateRange([Date], "last", "week", 1, 3)
+```
+Returns True for all dates in the week starting three weeks ago.
+
+```
+InDateRange([Date], "to_date", "year", 1, -1)
+```
+Returns True for all dates within the last year up to today's date.

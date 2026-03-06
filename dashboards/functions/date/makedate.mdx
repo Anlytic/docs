@@ -1,0 +1,41 @@
+---
+title: "Makedate"
+---
+
+# MakeDate
+
+Evaluates specified year, month, day (and optional hour, minute, second) components and returns a datetime value in ISO format.
+
+**Category:** `date`
+
+**Syntax:**
+```
+MakeDate(year, month, day, |hour|, |minute|, |second|)
+```
+
+**Returns:** `DateTimeColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `year` | `number` | ✓ Yes | An integer representing the year. |
+| `month` | `number` | ✓ Yes | An integer representing the month (1-12). |
+| `day` | `number` | ✓ Yes | An integer representing the day of the month (1-31). |
+| `hour` | `number` | ✗ No | An integer representing the hour (0-23). |
+| `minute` | `number` | ✗ No | An integer representing the minutes (0-59). |
+| `second` | `number` | ✗ No | An integer representing the seconds (0-59). |
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: 6
+
+## Examples
+
+```
+MakeDate(2019, 1, 31, 16, 30, 0)
+```
+Returns the datetime value.
+**Result:** `2019-01-31 16:30:00`

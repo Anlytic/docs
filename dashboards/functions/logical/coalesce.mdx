@@ -1,0 +1,54 @@
+---
+title: "Coalesce"
+---
+
+# Coalesce
+
+Returns the value of the first argument that is not Null. Often applied to columns to check for Null values and assign placeholder values in replacement of Nulls.
+
+
+**Category:** `logical`
+
+**Syntax:**
+```
+Coalesce([column_name], ...)
+```
+
+**Returns:** `AnyColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column_name` | `column` | ✓ Yes | The number, date, string, column, or function to be evaluated. |
+| `additional arguments` | `variadic` | ✗ No | Additional arguments to be evaluated. All arguments must be of the same data type. |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: Unlimited
+
+## Examples
+
+```
+Coalesce(Null, 1/0, 1/1, 1/2)
+```
+Returns the third argument (1) as it is the first non-Null value.
+**Result:** `1`
+
+```
+Coalesce([Sales], 0)
+```
+Converts all the Null values in Sales to 0.
+
+```
+Coalesce([Product Type], [Product Family], [Sku Number])
+```
+Return Product Type if it exists; return Product Family if there is no Product Type. If both don't exist, return SKU Number.
+
+## Related Functions
+
+- [IsNull](isnull) - Check if a value is null
+- [Zn](zn) - Convert nulls to zero specifically
+- [If](if) - Conditional logic for more complex null handling

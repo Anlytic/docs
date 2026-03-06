@@ -1,0 +1,45 @@
+---
+title: "Binrange"
+---
+
+# BinRange
+
+Computes the bin for a value using the provided lower bounds
+
+**Category:** `math`
+
+**Syntax:**
+```
+BinRange([value], [cutoff1], [cutoff2], ...)
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `number or column` | ✓ Yes | The value to place into the defined bins |
+| `cutoffs` | `number` | ✓ Yes | The lower bounds to compare the value against. The first cutoff indicates the lower bounds of bin 2 |
+
+**Allowed Column Types for `value`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 10
+
+## Examples
+
+```
+BinRange(25, 50)
+```
+Returns 1. All numbers lower than 50 are placed in bin 1 and all numbers 50 and greater are placed in bin 2
+**Result:** `1`
+
+```
+BinRange([Income], 100000, 500000)
+```
+Incomes less than 100,000 are placed in bin 1; incomes 100,000 – 499,999 are placed in bin 2; incomes 500,000 and greater are placed in bin 3
+

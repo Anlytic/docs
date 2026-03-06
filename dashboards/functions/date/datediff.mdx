@@ -1,0 +1,59 @@
+---
+title: "Datediff"
+---
+
+# DateDiff
+
+Calculates the time difference between two dates.
+
+**Category:** `date`
+
+**Syntax:**
+```
+DateDiff("unit", [start], [end])
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `unit` | `text` | ✓ Yes | The unit to measure the difference. |
+| `start` | `column\|datetime` | ✓ Yes | The starting date (use Date() to convert if needed). |
+| `end` | `column\|datetime` | ✓ Yes | The ending date (use Date() to convert if needed). |
+
+**Allowed Values for `unit`:** `year`, `quarter`, `month`, `week`, `day`, `hour`, `minute`, `second`, `millisecond`
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: 3
+
+## Examples
+
+```
+DateDiff("day", [Invoice Date], Today())
+```
+Days between the Invoice Date column and current UTC date.
+
+```
+DateDiff("year", [Invoice Date], Date("2018-01-01"))
+```
+Years between Invoice Date and 2018-01-01.
+**Result:** `8`
+
+```
+DateDiff("hour", [Ticket Date], Now())
+```
+Hours between Ticket Date and current UTC time.
+**Result:** `103`
+
+## Related Functions
+
+- [DateAdd](dateadd) - Add or subtract time from a date
+- [Today](today) - Get current date
+- [Now](now) - Get current date and time

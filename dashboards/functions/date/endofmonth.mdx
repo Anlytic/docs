@@ -1,0 +1,43 @@
+---
+title: "Endofmonth"
+---
+
+# EndOfMonth
+
+Returns the last day of the month of a Date value.
+
+**Category:** `date`
+
+**Syntax:**
+```
+EndOfMonth([date])
+```
+
+**Returns:** `DateTimeColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date` | `column\|datetime` | ✓ Yes | The date from which the end of month is to be computed. |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+EndOfMonth([Invoice Date])
+```
+Extract the last day of the month from the Invoice Date column.
+
+```
+EndOfMonth(Date("2023-03-07"))
+```
+Returns end of month for March 2023.
+**Result:** `2023-03-31 23:59:59`

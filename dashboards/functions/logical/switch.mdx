@@ -1,0 +1,45 @@
+---
+title: "Switch"
+---
+
+# Switch
+
+Returns the result corresponding to the first matching value. If the case argument evaluates to True, then the corresponding result is returned, otherwise the else argument is returned.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+Switch(value, case1, result1, [case2], [result2], ..., [else])
+```
+
+**Returns:** `AnyColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `column\|any` | ✓ Yes | The value to test. |
+| `case 1` | `any` | ✓ Yes | The case to test the value against. |
+| `result 1` | `any` | ✓ Yes | The result to be returned if its preceding case matches the input value. |
+| `additional cases and results` | `variadic` | ✗ No | Several pairs can be listed in a single function. Every supplied case must have a corresponding result. |
+| `else` | `any` | ✗ No | The result to be returned if no cases match the value. If not supplied, a Null result is returned. |
+
+## Validation
+- Minimum parameters: 3
+- Maximum parameters: Unlimited
+
+## Examples
+
+```
+Switch(1, 0, "None", 1, "One", "Many")
+```
+Tests value 1 against cases and returns corresponding result.
+**Result:** `One`
+
+```
+Switch([dimension-param], "Product Family", [Product Family], "Product Type", [Product Type])
+```
+Dynamically returns different columns based on parameter selection.

@@ -1,0 +1,47 @@
+---
+title: "Log"
+---
+
+# Log
+
+Returns the logarithm of a number to a specified base
+
+**Category:** `math`
+
+**Syntax:**
+```
+Log([number_column], [base])
+```
+
+**Returns:** `Float`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `number` | `number or column` | ✓ Yes | The number to compute the logarithm of |
+| `base` | `number or column` | ✓ Yes | The base of the logarithm |
+
+**Allowed Column Types for `number`:** INT, FLOAT, DECIMAL
+
+**Allowed Column Types for `base`:** INT, FLOAT, DECIMAL
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: 2
+
+## Examples
+
+```
+Log(100, 10)
+```
+Logarithm of 100 to base 10
+**Result:** `2`
+
+```
+Log([Value], 2)
+```
+Logarithm of each value to base 2
+

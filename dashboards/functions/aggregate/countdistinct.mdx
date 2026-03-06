@@ -1,0 +1,36 @@
+---
+title: "Countdistinct"
+---
+
+# CountDistinct
+
+Returns the number of unique values in the specified column
+
+**Category:** `aggregate`
+
+**Syntax:**
+```
+CountDistinct([column])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to count distinct values |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+CountDistinct([CustomerID])
+```
+Returns the number of unique customers
+

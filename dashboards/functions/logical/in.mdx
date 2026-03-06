@@ -1,0 +1,43 @@
+---
+title: "In"
+---
+
+# In
+
+Tests if a value matches any candidate value in a subsequent list of candidate values. Returns True if the value matches any of the subsequent candidate values, False if no values are matched.
+
+**Category:** `logical`
+
+**Syntax:**
+```
+In([value_column], candidate1, [candidates 2+])
+```
+
+**Returns:** `BooleanColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `value` | `column\|any` | ✓ Yes | The value to test. |
+| `candidate 1` | `any` | ✓ Yes | The first candidate to test value against. |
+| `additional candidates` | `variadic` | ✗ No | Additional candidates to test value against. |
+
+## Validation
+- Minimum parameters: 2
+- Maximum parameters: Unlimited
+
+## Examples
+
+```
+In("green", "red", "green", "blue")
+```
+Tests if "green" matches any of the candidate values.
+**Result:** `true`
+
+```
+In([Customer ID], 2000, 3000, 4000)
+```
+Returns True for rows where Customer ID is 2000, 3000, or 4000.

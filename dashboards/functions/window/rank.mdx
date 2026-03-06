@@ -1,0 +1,49 @@
+---
+title: "Rank"
+---
+
+# Rank
+
+Assigns a rank to each row within a partition based on the values in the specified column. When there are ties, the same rank is assigned and the next rank is skipped, leaving gaps in the sequence.
+
+**Category:** `window`
+
+**Syntax:**
+```
+Rank([column])
+```
+
+**Returns:** `Integer`
+
+**Context Filtering:** ✗ No
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `column` | `column` | ✓ Yes | The column to rank by |
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 1
+
+## Examples
+
+```
+Rank([Sales])
+```
+Returns the rank of each row based on sales values. If two rows tie for rank 2, both get rank 2, and the next row gets rank 4.
+
+```
+Rank([Score])
+```
+Ranks rows by score values. Tied scores receive the same rank, with subsequent ranks showing gaps.
+**Result:** `1, 2, 2, 4, 5, 6, ...`
+
+## Related Functions
+
+- [DenseRank](denserank) - Assigns rank without gaps
+- [PercentRank](percentrank) - Calculates relative rank as percentage
+- [RowNumber](rownumber) - Assigns sequential row numbers
+- [CumeDist](cumedist) - Calculates cumulative distribution
+- [Ntile](ntile) - Divides rows into groups

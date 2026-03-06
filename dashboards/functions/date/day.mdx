@@ -1,0 +1,38 @@
+---
+title: "Day"
+---
+
+# Day
+
+Returns the day of the month of a date value as a number.
+
+**Category:** `date`
+
+**Syntax:**
+```
+Day([date_column], |timezone|)
+```
+
+**Returns:** `IntColumn`
+
+**Context Filtering:** ✓ Yes
+
+## Parameters
+
+| Name | Type | Required | Description |
+|------|------|----------|-------------|
+| `date_column` | `column\|datetime` | ✓ Yes | The date from which to extract the day component. |
+| `timezone` | `text` | ✗ No | Optional IANA time zone name (e.g., "Europe/Amsterdam"). |
+
+**Allowed Column Types:** DATETIME, DATE
+
+## Validation
+- Minimum parameters: 1
+- Maximum parameters: 2
+
+## Examples
+
+```
+Day([Date])
+```
+Returns the day of the month of each date value in the [Date] column as a number.
