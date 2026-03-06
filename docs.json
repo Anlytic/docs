@@ -635,7 +635,7 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "href": "https://anlytic.com"
+    "href": "/"
   },
   "navbar": {
     "links": [
