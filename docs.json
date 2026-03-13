@@ -46,6 +46,11 @@
   "metadata": {
     "timestamp": true
   },
+  "seo": {
+    "metatags": {
+      "canonical": "https://docs.anlytic.com"
+    }
+  },
   "navigation": {
     "languages": [
       {
